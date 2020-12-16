@@ -1,0 +1,205 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{DF5C4D29-C080-435D-9EF9-A0346E92517D}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>HeqiaoDaoshiCore</RootNamespace>
+    <AssemblyName>HeqiaoDaoshiCore</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Haikan2, Version=2.2.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\HeqiaoDaoshi\bin\Haikan2.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Class1.cs" />
+    <Compile Include="MDB\BLL\ActiveQuantity.cs" />
+    <Compile Include="MDB\BLL\ArticlesManagement.cs" />
+    <Compile Include="MDB\BLL\ArticleType.cs" />
+    <Compile Include="MDB\BLL\Attractions.cs" />
+    <Compile Include="MDB\BLL\AttractRanking.cs" />
+    <Compile Include="MDB\BLL\Bank.cs" />
+    <Compile Include="MDB\BLL\Bus.cs" />
+    <Compile Include="MDB\BLL\CarPark.cs" />
+    <Compile Include="MDB\BLL\Complaints.cs" />
+    <Compile Include="MDB\BLL\Consult.cs" />
+    <Compile Include="MDB\BLL\CreditCardBehavior.cs" />
+    <Compile Include="MDB\BLL\CulturalIntroduc.cs" />
+    <Compile Include="MDB\BLL\EntranceGuard.cs" />
+    <Compile Include="MDB\BLL\Food.cs" />
+    <Compile Include="MDB\BLL\Gtoilet.cs" />
+    <Compile Include="MDB\BLL\Hospital.cs" />
+    <Compile Include="MDB\BLL\Hotel.cs" />
+    <Compile Include="MDB\BLL\HotelRoom.cs" />
+    <Compile Include="MDB\BLL\Information.cs" />
+    <Compile Include="MDB\BLL\InformationType.cs" />
+    <Compile Include="MDB\BLL\Leavemessage.cs" />
+    <Compile Include="MDB\BLL\Luxian.cs" />
+    <Compile Include="MDB\BLL\Mapmark.cs" />
+    <Compile Include="MDB\BLL\Mark.cs" />
+    <Compile Include="MDB\BLL\NaturalResources.cs" />
+    <Compile Include="MDB\BLL\News.cs" />
+    <Compile Include="MDB\BLL\Pointer.cs" />
+    <Compile Include="MDB\BLL\Promotional.cs" />
+    <Compile Include="MDB\BLL\PromotionalVideo.cs" />
+    <Compile Include="MDB\BLL\Publicity.cs" />
+    <Compile Include="MDB\BLL\PublicityPicture.cs" />
+    <Compile Include="MDB\BLL\PublicityType.cs" />
+    <Compile Include="MDB\BLL\ScenicSpot.cs" />
+    <Compile Include="MDB\BLL\searchl.cs" />
+    <Compile Include="MDB\BLL\Sharing.cs" />
+    <Compile Include="MDB\BLL\SpecialPick.cs" />
+    <Compile Include="MDB\BLL\Strategy.cs" />
+    <Compile Include="MDB\BLL\Student.cs" />
+    <Compile Include="MDB\BLL\SystemIcon.cs" />
+    <Compile Include="MDB\BLL\SystemLog.cs" />
+    <Compile Include="MDB\BLL\SystemMenu.cs" />
+    <Compile Include="MDB\BLL\SystemPermission.cs" />
+    <Compile Include="MDB\BLL\SystemRole.cs" />
+    <Compile Include="MDB\BLL\SystemRolePermissionMapping.cs" />
+    <Compile Include="MDB\BLL\SystemUser.cs" />
+    <Compile Include="MDB\BLL\SystemUserRoleMapping.cs" />
+    <Compile Include="MDB\BLL\Teacher.cs" />
+    <Compile Include="MDB\BLL\TourGuide.cs" />
+    <Compile Include="MDB\BLL\Tourism.cs" />
+    <Compile Include="MDB\BLL\Treasurerecord.cs" />
+    <Compile Include="MDB\BLL\Videomark.cs" />
+    <Compile Include="MDB\DAL\ActiveQuantity.cs" />
+    <Compile Include="MDB\DAL\ArticlesManagement.cs" />
+    <Compile Include="MDB\DAL\ArticleType.cs" />
+    <Compile Include="MDB\DAL\Attractions.cs" />
+    <Compile Include="MDB\DAL\AttractRanking.cs" />
+    <Compile Include="MDB\DAL\Bank.cs" />
+    <Compile Include="MDB\DAL\Bus.cs" />
+    <Compile Include="MDB\DAL\CarPark.cs" />
+    <Compile Include="MDB\DAL\Complaints.cs" />
+    <Compile Include="MDB\DAL\Consult.cs" />
+    <Compile Include="MDB\DAL\CreditCardBehavior.cs" />
+    <Compile Include="MDB\DAL\CulturalIntroduc.cs" />
+    <Compile Include="MDB\DAL\EntranceGuard.cs" />
+    <Compile Include="MDB\DAL\Food.cs" />
+    <Compile Include="MDB\DAL\Gtoilet.cs" />
+    <Compile Include="MDB\DAL\Hospital.cs" />
+    <Compile Include="MDB\DAL\Hotel.cs" />
+    <Compile Include="MDB\DAL\HotelRoom.cs" />
+    <Compile Include="MDB\DAL\Information.cs" />
+    <Compile Include="MDB\DAL\InformationType.cs" />
+    <Compile Include="MDB\DAL\Leavemessage.cs" />
+    <Compile Include="MDB\DAL\Luxian.cs" />
+    <Compile Include="MDB\DAL\Mapmark.cs" />
+    <Compile Include="MDB\DAL\Mark.cs" />
+    <Compile Include="MDB\DAL\NaturalResources.cs" />
+    <Compile Include="MDB\DAL\News.cs" />
+    <Compile Include="MDB\DAL\Pointer.cs" />
+    <Compile Include="MDB\DAL\Promotional.cs" />
+    <Compile Include="MDB\DAL\PromotionalVideo.cs" />
+    <Compile Include="MDB\DAL\Publicity.cs" />
+    <Compile Include="MDB\DAL\PublicityPicture.cs" />
+    <Compile Include="MDB\DAL\PublicityType.cs" />
+    <Compile Include="MDB\DAL\ScenicSpot.cs" />
+    <Compile Include="MDB\DAL\searchl.cs" />
+    <Compile Include="MDB\DAL\Sharing.cs" />
+    <Compile Include="MDB\DAL\SpecialPick.cs" />
+    <Compile Include="MDB\DAL\Strategy.cs" />
+    <Compile Include="MDB\DAL\Student.cs" />
+    <Compile Include="MDB\DAL\SystemIcon.cs" />
+    <Compile Include="MDB\DAL\SystemLog.cs" />
+    <Compile Include="MDB\DAL\SystemMenu.cs" />
+    <Compile Include="MDB\DAL\SystemPermission.cs" />
+    <Compile Include="MDB\DAL\SystemRole.cs" />
+    <Compile Include="MDB\DAL\SystemRolePermissionMapping.cs" />
+    <Compile Include="MDB\DAL\SystemUser.cs" />
+    <Compile Include="MDB\DAL\SystemUserRoleMapping.cs" />
+    <Compile Include="MDB\DAL\Teacher.cs" />
+    <Compile Include="MDB\DAL\TourGuide.cs" />
+    <Compile Include="MDB\DAL\Tourism.cs" />
+    <Compile Include="MDB\DAL\Treasurerecord.cs" />
+    <Compile Include="MDB\DAL\Videomark.cs" />
+    <Compile Include="MDB\Model\ActiveQuantity.cs" />
+    <Compile Include="MDB\Model\ArticlesManagement.cs" />
+    <Compile Include="MDB\Model\ArticleType.cs" />
+    <Compile Include="MDB\Model\Attractions.cs" />
+    <Compile Include="MDB\Model\AttractRanking.cs" />
+    <Compile Include="MDB\Model\Bank.cs" />
+    <Compile Include="MDB\Model\Bus.cs" />
+    <Compile Include="MDB\Model\CarPark.cs" />
+    <Compile Include="MDB\Model\Complaints.cs" />
+    <Compile Include="MDB\Model\Consult.cs" />
+    <Compile Include="MDB\Model\CreditCardBehavior.cs" />
+    <Compile Include="MDB\Model\CulturalIntroduc.cs" />
+    <Compile Include="MDB\Model\EntranceGuard.cs" />
+    <Compile Include="MDB\Model\Food.cs" />
+    <Compile Include="MDB\Model\Gtoilet.cs" />
+    <Compile Include="MDB\Model\Hospital.cs" />
+    <Compile Include="MDB\Model\Hotel.cs" />
+    <Compile Include="MDB\Model\HotelRoom.cs" />
+    <Compile Include="MDB\Model\Information.cs" />
+    <Compile Include="MDB\Model\InformationType.cs" />
+    <Compile Include="MDB\Model\Leavemessage.cs" />
+    <Compile Include="MDB\Model\Luxian.cs" />
+    <Compile Include="MDB\Model\Mapmark.cs" />
+    <Compile Include="MDB\Model\Mark.cs" />
+    <Compile Include="MDB\Model\NaturalResources.cs" />
+    <Compile Include="MDB\Model\News.cs" />
+    <Compile Include="MDB\Model\Pointer.cs" />
+    <Compile Include="MDB\Model\Promotional.cs" />
+    <Compile Include="MDB\Model\PromotionalVideo.cs" />
+    <Compile Include="MDB\Model\Publicity.cs" />
+    <Compile Include="MDB\Model\PublicityPicture.cs" />
+    <Compile Include="MDB\Model\PublicityType.cs" />
+    <Compile Include="MDB\Model\ScenicSpot.cs" />
+    <Compile Include="MDB\Model\searchl.cs" />
+    <Compile Include="MDB\Model\Sharing.cs" />
+    <Compile Include="MDB\Model\SpecialPick.cs" />
+    <Compile Include="MDB\Model\Strategy.cs" />
+    <Compile Include="MDB\Model\Student.cs" />
+    <Compile Include="MDB\Model\SystemIcon.cs" />
+    <Compile Include="MDB\Model\SystemLog.cs" />
+    <Compile Include="MDB\Model\SystemMenu.cs" />
+    <Compile Include="MDB\Model\SystemPermission.cs" />
+    <Compile Include="MDB\Model\SystemRole.cs" />
+    <Compile Include="MDB\Model\SystemRolePermissionMapping.cs" />
+    <Compile Include="MDB\Model\SystemUser.cs" />
+    <Compile Include="MDB\Model\SystemUserRoleMapping.cs" />
+    <Compile Include="MDB\Model\Teacher.cs" />
+    <Compile Include="MDB\Model\TourGuide.cs" />
+    <Compile Include="MDB\Model\Tourism.cs" />
+    <Compile Include="MDB\Model\Treasurerecord.cs" />
+    <Compile Include="MDB\Model\Videomark.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

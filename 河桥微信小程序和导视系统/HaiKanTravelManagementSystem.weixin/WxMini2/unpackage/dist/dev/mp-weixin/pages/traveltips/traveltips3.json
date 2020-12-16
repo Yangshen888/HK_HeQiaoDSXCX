@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "瑞晶石花洞",
+  "usingComponents": {
+    "u-swiper": "/uview-ui/components/u-swiper/u-swiper"
+  }
+}

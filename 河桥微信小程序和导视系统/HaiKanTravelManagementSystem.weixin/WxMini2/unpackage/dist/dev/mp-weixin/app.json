@@ -1,0 +1,78 @@
+{
+  "pages": [
+    "pages/home/transion",
+    "pages/home/handsmap",
+    "pages/home/index",
+    "pages/home/mapview",
+    "pages/home/about",
+    "pages/home/articledefault",
+    "pages/home/live",
+    "pages/home/tour",
+    "pages/guide/guide",
+    "pages/index/index",
+    "pages/introduce/index",
+    "pages/home/searchList",
+    "pages/precious/preciousjl",
+    "pages/question/index",
+    "pages/personal/index",
+    "pages/scenespot/index",
+    "pages/scenespot/spotdetail",
+    "pages/intelligentguide/index",
+    "pages/traveltips/index",
+    "pages/traveltips/strategy",
+    "pages/traveltips/minsuwenhuashow",
+    "uview-ui/components/u-avatar-cropper/u-avatar-cropper",
+    "pages/gereninfo/gereninfo",
+    "pages/gereninfo/strategy",
+    "pages/gereninfo/liuyan",
+    "pages/gereninfo/gonglue",
+    "pages/gereninfo/editgereninfo",
+    "pages/parking/parkingLot",
+    "pages/parking/parkingInfo",
+    "pages/traveltips/strategy44",
+    "pages/gereninfo/StrategyInfo",
+    "pages/home/youtype",
+    "pages/home/markerInfo",
+    "pages/gereninfo/clockinfo",
+    "pages/traveltips/traveltips1",
+    "pages/traveltips/traveltips2",
+    "pages/parking/businfo",
+    "pages/traveltips/traveltips3",
+    "pages/home/clock",
+    "pages/traveltips/traveltips",
+    "pages/speciality/speciality",
+    "pages/amusement/amusement",
+    "pages/life/life",
+    "pages/traveltips/traveltips4",
+    "pages/traveltips/traveltips5",
+    "pages/traveltips/traveltips6",
+    "pages/traveltips/traveltips7",
+    "pages/traveltips/traveltips8"
+  ],
+  "subPackages": [
+    {
+      "root": "packageA",
+      "pages": [
+        "ESEA/ESEA",
+        "ESEA/pick",
+        "ESEA/shopping",
+        "ESEA/eaeashows",
+        "ESEA/techanshow",
+        "ESEA/hotelshows",
+        "ESEA/pickshows"
+      ]
+    }
+  ],
+  "window": {
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "uView",
+    "navigationBarBackgroundColor": "#F8F8F8",
+    "backgroundColor": "#F8F8F8"
+  },
+  "permission": {
+    "scope.userLocation": {
+      "desc": "导航"
+    }
+  },
+  "usingComponents": {}
+}

@@ -1,0 +1,9 @@
+2020-06-30 16:52:56,793 [46] ERROR Microsoft.EntityFrameworkCore.Query [(null)]  - An exception occurred while iterating over the results of a query for context type 'HaiKanTravelManagementSystem.Api.Entities.haikanHeQiaoContext'.
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at HaiKanTravelManagementSystem.Api.Controllers.Api.V1.Rbac.UserController.GetRoleName(String ids, List`1 roles) in D:\work_gzt\200628_08.53\多多控智慧工资条\HaiKanTravelManagementSystem.Api\Controllers\Api\V1\Rbac\UserController.cs:line 558
+   at lambda_method(Closure , QueryContext , DbDataReader , ResultContext , Int32[] , ResultCoordinator )
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.MoveNext()
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at HaiKanTravelManagementSystem.Api.Controllers.Api.V1.Rbac.UserController.GetRoleName(String ids, List`1 roles) in D:\work_gzt\200628_08.53\多多控智慧工资条\HaiKanTravelManagementSystem.Api\Controllers\Api\V1\Rbac\UserController.cs:line 558
+   at lambda_method(Closure , QueryContext , DbDataReader , ResultContext , Int32[] , ResultCoordinator )
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.MoveNext()

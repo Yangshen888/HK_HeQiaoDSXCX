@@ -1,0 +1,1738 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>HaiKanDuoDuoKongCRM</name>
+    </assembly>
+    <members>
+        <member name="T:HaiKanDuoDuoKongCRM.Auth.AppAuthenticationSettings">
+            <summary>
+            JWT授权的配置项
+            </summary>
+        </member>
+        <member name="P:HaiKanDuoDuoKongCRM.Auth.AppAuthenticationSettings.AppId">
+            <summary>
+            应用ID
+            </summary>
+        </member>
+        <member name="P:HaiKanDuoDuoKongCRM.Auth.AppAuthenticationSettings.Secret">
+            <summary>
+            应用密钥(真实项目中可能区分应用,不同的应用对应惟一的密钥)
+            </summary>
+        </member>
+        <member name="M:HaiKanDuoDuoKongCRM.Auth.JwtBearerAuthenticationExtension.AddJwtBearerAuthentication(Microsoft.Extensions.DependencyInjection.IServiceCollection,HaiKanDuoDuoKongCRM.Auth.AppAuthenticationSettings)">
+            <summary>
+            注册JWT Bearer认证服务的静态扩展方法
+            </summary>
+            <param name="services"></param>
+            <param name="appSettings">JWT授权的配置项</param>
+        </member>
+        <member name="T:HaiKanDuoDuoKongCRM.Configurations.AppSettings">
+            <summary>
+            程序配置选项
+            </summary>
+        </member>
+        <member name="P:HaiKanDuoDuoKongCRM.Configurations.AppSettings.IsTrialVersion">
+            <summary>
+            是否是体验版
+            </summary>
+        </member>
+        <member name="T:HaiKanDuoDuoKongCRM.Configurations.MappingProfile">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:HaiKanDuoDuoKongCRM.Configurations.MappingProfile.#ctor">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:HaiKanDuoDuoKongCRM.Controllers.AccountController">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:HaiKanDuoDuoKongCRM.Controllers.AccountController.#ctor(HaiKanDuoDuoKongCRM.Entities.dongyangguosuiOAContext)">
+            <summary>
+            
+            </summary>
+            <param name="dbContext"></param>
+        </member>
+        <member name="M:HaiKanDuoDuoKongCRM.Controllers.AccountController.Profile">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanDuoDuoKongCRM.Controllers.AccountController.Menu">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:HaiKanDuoDuoKongCRM.Controllers.MenuItemHelper">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:HaiKanDuoDuoKongCRM.Controllers.MenuItemHelper.BuildTree(System.Collections.Generic.List{HaiKanDuoDuoKongCRM.ViewModels.Rbac.SystemMenu.MenuItem},System.String)">
+            <summary>
+            
+            </summary>
+            <param name="menus"></param>
+            <param name="selectedGuid"></param>
+            <returns></returns>
+        </member>
+        <member name="T:HaiKanDuoDuoKongCRM.Controllers.Api.V1.MessageController">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:HaiKanDuoDuoKongCRM.Controllers.Api.V1.MessageController.Count">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanDuoDuoKongCRM.Controllers.Api.V1.MessageController.Init">
+            <summary>
+            初始化消息标题列表
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanDuoDuoKongCRM.Controllers.Api.V1.MessageController.Content(System.Int32)">
+            <summary>
+            获取指定ID的消息内容
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanDuoDuoKongCRM.Controllers.Api.V1.MessageController.HasRead(System.Int32)">
+            <summary>
+            将消息标为已读
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanDuoDuoKongCRM.Controllers.Api.V1.MessageController.RemoveRead(System.Int32)">
+            <summary>
+            删除已读消息
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanDuoDuoKongCRM.Controllers.Api.V1.MessageController.Restore(System.Int32)">
+            <summary>
+            恢复已删消息
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:HaiKanDuoDuoKongCRM.Controllers.Api.V1.Rbac.RoleController">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:HaiKanDuoDuoKongCRM.Controllers.Api.V1.Rbac.RoleController.#ctor(HaiKanDuoDuoKongCRM.Entities.dongyangguosuiOAContext,AutoMapper.IMapper)">
+            <summary>
+            
+            </summary>
+            <param name="dbContext"></param>
+            <param name="mapper"></param>
+        </member>
+        <member name="M:HaiKanDuoDuoKongCRM.Controllers.Api.V1.Rbac.RoleController.List(HaiKanDuoDuoKongCRM.RequestPayload.Rbac.Role.RoleRequestPayload)">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanDuoDuoKongCRM.Controllers.Api.V1.Rbac.RoleController.Create(HaiKanDuoDuoKongCRM.ViewModels.Rbac.SystemRole.RoleCreateViewModel)">
+            <summary>
+            创建角色
+            </summary>
+            <param name="model">角色视图实体</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanDuoDuoKongCRM.Controllers.Api.V1.Rbac.RoleController.Edit(System.Guid)">
+            <summary>
+            编辑角色
+            </summary>
+            <param name="guid">角色惟一编码</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanDuoDuoKongCRM.Controllers.Api.V1.Rbac.RoleController.Edit(HaiKanDuoDuoKongCRM.ViewModels.Rbac.SystemRole.RoleCreateViewModel)">
+            <summary>
+            保存编辑后的角色信息
+            </summary>
+            <param name="model">角色视图实体</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanDuoDuoKongCRM.Controllers.Api.V1.Rbac.RoleController.Delete(System.String)">
+            <summary>
+            删除角色
+            </summary>
+            <param name="ids">角色ID,多个以逗号分隔</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanDuoDuoKongCRM.Controllers.Api.V1.Rbac.RoleController.Recover(System.String)">
+            <summary>
+            恢复角色
+            </summary>
+            <param name="ids">角色ID,多个以逗号分隔</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanDuoDuoKongCRM.Controllers.Api.V1.Rbac.RoleController.Batch(System.String,System.String)">
+            <summary>
+            批量操作
+            </summary>
+            <param name="command"></param>
+            <param name="ids">角色ID,多个以逗号分隔</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanDuoDuoKongCRM.Controllers.Api.V1.Rbac.RoleController.AssignPermission(HaiKanDuoDuoKongCRM.RequestPayload.Rbac.Role.RoleAssignPermissionPayload)">
+            <summary>
+            为指定角色分配权限
+            </summary>
+            <param name="payload">角色分配权限的请求载体类</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanDuoDuoKongCRM.Controllers.Api.V1.Rbac.RoleController.FindListByUserGuid(System.Guid)">
+            <summary>
+            获取指定用户的角色列表
+            </summary>
+            <param name="guid">用户GUID</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanDuoDuoKongCRM.Controllers.Api.V1.Rbac.RoleController.FindSimpleList">
+            <summary>
+            查询所有角色列表(只包含主要的字段信息:name,code)
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanDuoDuoKongCRM.Controllers.Api.V1.Rbac.RoleController.UpdateIsDelete(HaiKanDuoDuoKongCRM.Entities.Enums.CommonEnum.IsDeleted,System.String)">
+            <summary>
+            删除角色
+            </summary>
+            <param name="isDeleted"></param>
+            <param name="ids">角色ID字符串,多个以逗号隔开</param>
+            <returns></returns>
+        </member>
+        <member name="T:HaiKanDuoDuoKongCRM.Controllers.Api.V1.Rbac.UserController">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:HaiKanDuoDuoKongCRM.Controllers.Api.V1.Rbac.UserController.#ctor(HaiKanDuoDuoKongCRM.Entities.dongyangguosuiOAContext,AutoMapper.IMapper)">
+            <summary>
+            
+            </summary>
+            <param name="dbContext"></param>
+            <param name="mapper"></param>
+        </member>
+        <member name="M:HaiKanDuoDuoKongCRM.Controllers.Api.V1.Rbac.UserController.List(HaiKanDuoDuoKongCRM.RequestPayload.Rbac.User.UserRequestPayload)">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanDuoDuoKongCRM.Controllers.Api.V1.Rbac.UserController.Create(HaiKanDuoDuoKongCRM.ViewModels.Rbac.SystemUser.UserCreateViewModel)">
+            <summary>
+            创建用户
+            </summary>
+            <param name="model">用户视图实体</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanDuoDuoKongCRM.Controllers.Api.V1.Rbac.UserController.RoleList">
+            <summary>
+            获取角色列表
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanDuoDuoKongCRM.Controllers.Api.V1.Rbac.UserController.Edit(System.Guid)">
+            <summary>
+            编辑用户
+            </summary>
+            <param name="guid">用户GUID</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanDuoDuoKongCRM.Controllers.Api.V1.Rbac.UserController.Edit(HaiKanDuoDuoKongCRM.ViewModels.Rbac.SystemUser.UserEditViewModel)">
+            <summary>
+            保存编辑后的用户信息
+            </summary>
+            <param name="model">用户视图实体</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanDuoDuoKongCRM.Controllers.Api.V1.Rbac.UserController.Delete(System.String)">
+            <summary>
+            删除用户
+            </summary>
+            <param name="ids">用户GUID,多个以逗号分隔</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanDuoDuoKongCRM.Controllers.Api.V1.Rbac.UserController.Recover(System.String)">
+            <summary>
+            恢复用户
+            </summary>
+            <param name="ids">用户GUID,多个以逗号分隔</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanDuoDuoKongCRM.Controllers.Api.V1.Rbac.UserController.Batch(System.String,System.String)">
+            <summary>
+            批量操作
+            </summary>
+            <param name="command"></param>
+            <param name="ids">用户ID,多个以逗号分隔</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanDuoDuoKongCRM.Controllers.Api.V1.Rbac.UserController.SaveRoles(HaiKanDuoDuoKongCRM.ViewModels.Rbac.SystemUser.SaveUserRolesViewModel)">
+            <summary>
+            保存用户-角色的关系映射数据
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanDuoDuoKongCRM.Controllers.Api.V1.Rbac.UserController.UpdateIsDelete(HaiKanDuoDuoKongCRM.Entities.Enums.CommonEnum.IsDeleted,System.String)">
+            <summary>
+            删除用户
+            </summary>
+            <param name="isDeleted"></param>
+            <param name="ids">用户ID字符串,多个以逗号隔开</param>
+            <returns></returns>
+        </member>
+        <member name="T:HaiKanDuoDuoKongCRM.Controllers.ErrorController">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:HaiKanDuoDuoKongCRM.Controllers.ErrorController.Code(System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="code"></param>
+            <returns></returns>
+        </member>
+        <member name="T:HaiKanDuoDuoKongCRM.Controllers.OauthController">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:HaiKanDuoDuoKongCRM.Controllers.OauthController.#ctor(Microsoft.Extensions.Options.IOptions{HaiKanDuoDuoKongCRM.Auth.AppAuthenticationSettings},HaiKanDuoDuoKongCRM.Entities.dongyangguosuiOAContext)">
+            <summary>
+            
+            </summary>
+            <param name="appSettings"></param>
+        </member>
+        <member name="M:HaiKanDuoDuoKongCRM.Controllers.OauthController.Auth(System.String,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="username"></param>
+            <param name="password"></param>
+            <returns></returns>
+        </member>
+        <member name="T:HaiKanDuoDuoKongCRM.Controllers.TestController">
+            <summary>
+            测试控制器
+            </summary>
+        </member>
+        <member name="M:HaiKanDuoDuoKongCRM.Controllers.TestController.Logger">
+            <summary>
+            测试日志
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:HaiKanDuoDuoKongCRM.Entities.dongyangguosuiOAContext.SystemPermissionWithAssignProperty">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:HaiKanDuoDuoKongCRM.Entities.dongyangguosuiOAContext.SystemPermissionWithMenu">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:HaiKanDuoDuoKongCRM.Entities.Enums.CommonEnum">
+            <summary>
+            通用枚举类
+            </summary>
+        </member>
+        <member name="T:HaiKanDuoDuoKongCRM.Entities.Enums.CommonEnum.IsDeleted">
+            <summary>
+            是否已删
+            </summary>
+        </member>
+        <member name="F:HaiKanDuoDuoKongCRM.Entities.Enums.CommonEnum.IsDeleted.All">
+            <summary>
+            所有
+            </summary>
+        </member>
+        <member name="F:HaiKanDuoDuoKongCRM.Entities.Enums.CommonEnum.IsDeleted.No">
+            <summary>
+            否
+            </summary>
+        </member>
+        <member name="F:HaiKanDuoDuoKongCRM.Entities.Enums.CommonEnum.IsDeleted.Yes">
+            <summary>
+            是
+            </summary>
+        </member>
+        <member name="T:HaiKanDuoDuoKongCRM.Entities.Enums.CommonEnum.IsLocked">
+            <summary>
+            是否已被锁定
+            </summary>
+        </member>
+        <member name="F:HaiKanDuoDuoKongCRM.Entities.Enums.CommonEnum.IsLocked.UnLocked">
+            <summary>
+            未锁定
+            </summary>
+        </member>
+        <member name="F:HaiKanDuoDuoKongCRM.Entities.Enums.CommonEnum.IsLocked.Locked">
+            <summary>
+            已锁定
+            </summary>
+        </member>
+        <member name="T:HaiKanDuoDuoKongCRM.Entities.Enums.CommonEnum.IsEnabled">
+            <summary>
+            是否可用
+            </summary>
+        </member>
+        <member name="F:HaiKanDuoDuoKongCRM.Entities.Enums.CommonEnum.IsEnabled.No">
+            <summary>
+            否
+            </summary>
+        </member>
+        <member name="F:HaiKanDuoDuoKongCRM.Entities.Enums.CommonEnum.IsEnabled.Yes">
+            <summary>
+            是
+            </summary>
+        </member>
+        <member name="T:HaiKanDuoDuoKongCRM.Entities.Enums.CommonEnum.Status">
+            <summary>
+            用户状态
+            </summary>
+        </member>
+        <member name="F:HaiKanDuoDuoKongCRM.Entities.Enums.CommonEnum.Status.All">
+            <summary>
+            未指定
+            </summary>
+        </member>
+        <member name="F:HaiKanDuoDuoKongCRM.Entities.Enums.CommonEnum.Status.Forbidden">
+            <summary>
+            已禁用
+            </summary>
+        </member>
+        <member name="F:HaiKanDuoDuoKongCRM.Entities.Enums.CommonEnum.Status.Normal">
+            <summary>
+            正常
+            </summary>
+        </member>
+        <member name="T:HaiKanDuoDuoKongCRM.Entities.Enums.CommonEnum.PermissionType">
+            <summary>
+            权限类型
+            </summary>
+        </member>
+        <member name="F:HaiKanDuoDuoKongCRM.Entities.Enums.CommonEnum.PermissionType.Menu">
+            <summary>
+            菜单
+            </summary>
+        </member>
+        <member name="F:HaiKanDuoDuoKongCRM.Entities.Enums.CommonEnum.PermissionType.Action">
+            <summary>
+            按钮/操作/功能
+            </summary>
+        </member>
+        <member name="T:HaiKanDuoDuoKongCRM.Entities.Enums.CommonEnum.YesOrNo">
+            <summary>
+            是否枚举
+            </summary>
+        </member>
+        <member name="F:HaiKanDuoDuoKongCRM.Entities.Enums.CommonEnum.YesOrNo.All">
+            <summary>
+            所有
+            </summary>
+        </member>
+        <member name="F:HaiKanDuoDuoKongCRM.Entities.Enums.CommonEnum.YesOrNo.No">
+            <summary>
+            否
+            </summary>
+        </member>
+        <member name="F:HaiKanDuoDuoKongCRM.Entities.Enums.CommonEnum.YesOrNo.Yes">
+            <summary>
+            是
+            </summary>
+        </member>
+        <member name="T:HaiKanDuoDuoKongCRM.Entities.QueryModels.SystemPermission.SystemPermissionWithAssignProperty">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:HaiKanDuoDuoKongCRM.Entities.QueryModels.SystemPermission.SystemPermissionWithAssignProperty.Code">
+            <summary>
+            权限编码
+            </summary>
+        </member>
+        <member name="P:HaiKanDuoDuoKongCRM.Entities.QueryModels.SystemPermission.SystemPermissionWithAssignProperty.Name">
+            <summary>
+            权限名称
+            </summary>
+        </member>
+        <member name="P:HaiKanDuoDuoKongCRM.Entities.QueryModels.SystemPermission.SystemPermissionWithAssignProperty.MenuGuid">
+            <summary>
+            权限关联的菜单GUID
+            </summary>
+        </member>
+        <member name="P:HaiKanDuoDuoKongCRM.Entities.QueryModels.SystemPermission.SystemPermissionWithAssignProperty.ActionCode">
+            <summary>
+            权限操作码
+            </summary>
+        </member>
+        <member name="P:HaiKanDuoDuoKongCRM.Entities.QueryModels.SystemPermission.SystemPermissionWithAssignProperty.RoleCode">
+            <summary>
+            角色编码
+            </summary>
+        </member>
+        <member name="P:HaiKanDuoDuoKongCRM.Entities.QueryModels.SystemPermission.SystemPermissionWithAssignProperty.IsAssigned">
+            <summary>
+            权限是否已分配到当前角色
+            </summary>
+        </member>
+        <member name="T:HaiKanDuoDuoKongCRM.Entities.QueryModels.SystemPermission.SystemPermissionWithMenu">
+            <summary>
+            权限实体类
+            </summary>
+        </member>
+        <member name="P:HaiKanDuoDuoKongCRM.Entities.QueryModels.SystemPermission.SystemPermissionWithMenu.PermissionCode">
+            <summary>
+            权限码
+            </summary>
+        </member>
+        <member name="P:HaiKanDuoDuoKongCRM.Entities.QueryModels.SystemPermission.SystemPermissionWithMenu.PermissionActionCode">
+            <summary>
+            权限操作码
+            </summary>
+        </member>
+        <member name="P:HaiKanDuoDuoKongCRM.Entities.QueryModels.SystemPermission.SystemPermissionWithMenu.PermissionName">
+            <summary>
+            权限名称
+            </summary>
+        </member>
+        <member name="P:HaiKanDuoDuoKongCRM.Entities.QueryModels.SystemPermission.SystemPermissionWithMenu.PermissionType">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:HaiKanDuoDuoKongCRM.Entities.QueryModels.SystemPermission.SystemPermissionWithMenu.MenuName">
+            <summary>
+            菜单名称
+            </summary>
+        </member>
+        <member name="P:HaiKanDuoDuoKongCRM.Entities.QueryModels.SystemPermission.SystemPermissionWithMenu.MenuGuid">
+            <summary>
+            菜单GUID
+            </summary>
+        </member>
+        <member name="P:HaiKanDuoDuoKongCRM.Entities.QueryModels.SystemPermission.SystemPermissionWithMenu.MenuAlias">
+            <summary>
+            菜单别名(与前端路由配置中的name值保持一致)
+            </summary>
+        </member>
+        <member name="P:HaiKanDuoDuoKongCRM.Entities.QueryModels.SystemPermission.SystemPermissionWithMenu.IsDefaultRouter">
+            <summary>
+            是否是默认前端路由
+            </summary>
+        </member>
+        <member name="P:HaiKanDuoDuoKongCRM.Entities.SystemPermission.Menu">
+            <summary>
+            关联的菜单
+            </summary>
+        </member>
+        <member name="P:HaiKanDuoDuoKongCRM.Entities.SystemPermission.Roles">
+            <summary>
+            权限所属的角色集合
+            </summary>
+        </member>
+        <member name="T:HaiKanDuoDuoKongCRM.Entities.UserType">
+            <summary>
+            用户类型
+            </summary>
+        </member>
+        <member name="F:HaiKanDuoDuoKongCRM.Entities.UserType.SuperAdministrator">
+            <summary>
+            超级管理员
+            </summary>
+        </member>
+        <member name="F:HaiKanDuoDuoKongCRM.Entities.UserType.Admin">
+            <summary>
+            管理员
+            </summary>
+        </member>
+        <member name="F:HaiKanDuoDuoKongCRM.Entities.UserType.GeneralUser">
+            <summary>
+            一般用户
+            </summary>
+        </member>
+        <member name="T:HaiKanDuoDuoKongCRM.Entities.UserStatus">
+            <summary>
+            用户状态
+            </summary>
+        </member>
+        <member name="F:HaiKanDuoDuoKongCRM.Entities.UserStatus.All">
+            <summary>
+            未指定
+            </summary>
+        </member>
+        <member name="F:HaiKanDuoDuoKongCRM.Entities.UserStatus.Forbidden">
+            <summary>
+            已禁用
+            </summary>
+        </member>
+        <member name="F:HaiKanDuoDuoKongCRM.Entities.UserStatus.Normal">
+            <summary>
+            正常
+            </summary>
+        </member>
+        <member name="M:HaiKanDuoDuoKongCRM.Extensions.AuthContext.AuthContextService.Configure(Microsoft.AspNetCore.Http.IHttpContextAccessor)">
+            <summary>
+            
+            </summary>
+            <param name="httpContextAccessor"></param>
+        </member>
+        <member name="P:HaiKanDuoDuoKongCRM.Extensions.AuthContext.AuthContextService.Current">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:HaiKanDuoDuoKongCRM.Extensions.AuthContext.AuthContextService.CurrentUser">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:HaiKanDuoDuoKongCRM.Extensions.AuthContext.AuthContextService.IsAuthenticated">
+            <summary>
+            是否已授权
+            </summary>
+        </member>
+        <member name="P:HaiKanDuoDuoKongCRM.Extensions.AuthContext.AuthContextService.IsSupperAdministator">
+            <summary>
+            是否是超级管理员
+            </summary>
+        </member>
+        <member name="T:HaiKanDuoDuoKongCRM.Extensions.AuthContext.AuthContextUser">
+            <summary>
+            登录用户上下文
+            </summary>
+        </member>
+        <member name="P:HaiKanDuoDuoKongCRM.Extensions.AuthContext.AuthContextUser.Guid">
+            <summary>
+            用户GUID
+            </summary>
+        </member>
+        <member name="P:HaiKanDuoDuoKongCRM.Extensions.AuthContext.AuthContextUser.DisplayName">
+            <summary>
+            显示名
+            </summary>
+        </member>
+        <member name="P:HaiKanDuoDuoKongCRM.Extensions.AuthContext.AuthContextUser.LoginName">
+            <summary>
+            登录名
+            </summary>
+        </member>
+        <member name="P:HaiKanDuoDuoKongCRM.Extensions.AuthContext.AuthContextUser.EmailAddress">
+            <summary>
+            电子邮箱
+            </summary>
+        </member>
+        <member name="P:HaiKanDuoDuoKongCRM.Extensions.AuthContext.AuthContextUser.UserType">
+            <summary>
+            用户类型
+            </summary>
+        </member>
+        <member name="P:HaiKanDuoDuoKongCRM.Extensions.AuthContext.AuthContextUser.Avator">
+            <summary>
+            头像地址
+            </summary>
+        </member>
+        <member name="T:HaiKanDuoDuoKongCRM.Extensions.ConfigurationManager">
+            <summary>
+            配置文件管理器
+            </summary>
+        </member>
+        <member name="P:HaiKanDuoDuoKongCRM.Extensions.ConfigurationManager.Configuration">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:HaiKanDuoDuoKongCRM.Extensions.ConfigurationManager.AppSettings">
+            <summary>
+            读取配置文件[AppSettings]节点数据
+            </summary>
+        </member>
+        <member name="T:HaiKanDuoDuoKongCRM.Extensions.CustomException.CanAccess">
+            <summary>
+            用户可以访问的控制器及操作权限
+            </summary>
+        </member>
+        <member name="P:HaiKanDuoDuoKongCRM.Extensions.CustomException.CanAccess.Controller">
+            <summary>
+            控制器
+            </summary>
+        </member>
+        <member name="P:HaiKanDuoDuoKongCRM.Extensions.CustomException.CanAccess.Actions">
+            <summary>
+            Action集合
+            </summary>
+        </member>
+        <member name="T:HaiKanDuoDuoKongCRM.Extensions.CustomException.OwnedApiPermission">
+            <summary>
+            用户拥有的API操作权限
+            </summary>
+        </member>
+        <member name="M:HaiKanDuoDuoKongCRM.Extensions.CustomException.OwnedApiPermission.#ctor">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:HaiKanDuoDuoKongCRM.Extensions.CustomException.OwnedApiPermission.CanAccesses">
+            <summary>
+            可以访问的API控制器集合
+            </summary>
+        </member>
+        <member name="M:HaiKanDuoDuoKongCRM.Extensions.CustomException.OwnedApiPermission.Can(System.String,System.String)">
+            <summary>
+            是否可以访问
+            </summary>
+            <param name="controller"></param>
+            <param name="action"></param>
+            <returns></returns>
+        </member>
+        <member name="T:HaiKanDuoDuoKongCRM.Extensions.CustomException.CustomAuthorizeAttribute">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:HaiKanDuoDuoKongCRM.Extensions.CustomException.CustomAuthorizeAttribute.#ctor">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:HaiKanDuoDuoKongCRM.Extensions.CustomException.CustomAuthorizeAttribute.ActionAlias">
+            <summary>
+            操作的别名
+            </summary>
+        </member>
+        <member name="M:HaiKanDuoDuoKongCRM.Extensions.CustomException.CustomAuthorizeAttribute.OnAuthorization(Microsoft.AspNetCore.Mvc.Filters.AuthorizationFilterContext)">
+            <summary>
+            
+            </summary>
+            <param name="context"></param>
+        </member>
+        <member name="T:HaiKanDuoDuoKongCRM.Extensions.CustomException.ExceptionMiddleware">
+            <summary>
+            异常中间件
+            </summary>
+        </member>
+        <member name="M:HaiKanDuoDuoKongCRM.Extensions.CustomException.ExceptionMiddleware.#ctor(Microsoft.AspNetCore.Http.RequestDelegate)">
+            <summary>
+            
+            </summary>
+            <param name="next"></param>
+        </member>
+        <member name="T:HaiKanDuoDuoKongCRM.Extensions.CustomException.HttpException">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:HaiKanDuoDuoKongCRM.Extensions.CustomException.HttpException.#ctor(System.Net.HttpStatusCode)">
+            <summary>
+            
+            </summary>
+            <param name="statusCode"></param>
+        </member>
+        <member name="P:HaiKanDuoDuoKongCRM.Extensions.CustomException.HttpException.StatusCode">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:HaiKanDuoDuoKongCRM.Extensions.CustomException.UnauthorizeException">
+            <summary>
+            未授权的异常类
+            </summary>
+        </member>
+        <member name="M:HaiKanDuoDuoKongCRM.Extensions.CustomException.UnauthorizeException.#ctor">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:HaiKanDuoDuoKongCRM.Extensions.CustomException.ValidateModelAttribute">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:HaiKanDuoDuoKongCRM.Extensions.CustomException.ValidateModelAttribute.OnActionExecuting(Microsoft.AspNetCore.Mvc.Filters.ActionExecutingContext)">
+            <summary>
+            
+            </summary>
+            <param name="actionContext"></param>
+        </member>
+        <member name="T:HaiKanDuoDuoKongCRM.Extensions.DataAccess.EntityFrameworkExtension">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:HaiKanDuoDuoKongCRM.Extensions.DataAccess.EntityFrameworkExtension.FromSql``1(Microsoft.EntityFrameworkCore.Infrastructure.DatabaseFacade,System.String,System.Object)">
+            <summary>
+            调用ADO.NET执行SQL语句查询泛型集合
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="database">数据库连接上下文</param>
+            <param name="sql">SQL语句</param>
+            <param name="parameters">SQL语句需要的参数</param>
+            <returns></returns>
+        </member>
+        <member name="T:HaiKanDuoDuoKongCRM.Extensions.DataAccess.OrderByExtensions">
+            <summary>
+            排序静态扩展类
+            </summary>
+        </member>
+        <member name="T:HaiKanDuoDuoKongCRM.Extensions.DataAccess.QueryParamNameAttribute">
+            <summary>
+            Use for an alternative param name other than the propery name
+            </summary>
+        </member>
+        <member name="T:HaiKanDuoDuoKongCRM.Extensions.DataAccess.QueryParamIgnoreAttribute">
+            <summary>
+            Ignore this property
+            </summary>
+        </member>
+        <member name="T:HaiKanDuoDuoKongCRM.Extensions.DataAccess.TypeConvertor">
+            <summary>
+            Convert a base data type to another base data type
+            </summary>
+        </member>
+        <member name="M:HaiKanDuoDuoKongCRM.Extensions.DataAccess.TypeConvertor.ToNetType(System.Data.DbType)">
+            <summary>
+            Convert db type to .Net data type
+            </summary>
+            <param name="dbType"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanDuoDuoKongCRM.Extensions.DataAccess.TypeConvertor.ToNetType(System.Data.SqlDbType)">
+            <summary>
+            Convert TSQL type to .Net data type
+            </summary>
+            <param name="sqlDbType"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanDuoDuoKongCRM.Extensions.DataAccess.TypeConvertor.ToDbType(System.Type)">
+            <summary>
+            Convert .Net type to Db type
+            </summary>
+            <param name="type"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanDuoDuoKongCRM.Extensions.DataAccess.TypeConvertor.ToDbType(System.Data.SqlDbType)">
+            <summary>
+            Convert TSQL data type to DbType
+            </summary>
+            <param name="sqlDbType"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanDuoDuoKongCRM.Extensions.DataAccess.TypeConvertor.ToSqlDbType(System.Type)">
+            <summary>
+            Convert .Net type to TSQL data type
+            </summary>
+            <param name="type"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanDuoDuoKongCRM.Extensions.DataAccess.TypeConvertor.ToSqlDbType(System.Data.DbType)">
+            <summary>
+            Convert DbType type to TSQL data type
+            </summary>
+            <param name="dbType"></param>
+            <returns></returns>
+        </member>
+        <member name="T:HaiKanDuoDuoKongCRM.Extensions.DataTableConvert">
+            <summary>
+            把datatable转换为对象集合列表List&lt;T&gt;
+            </summary>
+        </member>
+        <member name="M:HaiKanDuoDuoKongCRM.Extensions.DataTableConvert.ToList``1(System.Data.DataTable)">
+            <summary>
+            将DataTable转换成泛型对象列表
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="dt"></param>
+            <returns></returns>
+        </member>
+        <member name="T:HaiKanDuoDuoKongCRM.Extensions.QueryableExtension">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:HaiKanDuoDuoKongCRM.Extensions.QueryableExtension.Paged``1(System.Linq.IQueryable{``0},System.Int32,System.Int32)">
+            <summary>
+            IQueryable分页
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="query"></param>
+            <param name="currentPage"></param>
+            <param name="pageSize"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanDuoDuoKongCRM.Extensions.QueryableExtension.ToSql``1(System.Linq.IQueryable{``0})">
+            <summary>
+            
+            </summary>
+            <typeparam name="TEntity"></typeparam>
+            <param name="query"></param>
+            <returns></returns>
+        </member>
+        <member name="T:HaiKanDuoDuoKongCRM.Extensions.ResponseModelFactory">
+            <summary>
+            /
+            </summary>
+        </member>
+        <member name="P:HaiKanDuoDuoKongCRM.Extensions.ResponseModelFactory.CreateInstance">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:HaiKanDuoDuoKongCRM.Extensions.ResponseModelFactory.CreateResultInstance">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:HaiKanDuoDuoKongCRM.Models.Menu.Router">
+            <summary>
+            用于前端的路由对象
+            </summary>
+        </member>
+        <member name="T:HaiKanDuoDuoKongCRM.Models.Menu.RouterMeta">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:HaiKanDuoDuoKongCRM.Models.Response.ResponseModel">
+            <summary>
+            请求响应实体
+            </summary>
+        </member>
+        <member name="M:HaiKanDuoDuoKongCRM.Models.Response.ResponseModel.#ctor">
+            <summary>
+            请求响应实体类
+            </summary>
+        </member>
+        <member name="P:HaiKanDuoDuoKongCRM.Models.Response.ResponseModel.Code">
+            <summary>
+            响应代码
+            </summary>
+        </member>
+        <member name="P:HaiKanDuoDuoKongCRM.Models.Response.ResponseModel.Message">
+            <summary>
+            响应消息内容
+            </summary>
+        </member>
+        <member name="P:HaiKanDuoDuoKongCRM.Models.Response.ResponseModel.Data">
+            <summary>
+            返回的响应数据
+            </summary>
+        </member>
+        <member name="M:HaiKanDuoDuoKongCRM.Models.Response.ResponseModel.SetSuccess(System.String)">
+            <summary>
+            设置响应状态为成功
+            </summary>
+            <param name="message"></param>
+        </member>
+        <member name="M:HaiKanDuoDuoKongCRM.Models.Response.ResponseModel.SetFailed(System.String)">
+            <summary>
+            设置响应状态为失败
+            </summary>
+            <param name="message"></param>
+        </member>
+        <member name="M:HaiKanDuoDuoKongCRM.Models.Response.ResponseModel.SetIsTrial(System.String)">
+            <summary>
+            设置响应状态为体验版(返回失败结果)
+            </summary>
+            <param name="message"></param>
+        </member>
+        <member name="M:HaiKanDuoDuoKongCRM.Models.Response.ResponseModel.SetError(System.String)">
+            <summary>
+            设置响应状态为错误
+            </summary>
+            <param name="message"></param>
+        </member>
+        <member name="M:HaiKanDuoDuoKongCRM.Models.Response.ResponseModel.SetNotFound(System.String)">
+            <summary>
+            设置响应状态为未知资源
+            </summary>
+            <param name="message"></param>
+        </member>
+        <member name="M:HaiKanDuoDuoKongCRM.Models.Response.ResponseModel.SetNoPermission(System.String)">
+            <summary>
+            设置响应状态为无权限
+            </summary>
+            <param name="message"></param>
+        </member>
+        <member name="M:HaiKanDuoDuoKongCRM.Models.Response.ResponseModel.SetData(System.Object)">
+            <summary>
+            设置响应数据
+            </summary>
+            <param name="data"></param>
+        </member>
+        <member name="T:HaiKanDuoDuoKongCRM.Models.Response.ResponseResultModel">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:HaiKanDuoDuoKongCRM.Models.Response.ResponseResultModel.TotalCount">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:HaiKanDuoDuoKongCRM.Models.Response.ResponseResultModel.SetData(System.Object,System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="data"></param>
+            <param name="totalCount"></param>
+        </member>
+        <member name="T:HaiKanDuoDuoKongCRM.RequestPayload.Rbac.Menu.MenuRequestPayload">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:HaiKanDuoDuoKongCRM.RequestPayload.Rbac.Menu.MenuRequestPayload.IsDeleted">
+            <summary>
+            是否已被删除
+            </summary>
+        </member>
+        <member name="P:HaiKanDuoDuoKongCRM.RequestPayload.Rbac.Menu.MenuRequestPayload.Status">
+            <summary>
+            状态
+            </summary>
+        </member>
+        <member name="P:HaiKanDuoDuoKongCRM.RequestPayload.Rbac.Menu.MenuRequestPayload.ParentGuid">
+            <summary>
+            上级菜单GUID
+            </summary>
+        </member>
+        <member name="T:HaiKanDuoDuoKongCRM.RequestPayload.Rbac.Permission.PermissionRequestPayload">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:HaiKanDuoDuoKongCRM.RequestPayload.Rbac.Permission.PermissionRequestPayload.IsDeleted">
+            <summary>
+            是否已被删除
+            </summary>
+        </member>
+        <member name="P:HaiKanDuoDuoKongCRM.RequestPayload.Rbac.Permission.PermissionRequestPayload.Status">
+            <summary>
+            状态
+            </summary>
+        </member>
+        <member name="P:HaiKanDuoDuoKongCRM.RequestPayload.Rbac.Permission.PermissionRequestPayload.MenuGuid">
+            <summary>
+            关联菜单GUID
+            </summary>
+        </member>
+        <member name="T:HaiKanDuoDuoKongCRM.RequestPayload.Rbac.Role.RoleAssignPermissionPayload">
+            <summary>
+            角色分配权限的请求载体类
+            </summary>
+        </member>
+        <member name="M:HaiKanDuoDuoKongCRM.RequestPayload.Rbac.Role.RoleAssignPermissionPayload.#ctor">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:HaiKanDuoDuoKongCRM.RequestPayload.Rbac.Role.RoleAssignPermissionPayload.RoleCode">
+            <summary>
+            角色编码
+            </summary>
+        </member>
+        <member name="P:HaiKanDuoDuoKongCRM.RequestPayload.Rbac.Role.RoleAssignPermissionPayload.Permissions">
+            <summary>
+            权限列表
+            </summary>
+        </member>
+        <member name="T:HaiKanDuoDuoKongCRM.RequestPayload.Rbac.Role.RoleRequestPayload">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:HaiKanDuoDuoKongCRM.RequestPayload.Rbac.Role.RoleRequestPayload.IsDeleted">
+            <summary>
+            是否已被删除
+            </summary>
+        </member>
+        <member name="P:HaiKanDuoDuoKongCRM.RequestPayload.Rbac.Role.RoleRequestPayload.Status">
+            <summary>
+            状态
+            </summary>
+        </member>
+        <member name="T:HaiKanDuoDuoKongCRM.RequestPayload.Rbac.User.UserRequestPayload">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:HaiKanDuoDuoKongCRM.RequestPayload.Rbac.User.UserRequestPayload.IsDeleted">
+            <summary>
+            是否已被删除
+            </summary>
+        </member>
+        <member name="T:HaiKanDuoDuoKongCRM.RequestPayload.RequestPayload">
+            <summary>
+            请求实体
+            </summary>
+        </member>
+        <member name="M:HaiKanDuoDuoKongCRM.RequestPayload.RequestPayload.#ctor">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:HaiKanDuoDuoKongCRM.RequestPayload.RequestPayload.PageSize">
+            <summary>
+            分页大小
+            </summary>
+        </member>
+        <member name="P:HaiKanDuoDuoKongCRM.RequestPayload.RequestPayload.CurrentPage">
+            <summary>
+            当前页码
+            </summary>
+        </member>
+        <member name="P:HaiKanDuoDuoKongCRM.RequestPayload.RequestPayload.Sort">
+            <summary>
+            排序对象集合(支持多个字段排序)
+            </summary>
+        </member>
+        <member name="P:HaiKanDuoDuoKongCRM.RequestPayload.RequestPayload.OrderBy">
+            <summary>
+            组合后的排序字符串
+            </summary>
+        </member>
+        <member name="P:HaiKanDuoDuoKongCRM.RequestPayload.RequestPayload.FirstSort">
+            <summary>
+            第一个排序字段(单个字段排序)
+            </summary>
+        </member>
+        <member name="P:HaiKanDuoDuoKongCRM.RequestPayload.RequestPayload.Kw">
+            <summary>
+            搜索关键字
+            </summary>
+        </member>
+        <member name="T:HaiKanDuoDuoKongCRM.RequestPayload.Sort">
+            <summary>
+            排序实体对象
+            </summary>
+        </member>
+        <member name="M:HaiKanDuoDuoKongCRM.RequestPayload.Sort.#ctor">
+            <summary>
+            排序实体对象构造函数
+            </summary>
+        </member>
+        <member name="P:HaiKanDuoDuoKongCRM.RequestPayload.Sort.Field">
+            <summary>
+            排序字段
+            </summary>
+        </member>
+        <member name="P:HaiKanDuoDuoKongCRM.RequestPayload.Sort.Direct">
+            <summary>
+            排序方向
+            </summary>
+        </member>
+        <member name="M:HaiKanDuoDuoKongCRM.Startup.ConfigureServices(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            
+            </summary>
+            <param name="services"></param>
+        </member>
+        <member name="M:HaiKanDuoDuoKongCRM.Startup.Configure(Microsoft.AspNetCore.Builder.IApplicationBuilder,Microsoft.AspNetCore.Hosting.IHostingEnvironment)">
+            <summary>
+            This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
+            </summary>
+            <param name="app"></param>
+            <param name="env"></param>
+        </member>
+        <member name="T:HaiKanDuoDuoKongCRM.ViewModels.Rbac.SystemMenu.MenuCreateViewModel">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:HaiKanDuoDuoKongCRM.ViewModels.Rbac.SystemMenu.MenuCreateViewModel.Name">
+            <summary>
+            菜单名称
+            </summary>
+        </member>
+        <member name="P:HaiKanDuoDuoKongCRM.ViewModels.Rbac.SystemMenu.MenuCreateViewModel.Url">
+            <summary>
+            链接地址
+            </summary>
+        </member>
+        <member name="P:HaiKanDuoDuoKongCRM.ViewModels.Rbac.SystemMenu.MenuCreateViewModel.Alias">
+            <summary>
+            页面别名
+            </summary>
+        </member>
+        <member name="P:HaiKanDuoDuoKongCRM.ViewModels.Rbac.SystemMenu.MenuCreateViewModel.Icon">
+            <summary>
+            菜单图标(可选)
+            </summary>
+        </member>
+        <member name="P:HaiKanDuoDuoKongCRM.ViewModels.Rbac.SystemMenu.MenuCreateViewModel.ParentGuid">
+            <summary>
+            父级GUID
+            </summary>
+        </member>
+        <member name="P:HaiKanDuoDuoKongCRM.ViewModels.Rbac.SystemMenu.MenuCreateViewModel.ParentName">
+            <summary>
+            上级菜单名称
+            </summary>
+        </member>
+        <member name="P:HaiKanDuoDuoKongCRM.ViewModels.Rbac.SystemMenu.MenuCreateViewModel.Level">
+            <summary>
+            菜单层级深度
+            </summary>
+        </member>
+        <member name="P:HaiKanDuoDuoKongCRM.ViewModels.Rbac.SystemMenu.MenuCreateViewModel.Description">
+            <summary>
+            描述信息
+            </summary>
+        </member>
+        <member name="P:HaiKanDuoDuoKongCRM.ViewModels.Rbac.SystemMenu.MenuCreateViewModel.Sort">
+            <summary>
+            排序
+            </summary>
+        </member>
+        <member name="P:HaiKanDuoDuoKongCRM.ViewModels.Rbac.SystemMenu.MenuCreateViewModel.Status">
+            <summary>
+            是否可用(0:禁用,1:可用)
+            </summary>
+        </member>
+        <member name="P:HaiKanDuoDuoKongCRM.ViewModels.Rbac.SystemMenu.MenuCreateViewModel.IsDeleted">
+            <summary>
+            是否已删
+            </summary>
+        </member>
+        <member name="P:HaiKanDuoDuoKongCRM.ViewModels.Rbac.SystemMenu.MenuCreateViewModel.IsDefaultRouter">
+            <summary>
+            是否为默认路由
+            </summary>
+        </member>
+        <member name="P:HaiKanDuoDuoKongCRM.ViewModels.Rbac.SystemMenu.MenuCreateViewModel.Component">
+            <summary>
+            前端组件(.vue)
+            </summary>
+        </member>
+        <member name="P:HaiKanDuoDuoKongCRM.ViewModels.Rbac.SystemMenu.MenuCreateViewModel.HideInMenu">
+            <summary>
+            在菜单中隐藏
+            </summary>
+        </member>
+        <member name="P:HaiKanDuoDuoKongCRM.ViewModels.Rbac.SystemMenu.MenuCreateViewModel.NotCache">
+            <summary>
+            不缓存页面
+            </summary>
+        </member>
+        <member name="P:HaiKanDuoDuoKongCRM.ViewModels.Rbac.SystemMenu.MenuCreateViewModel.BeforeCloseFun">
+            <summary>
+            页面关闭前的回调函数
+            </summary>
+        </member>
+        <member name="T:HaiKanDuoDuoKongCRM.ViewModels.Rbac.SystemMenu.MenuEditViewModel">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:HaiKanDuoDuoKongCRM.ViewModels.Rbac.SystemMenu.MenuEditViewModel.SystemMenuUuid">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:HaiKanDuoDuoKongCRM.ViewModels.Rbac.SystemMenu.MenuEditViewModel.Name">
+            <summary>
+            菜单名称
+            </summary>
+        </member>
+        <member name="P:HaiKanDuoDuoKongCRM.ViewModels.Rbac.SystemMenu.MenuEditViewModel.Url">
+            <summary>
+            链接地址
+            </summary>
+        </member>
+        <member name="P:HaiKanDuoDuoKongCRM.ViewModels.Rbac.SystemMenu.MenuEditViewModel.Alias">
+            <summary>
+            页面别名
+            </summary>
+        </member>
+        <member name="P:HaiKanDuoDuoKongCRM.ViewModels.Rbac.SystemMenu.MenuEditViewModel.Icon">
+            <summary>
+            菜单图标(可选)
+            </summary>
+        </member>
+        <member name="P:HaiKanDuoDuoKongCRM.ViewModels.Rbac.SystemMenu.MenuEditViewModel.ParentGuid">
+            <summary>
+            父级GUID
+            </summary>
+        </member>
+        <member name="P:HaiKanDuoDuoKongCRM.ViewModels.Rbac.SystemMenu.MenuEditViewModel.ParentName">
+            <summary>
+            上级菜单名称
+            </summary>
+        </member>
+        <member name="P:HaiKanDuoDuoKongCRM.ViewModels.Rbac.SystemMenu.MenuEditViewModel.Level">
+            <summary>
+            菜单层级深度
+            </summary>
+        </member>
+        <member name="P:HaiKanDuoDuoKongCRM.ViewModels.Rbac.SystemMenu.MenuEditViewModel.Description">
+            <summary>
+            描述信息
+            </summary>
+        </member>
+        <member name="P:HaiKanDuoDuoKongCRM.ViewModels.Rbac.SystemMenu.MenuEditViewModel.Sort">
+            <summary>
+            排序
+            </summary>
+        </member>
+        <member name="P:HaiKanDuoDuoKongCRM.ViewModels.Rbac.SystemMenu.MenuEditViewModel.Status">
+            <summary>
+            是否可用(0:禁用,1:可用)
+            </summary>
+        </member>
+        <member name="P:HaiKanDuoDuoKongCRM.ViewModels.Rbac.SystemMenu.MenuEditViewModel.IsDeleted">
+            <summary>
+            是否已删
+            </summary>
+        </member>
+        <member name="P:HaiKanDuoDuoKongCRM.ViewModels.Rbac.SystemMenu.MenuEditViewModel.IsDefaultRouter">
+            <summary>
+            是否为默认路由
+            </summary>
+        </member>
+        <member name="P:HaiKanDuoDuoKongCRM.ViewModels.Rbac.SystemMenu.MenuEditViewModel.Component">
+            <summary>
+            前端组件(.vue)
+            </summary>
+        </member>
+        <member name="P:HaiKanDuoDuoKongCRM.ViewModels.Rbac.SystemMenu.MenuEditViewModel.HideInMenu">
+            <summary>
+            在菜单中隐藏
+            </summary>
+        </member>
+        <member name="P:HaiKanDuoDuoKongCRM.ViewModels.Rbac.SystemMenu.MenuEditViewModel.NotCache">
+            <summary>
+            不缓存页面
+            </summary>
+        </member>
+        <member name="P:HaiKanDuoDuoKongCRM.ViewModels.Rbac.SystemMenu.MenuEditViewModel.BeforeCloseFun">
+            <summary>
+            页面关闭前的回调函数
+            </summary>
+        </member>
+        <member name="T:HaiKanDuoDuoKongCRM.ViewModels.Rbac.SystemMenu.MenuJsonModel">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:HaiKanDuoDuoKongCRM.ViewModels.Rbac.SystemMenu.MenuTree">
+            <summary>
+            用于iview的菜单树
+            </summary>
+        </member>
+        <member name="M:HaiKanDuoDuoKongCRM.ViewModels.Rbac.SystemMenu.MenuTree.#ctor">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:HaiKanDuoDuoKongCRM.ViewModels.Rbac.SystemMenu.MenuTree.Guid">
+            <summary>
+            GUID
+            </summary>
+        </member>
+        <member name="P:HaiKanDuoDuoKongCRM.ViewModels.Rbac.SystemMenu.MenuTree.ParentGuid">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:HaiKanDuoDuoKongCRM.ViewModels.Rbac.SystemMenu.MenuTree.Title">
+            <summary>
+            标题(菜单名称)
+            </summary>
+        </member>
+        <member name="P:HaiKanDuoDuoKongCRM.ViewModels.Rbac.SystemMenu.MenuTree.Expand">
+            <summary>
+            是否展开子节点
+            </summary>
+        </member>
+        <member name="P:HaiKanDuoDuoKongCRM.ViewModels.Rbac.SystemMenu.MenuTree.Disabled">
+            <summary>
+            禁掉响应
+            </summary>
+        </member>
+        <member name="P:HaiKanDuoDuoKongCRM.ViewModels.Rbac.SystemMenu.MenuTree.DisableCheckbox">
+            <summary>
+            禁掉 checkbox
+            </summary>
+        </member>
+        <member name="P:HaiKanDuoDuoKongCRM.ViewModels.Rbac.SystemMenu.MenuTree.Selected">
+            <summary>
+            是否选中子节点	
+            </summary>
+        </member>
+        <member name="P:HaiKanDuoDuoKongCRM.ViewModels.Rbac.SystemMenu.MenuTree.Checked">
+            <summary>
+            是否勾选(如果勾选，子节点也会全部勾选)
+            </summary>
+        </member>
+        <member name="P:HaiKanDuoDuoKongCRM.ViewModels.Rbac.SystemMenu.MenuTree.Children">
+            <summary>
+            子节点属性数组
+            </summary>
+        </member>
+        <member name="T:HaiKanDuoDuoKongCRM.ViewModels.Rbac.SystemPermission.PermissionCreateViewModel">
+            <summary>
+            权限实体类
+            </summary>
+        </member>
+        <member name="T:HaiKanDuoDuoKongCRM.ViewModels.Rbac.SystemPermission.PermissionEditViewModel">
+            <summary>
+            权限实体类
+            </summary>
+        </member>
+        <member name="P:HaiKanDuoDuoKongCRM.ViewModels.Rbac.SystemPermission.PermissionEditViewModel.MenuName">
+            <summary>
+            菜单名称
+            </summary>
+        </member>
+        <member name="T:HaiKanDuoDuoKongCRM.ViewModels.Rbac.SystemPermission.PermissionJsonModel">
+            <summary>
+            权限实体类
+            </summary>
+        </member>
+        <member name="P:HaiKanDuoDuoKongCRM.ViewModels.Rbac.SystemPermission.PermissionJsonModel.MenuName">
+            <summary>
+            菜单名称
+            </summary>
+        </member>
+        <member name="P:HaiKanDuoDuoKongCRM.ViewModels.Rbac.SystemPermission.PermissionJsonModel.PermissionTypeText">
+            <summary>
+            权限类型的显示文本
+            </summary>
+        </member>
+        <member name="T:HaiKanDuoDuoKongCRM.ViewModels.Rbac.SystemPermission.PermissionMenuTree">
+            <summary>
+            用于角色权限的菜单树
+            </summary>
+        </member>
+        <member name="M:HaiKanDuoDuoKongCRM.ViewModels.Rbac.SystemPermission.PermissionMenuTree.#ctor">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:HaiKanDuoDuoKongCRM.ViewModels.Rbac.SystemPermission.PermissionMenuTree.Guid">
+            <summary>
+            GUID
+            </summary>
+        </member>
+        <member name="P:HaiKanDuoDuoKongCRM.ViewModels.Rbac.SystemPermission.PermissionMenuTree.ParentGuid">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:HaiKanDuoDuoKongCRM.ViewModels.Rbac.SystemPermission.PermissionMenuTree.Title">
+            <summary>
+            标题(菜单名称)
+            </summary>
+        </member>
+        <member name="P:HaiKanDuoDuoKongCRM.ViewModels.Rbac.SystemPermission.PermissionMenuTree.Expand">
+            <summary>
+            是否展开子节点
+            </summary>
+        </member>
+        <member name="P:HaiKanDuoDuoKongCRM.ViewModels.Rbac.SystemPermission.PermissionMenuTree.Disabled">
+            <summary>
+            禁掉响应
+            </summary>
+        </member>
+        <member name="P:HaiKanDuoDuoKongCRM.ViewModels.Rbac.SystemPermission.PermissionMenuTree.DisableCheckbox">
+            <summary>
+            禁掉 checkbox
+            </summary>
+        </member>
+        <member name="P:HaiKanDuoDuoKongCRM.ViewModels.Rbac.SystemPermission.PermissionMenuTree.Selected">
+            <summary>
+            是否选中子节点	
+            </summary>
+        </member>
+        <member name="P:HaiKanDuoDuoKongCRM.ViewModels.Rbac.SystemPermission.PermissionMenuTree.Checked">
+            <summary>
+            是否勾选(如果勾选，子节点也会全部勾选)
+            </summary>
+        </member>
+        <member name="P:HaiKanDuoDuoKongCRM.ViewModels.Rbac.SystemPermission.PermissionMenuTree.AllAssigned">
+            <summary>
+            当前菜单的所有权限都已分配到指定角色
+            </summary>
+        </member>
+        <member name="P:HaiKanDuoDuoKongCRM.ViewModels.Rbac.SystemPermission.PermissionMenuTree.Permissions">
+            <summary>
+            当前菜单拥有的权限功能
+            </summary>
+        </member>
+        <member name="P:HaiKanDuoDuoKongCRM.ViewModels.Rbac.SystemPermission.PermissionMenuTree.Children">
+            <summary>
+            子节点属性数组
+            </summary>
+        </member>
+        <member name="T:HaiKanDuoDuoKongCRM.ViewModels.Rbac.SystemPermission.PermissionElement">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:HaiKanDuoDuoKongCRM.ViewModels.Rbac.SystemPermission.PermissionElement.Code">
+            <summary>
+            权限编码
+            </summary>
+        </member>
+        <member name="P:HaiKanDuoDuoKongCRM.ViewModels.Rbac.SystemPermission.PermissionElement.Name">
+            <summary>
+            权限名称
+            </summary>
+        </member>
+        <member name="P:HaiKanDuoDuoKongCRM.ViewModels.Rbac.SystemPermission.PermissionElement.IsAssignedToRole">
+            <summary>
+            是否已分配到指定角色
+            </summary>
+        </member>
+        <member name="T:HaiKanDuoDuoKongCRM.ViewModels.Rbac.SystemRole.RoleCreateViewModel">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:HaiKanDuoDuoKongCRM.ViewModels.Rbac.SystemRole.RoleJsonModel">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:HaiKanDuoDuoKongCRM.ViewModels.Rbac.SystemUser.SaveUserRolesViewModel">
+            <summary>
+            用户获得的角色实体对象
+            </summary>
+        </member>
+        <member name="P:HaiKanDuoDuoKongCRM.ViewModels.Rbac.SystemUser.SaveUserRolesViewModel.UserGuid">
+            <summary>
+            用户GUID
+            </summary>
+        </member>
+        <member name="P:HaiKanDuoDuoKongCRM.ViewModels.Rbac.SystemUser.SaveUserRolesViewModel.AssignedRoles">
+            <summary>
+            已获得的角色代码集合
+            </summary>
+        </member>
+        <member name="T:HaiKanDuoDuoKongCRM.ViewModels.Rbac.SystemUser.UserCreateViewModel">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:HaiKanDuoDuoKongCRM.ViewModels.Rbac.SystemUser.UserEditViewModel">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:HaiKanDuoDuoKongCRM.ViewModels.Rbac.SystemUser.UserJsonModel">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:HaikanEnrollmentRegistration.Api.Controllers.Api.V1.Rbac.MenuController">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:HaikanEnrollmentRegistration.Api.Controllers.Api.V1.Rbac.MenuController.#ctor(HaiKanDuoDuoKongCRM.Entities.dongyangguosuiOAContext,AutoMapper.IMapper)">
+            <summary>
+            
+            </summary>
+            <param name="dbContext"></param>
+            <param name="mapper"></param>
+        </member>
+        <member name="M:HaikanEnrollmentRegistration.Api.Controllers.Api.V1.Rbac.MenuController.List(HaiKanDuoDuoKongCRM.RequestPayload.Rbac.Menu.MenuRequestPayload)">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HaikanEnrollmentRegistration.Api.Controllers.Api.V1.Rbac.MenuController.Create(HaiKanDuoDuoKongCRM.ViewModels.Rbac.SystemMenu.MenuCreateViewModel)">
+            <summary>
+            创建菜单
+            </summary>
+            <param name="model">菜单视图实体</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaikanEnrollmentRegistration.Api.Controllers.Api.V1.Rbac.MenuController.Edit(System.Guid)">
+            <summary>
+            编辑菜单
+            </summary>
+            <param name="guid">菜单ID</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaikanEnrollmentRegistration.Api.Controllers.Api.V1.Rbac.MenuController.Edit(HaiKanDuoDuoKongCRM.ViewModels.Rbac.SystemMenu.MenuEditViewModel)">
+            <summary>
+            保存编辑后的菜单信息
+            </summary>
+            <param name="model">菜单视图实体</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaikanEnrollmentRegistration.Api.Controllers.Api.V1.Rbac.MenuController.Tree(System.String)">
+            <summary>
+            菜单树
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HaikanEnrollmentRegistration.Api.Controllers.Api.V1.Rbac.MenuController.Delete(System.String)">
+            <summary>
+            删除菜单
+            </summary>
+            <param name="ids">菜单ID,多个以逗号分隔</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaikanEnrollmentRegistration.Api.Controllers.Api.V1.Rbac.MenuController.Recover(System.String)">
+            <summary>
+            恢复菜单
+            </summary>
+            <param name="ids">菜单ID,多个以逗号分隔</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaikanEnrollmentRegistration.Api.Controllers.Api.V1.Rbac.MenuController.Batch(System.String,System.String)">
+            <summary>
+            批量操作
+            </summary>
+            <param name="command"></param>
+            <param name="ids">菜单ID,多个以逗号分隔</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaikanEnrollmentRegistration.Api.Controllers.Api.V1.Rbac.MenuController.UpdateIsDelete(HaiKanDuoDuoKongCRM.Entities.Enums.CommonEnum.IsDeleted,System.String)">
+            <summary>
+            删除菜单
+            </summary>
+            <param name="isDeleted"></param>
+            <param name="ids">菜单ID字符串,多个以逗号隔开</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaikanEnrollmentRegistration.Api.Controllers.Api.V1.Rbac.MenuController.UpdateStatus(HaiKanDuoDuoKongCRM.Entities.UserStatus,System.String)">
+            <summary>
+            删除菜单
+            </summary>
+            <param name="status">菜单状态</param>
+            <param name="ids">菜单ID字符串,多个以逗号隔开</param>
+            <returns></returns>
+        </member>
+        <member name="T:HaikanEnrollmentRegistration.Api.Controllers.Api.V1.Rbac.MenuTreeHelper">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:HaikanEnrollmentRegistration.Api.Controllers.Api.V1.Rbac.MenuTreeHelper.BuildTree(System.Collections.Generic.List{HaiKanDuoDuoKongCRM.ViewModels.Rbac.SystemMenu.MenuTree},System.String)">
+            <summary>
+            
+            </summary>
+            <param name="menus"></param>
+            <param name="selectedGuid"></param>
+            <returns></returns>
+        </member>
+        <member name="T:HaikanEnrollmentRegistration.Api.Controllers.Api.V1.Rbac.PermissionController">
+            <summary>
+            权限控制器
+            </summary>
+        </member>
+        <member name="M:HaikanEnrollmentRegistration.Api.Controllers.Api.V1.Rbac.PermissionController.#ctor(HaiKanDuoDuoKongCRM.Entities.dongyangguosuiOAContext,AutoMapper.IMapper)">
+            <summary>
+            
+            </summary>
+            <param name="dbContext"></param>
+            <param name="mapper"></param>
+        </member>
+        <member name="M:HaikanEnrollmentRegistration.Api.Controllers.Api.V1.Rbac.PermissionController.List(HaiKanDuoDuoKongCRM.RequestPayload.Rbac.Permission.PermissionRequestPayload)">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HaikanEnrollmentRegistration.Api.Controllers.Api.V1.Rbac.PermissionController.Create(HaiKanDuoDuoKongCRM.ViewModels.Rbac.SystemPermission.PermissionCreateViewModel)">
+            <summary>
+            创建权限
+            </summary>
+            <param name="model">权限视图实体</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaikanEnrollmentRegistration.Api.Controllers.Api.V1.Rbac.PermissionController.Edit(System.Guid)">
+            <summary>
+            编辑权限
+            </summary>
+            <param name="code">权限惟一编码</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaikanEnrollmentRegistration.Api.Controllers.Api.V1.Rbac.PermissionController.Edit(HaiKanDuoDuoKongCRM.ViewModels.Rbac.SystemPermission.PermissionEditViewModel)">
+            <summary>
+            保存编辑后的权限信息
+            </summary>
+            <param name="model">权限视图实体</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaikanEnrollmentRegistration.Api.Controllers.Api.V1.Rbac.PermissionController.Delete(System.String)">
+            <summary>
+            删除权限
+            </summary>
+            <param name="ids">权限ID,多个以逗号分隔</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaikanEnrollmentRegistration.Api.Controllers.Api.V1.Rbac.PermissionController.Recover(System.String)">
+            <summary>
+            恢复权限
+            </summary>
+            <param name="ids">权限ID,多个以逗号分隔</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaikanEnrollmentRegistration.Api.Controllers.Api.V1.Rbac.PermissionController.Batch(System.String,System.String)">
+            <summary>
+            批量操作
+            </summary>
+            <param name="command"></param>
+            <param name="ids">权限ID,多个以逗号分隔</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaikanEnrollmentRegistration.Api.Controllers.Api.V1.Rbac.PermissionController.PermissionTree(System.String)">
+            <summary>
+            角色-权限菜单树
+            </summary>
+            <param name="code">角色编码</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaikanEnrollmentRegistration.Api.Controllers.Api.V1.Rbac.PermissionController.UpdateIsDelete(HaiKanDuoDuoKongCRM.Entities.Enums.CommonEnum.IsDeleted,System.String)">
+            <summary>
+            删除权限
+            </summary>
+            <param name="isDeleted"></param>
+            <param name="ids">权限ID字符串,多个以逗号隔开</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaikanEnrollmentRegistration.Api.Controllers.Api.V1.Rbac.PermissionController.UpdateStatus(HaiKanDuoDuoKongCRM.Entities.UserStatus,System.String)">
+            <summary>
+            删除权限
+            </summary>
+            <param name="status">权限状态</param>
+            <param name="ids">权限ID字符串,多个以逗号隔开</param>
+            <returns></returns>
+        </member>
+        <member name="T:HaikanEnrollmentRegistration.Api.Controllers.Api.V1.Rbac.PermissionTreeHelper">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:HaikanEnrollmentRegistration.Api.Controllers.Api.V1.Rbac.PermissionTreeHelper.FillRecursive(System.Collections.Generic.List{HaiKanDuoDuoKongCRM.ViewModels.Rbac.SystemPermission.PermissionMenuTree},System.Collections.Generic.List{HaiKanDuoDuoKongCRM.Entities.QueryModels.SystemPermission.SystemPermissionWithAssignProperty},System.Nullable{System.Guid},System.Boolean)">
+            <summary>
+            
+            </summary>
+            <param name="menus">菜单集合</param>
+            <param name="permissions">权限集合</param>
+            <param name="parentGuid">父级菜单GUID</param>
+            <param name="isSuperAdministrator">是否为超级管理员角色</param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

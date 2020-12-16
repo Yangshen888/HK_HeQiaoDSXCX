@@ -1,0 +1,15 @@
+
+.title {
+	font-size: 42rpx;
+	font-weight: 600;
+	line-height: 2;
+	padding: 20rpx 0;
+}
+.descripe {
+	text-indent: 2em;
+	text-align: justify;
+	line-height: 1.5;
+	padding: 20rpx 0;
+	font-size: 32rpx;
+}
+

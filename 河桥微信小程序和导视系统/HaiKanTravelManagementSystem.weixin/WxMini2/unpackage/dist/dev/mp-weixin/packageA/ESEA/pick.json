@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "特色采摘",
+  "usingComponents": {
+    "u-image": "/uview-ui/components/u-image/u-image"
+  }
+}

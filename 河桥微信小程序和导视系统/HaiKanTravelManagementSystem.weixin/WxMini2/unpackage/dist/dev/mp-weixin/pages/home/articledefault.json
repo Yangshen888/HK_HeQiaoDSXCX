@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "推荐详情",
+  "usingComponents": {
+    "u-swiper": "/uview-ui/components/u-swiper/u-swiper",
+    "u-parse": "/uview-ui/components/u-parse/u-parse"
+  }
+}

@@ -1,0 +1,1 @@
+<view style="padding:0 40rpx;"><view><view class="title">{{info.title}}</view><view style="text-align:center;"><u-swiper vue-id="3315b3f4-1" list="{{lis}}" height="500" bind:__l="__l"></u-swiper></view><view class="descripe"><u-parse vue-id="3315b3f4-2" html="{{info.content}}" bind:__l="__l"></u-parse></view></view></view>

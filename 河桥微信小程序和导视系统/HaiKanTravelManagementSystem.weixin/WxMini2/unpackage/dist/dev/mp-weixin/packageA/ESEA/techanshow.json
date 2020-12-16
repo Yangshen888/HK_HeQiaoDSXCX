@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "特产详情",
+  "usingComponents": {
+    "u-swiper": "/uview-ui/components/u-swiper/u-swiper"
+  }
+}

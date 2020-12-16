@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "河桥古镇",
+  "usingComponents": {
+    "u-swiper": "/uview-ui/components/u-swiper/u-swiper"
+  }
+}

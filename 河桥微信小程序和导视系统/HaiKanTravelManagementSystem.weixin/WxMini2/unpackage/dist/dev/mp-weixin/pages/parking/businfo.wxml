@@ -1,0 +1,1 @@
+<view><block wx:for="{{pictureUrl}}" wx:for-item="res" wx:for-index="index"><view><image style="width:100%;" src="{{prefix+res}}" mode="widthFix" data-src="{{prefix+res}}" data-event-opts="{{[['bindtap',[['preview',['$event']]]]]}}" bindbindtap="__e"></image></view></block></view>

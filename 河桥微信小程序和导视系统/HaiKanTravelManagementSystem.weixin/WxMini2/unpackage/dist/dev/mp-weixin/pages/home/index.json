@@ -1,0 +1,13 @@
+{
+  "navigationBarTitleText": "古韵河桥",
+  "enablePullDownRefresh": true,
+  "navigationStyle": "custom",
+  "usingComponents": {
+    "uni-search-bar": "/components/uni-search-bar/uni-search-bar",
+    "u-swiper": "/uview-ui/components/u-swiper/u-swiper",
+    "u-grid": "/uview-ui/components/u-grid/u-grid",
+    "u-grid-item": "/uview-ui/components/u-grid-item/u-grid-item",
+    "u-loadmore": "/uview-ui/components/u-loadmore/u-loadmore",
+    "u-icon": "/uview-ui/components/u-icon/u-icon"
+  }
+}

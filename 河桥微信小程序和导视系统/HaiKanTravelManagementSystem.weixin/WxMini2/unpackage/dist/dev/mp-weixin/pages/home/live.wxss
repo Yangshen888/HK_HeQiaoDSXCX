@@ -1,0 +1,89 @@
+
+.topItem{
+	float: right;
+}
+.bottom{
+	overflow: auto;
+	height: 30px;
+	line-height: 30px;
+}
+.putBox{
+	position: absolute;
+	left: -30rpx;
+	width:180rpx;
+	height: 108rpx;
+	line-height: 120rpx;
+	text-align: center;
+	-webkit-border-radius: 0 10px 0 8px;
+	        border-radius: 0 10px 0 8px;
+	background: url(https://hqjsc.hzgx.info/wxapp/static/tagsbg.png) no-repeat;
+	background-size: 100% 100%;
+	/* background-image: linear-gradient(to top right, #fd62af, #fc4355); */
+	color: #fff;
+	top: -20rpx;
+}
+.top{
+	height: 40px;
+	line-height: 40px;
+	position: relative;
+}
+.content image{
+	-webkit-border-radius: 10rpx;
+	        border-radius: 10rpx;
+}
+.cu-card {
+	display: block;
+	overflow: hidden;
+	padding-top: 20rpx;
+	margin: 20rpx 0;
+	-webkit-box-shadow: 0 0 2px rgba(0, 0, 0, 0.2);
+	        box-shadow: 0 0 2px rgba(0, 0, 0, 0.2);
+	-webkit-border-radius: 10rpx;
+	        border-radius: 10rpx;
+}
+.cu-card .article {
+	display: block;
+}
+.cu-item {
+	display: block;
+	background-color: #ffffff;
+	overflow: hidden;
+	-webkit-border-radius: 5px;
+	        border-radius: 5px;
+	margin: 0 10px;
+}
+.title {
+	font-size: 14px;
+	font-weight: 900;
+	color: #333333;
+	line-height: 60rpx;
+}
+.text-cut {
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	overflow: hidden;
+}
+.content {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: flex;
+}
+.text-content {
+	font-size: 12px;
+	text-indent: 2em;
+	/* text-align: justify; */
+	overflow: hidden;
+	text-overflow: ellipsis;
+	display: -webkit-box;
+	-webkit-line-clamp: 3;
+	-webkit-box-orient: vertical;
+}
+.desc {
+	margin-left: 20rpx;
+	width: 50%;
+}
+.text-bottom {
+	font-size: 12px;
+	line-height: 30px;
+}
+

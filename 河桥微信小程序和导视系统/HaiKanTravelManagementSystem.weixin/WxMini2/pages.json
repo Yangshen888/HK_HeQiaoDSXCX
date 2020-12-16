@@ -1,0 +1,391 @@
+{
+	"easycom": {
+		"^u-(.*)": "@/uview-ui/components/u-$1/u-$1.vue"
+	},
+	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+		{
+		    "path" : "pages/home/transion",
+		    "style" : {
+				"navigationBarTitleText": "古镇概况"
+			}
+		},
+		{
+			"path": "pages/home/handsmap",
+			"style": {
+				"navigationBarTitleText": "虚拟导览",
+				"navigationStyle": "custom" // 隐藏系统导航栏
+				// "navigationBarTextStyle": "white" // 状态栏字体为白色，只能为 white-白色，black-黑色 二选一
+			}
+		},
+		{
+			"path": "pages/home/index",
+			"style": {
+				"navigationBarTitleText": "古韵河桥",
+				"enablePullDownRefresh": true,
+				"navigationStyle": "custom" // 隐藏系统导航栏
+				// "navigationBarTextStyle": "white" // 状态栏字体为白色，只能为 white-白色，black-黑色 二选一
+			}
+		},
+		{
+			"path": "pages/home/mapview",
+			"style": {
+				"navigationBarTitleText": "地图"
+				// "enablePullDownRefresh": true
+				// "navigationStyle": "custom" // 隐藏系统导航栏
+				// "navigationBarTextStyle": "white" // 状态栏字体为白色，只能为 white-白色，black-黑色 二选一
+			}
+		},
+		{
+			"path": "pages/home/about",
+			"style": {
+				"navigationBarTitleText": "古韵河桥",
+				"enablePullDownRefresh": true
+				// "navigationStyle": "custom"// 隐藏系统导航栏
+				// "navigationBarTextStyle": "white" // 状态栏字体为白色，只能为 white-白色，black-黑色 二选一
+			}
+		},
+		{
+			"path": "pages/home/articledefault",
+			"style": {
+				"navigationBarTitleText": "推荐详情"
+				// "navigationStyle": "custom", // 隐藏系统导航栏
+				// "navigationBarTextStyle": "white" // 状态栏字体为白色，只能为 white-白色，black-黑色 二选一
+			}
+		},
+		{
+			"path": "pages/home/live",
+			"style": {
+				"navigationBarTitleText": "民宿酒店"
+				// "navigationStyle": "custom" // 隐藏系统导航栏
+				// "navigationBarTextStyle": "white" // 状态栏字体为白色，只能为 white-白色，black-黑色 二选一
+			}
+		},
+		{
+			"path": "pages/home/tour",
+			"style": {
+				"navigationBarTitleText": "旅游文化"
+				// "navigationStyle": "custom" // 隐藏系统导航栏
+				// "navigationBarTextStyle": "white" // 状态栏字体为白色，只能为 white-白色，black-黑色 二选一
+			}
+		},
+		{
+			"path": "pages/guide/guide",
+			"style": {
+				"navigationBarTitleText": "智能导游",
+				"navigationStyle": "custom", // 隐藏系统导航栏
+				"navigationBarTextStyle": "black" // 状态栏字体为白色，只能为 white-白色，black-黑色 二选一
+			}
+		},
+		{
+			"path": "pages/index/index",
+			"style": {
+				"navigationBarTitleText": "智慧旅游"
+			}
+		},
+		{
+			"path": "pages/introduce/index",
+			"style": {
+				"navigationBarTitleText": "景点介绍",
+				// "enablePullDownRefresh": true,
+				// "onReachBottomDistance": 1,
+				"navigationStyle": "custom", // 隐藏系统导航栏
+				"navigationBarTextStyle": "white" // 状态栏字体为白色，只能为 white-白色，black-黑色 二选一
+			}
+		},
+		{
+			"path": "pages/home/searchList",
+			"style": {
+				"navigationBarTitleText": "关键词搜索",
+				"enablePullDownRefresh": true,
+				"onReachBottomDistance": 1
+				// "navigationStyle": "custom", // 隐藏系统导航栏
+				// "navigationBarTextStyle": "white" // 状态栏字体为白色，只能为 white-白色，black-黑色 二选一
+			}
+		},
+		// {
+		// 	"path": "pages/guide/guide",
+		// 	"style": {
+		// 		"navigationBarTitleText": "智能导游"
+		// 	}
+		// },
+		{
+			"path": "pages/precious/preciousjl",
+			"style": {
+				"navigationBarTitleText": "宝藏记录"
+			}
+		},
+		{
+			"path": "pages/question/index",
+			"style": {
+				"navigationBarTitleText": "互动答题"
+			}
+		},
+		{
+			"path": "pages/personal/index",
+			"style": {
+				"navigationBarTitleText": "个人中心"
+			}
+		},
+		{
+			"path": "pages/scenespot/index",
+			"style": {
+				"navigationBarTitleText": "攻略",
+				"enablePullDownRefresh": true,
+				"onReachBottomDistance": 1
+			}
+		},
+		{
+			"path": "pages/scenespot/spotdetail",
+			"style": {
+				"navigationBarTitleText": "景点介绍"
+			}
+		},
+		{
+			"path": "pages/intelligentguide/index",
+			"style": {
+				"navigationBarTitleText": "智能导览"
+			}
+		},
+		{
+			"path": "pages/traveltips/index",
+			"style": {
+				"navigationBarTitleText": "攻略指南"
+			}
+		},
+		{
+			"path": "pages/traveltips/strategy",
+			"style": {
+				"navigationBarTitleText": "旅游攻略"
+			}
+		}, {
+			"path": "pages/traveltips/minsuwenhuashow",
+			"style": {
+				"navigationBarTitleText": "民俗文化详情"
+			}
+		},
+
+		// avatarCropper-头像裁剪
+		{
+			"path": "uview-ui/components/u-avatar-cropper/u-avatar-cropper",
+			"style": {
+				"navigationBarTitleText": "头像裁剪",
+				"navigationBarBackgroundColor": "#000000"
+			}
+		},
+		{
+			"path": "pages/gereninfo/gereninfo",
+			"style": {
+				"navigationBarTitleText": "个人信息"
+			}
+		},
+		{
+			"path": "pages/gereninfo/strategy",
+			"style": {
+				"navigationBarTitleText": "攻略发布"
+			}
+		}, {
+			"path": "pages/gereninfo/liuyan",
+			"style": {
+				"navigationBarTitleText": "留言建议"
+			}
+		}, {
+			"path": "pages/gereninfo/gonglue",
+			"style": {
+				"navigationBarTitleText": "攻略发布"
+			}
+		}, {
+			"path": "pages/gereninfo/editgereninfo",
+			"style": {
+				"navigationBarTitleText": "修改信息"
+			}
+		}, {
+			"path": "pages/parking/parkingLot",
+			"style": {
+				"navigationBarTitleText": "行车引导"
+
+			}
+		}, {
+			"path": "pages/parking/parkingInfo",
+			"style": {
+				"navigationBarTitleText": "停车场详情",
+				"navigationStyle": "custom", // 隐藏系统导航栏
+				"navigationBarTextStyle": "white"
+			}
+		}, {
+			"path": "pages/traveltips/strategy44",
+			"style": {
+				"navigationBarTitleText": "推荐路线详情"
+			}
+		},
+		{
+			"path": "pages/gereninfo/StrategyInfo",
+			"style": {
+				"navigationBarTitleText": "攻略详情"
+			}
+		}
+	    ,{
+            "path" : "pages/home/youtype",
+            "style" : {
+				"navigationBarTitleText": "游玩秘籍"
+			}
+        }
+        ,{
+            "path" : "pages/home/markerInfo",
+            "style" : {
+				"navigationBarTitleText": "详情"
+			}
+        }
+        ,{
+            "path" : "pages/gereninfo/clockinfo",
+            "style" : {
+				"navigationBarTitleText": "打卡详情"
+			}
+        }
+        ,{
+            "path" : "pages/traveltips/traveltips1",
+            "style" : {
+				"navigationBarTitleText": "柳溪江码头"
+			}
+        }
+        ,{
+            "path" : "pages/traveltips/traveltips2",
+            "style" : {
+				"navigationBarTitleText": "示范村落"
+			}
+        }      
+        ,{
+            "path" : "pages/parking/businfo",
+            "style" : {
+				"navigationBarTitleText": "公交详情"
+			}
+        }
+        ,{
+            "path" : "pages/traveltips/traveltips3",
+            "style" : {
+				"navigationBarTitleText": "瑞晶石花洞"
+			}
+        }
+        ,{
+            "path" : "pages/home/clock",
+            "style" : {
+				"navigationBarTitleText": "打卡"
+			}
+        }
+        ,{
+            "path" : "pages/traveltips/traveltips",
+            "style" : {
+				"navigationBarTitleText": "河桥古镇"
+			}
+        }
+        ,{
+            "path" : "pages/speciality/speciality",
+            "style" : {
+				"navigationBarTitleText": "购物"
+			}
+        }
+        ,{
+            "path" : "pages/amusement/amusement",
+            "style" : {
+				"navigationBarTitleText": "娱乐"
+			}
+        }
+        ,{
+            "path" : "pages/life/life",
+            "style" : {
+				"navigationBarTitleText": "生活"
+			}
+        }
+        ,{
+            "path" : "pages/traveltips/traveltips4",
+            "style" : {
+				"navigationBarTitleText": "游玩推荐"
+			}
+        }
+        ,{
+            "path" : "pages/traveltips/traveltips5",
+            "style" : {
+				"navigationBarTitleText": "景点介绍"
+			}
+        }
+        ,{
+            "path" : "pages/traveltips/traveltips6",
+            "style" : {
+				"navigationBarTitleText": "采摘"
+			}
+        }
+        ,{
+            "path" : "pages/traveltips/traveltips7",
+            "style" : {
+				"navigationBarTitleText": "旅游攻略"
+			}
+        }
+        ,{
+            "path" : "pages/traveltips/traveltips8",
+            "style" : {
+				"navigationBarTitleText": "购物"
+			}
+        }
+    ],
+	"subpackages": [{
+		"root": "packageA",
+		"pages": [{
+			"path": "ESEA/ESEA",
+			"style": {
+				"navigationBarTitleText": "美食"
+			}
+		}, {
+			"path": "ESEA/pick",
+			"style": {
+				"navigationBarTitleText": "特色采摘"
+			}
+		}, {
+			"path": "ESEA/shopping",
+			"style": {
+				"navigationBarTitleText": "购物"
+			}
+		}, {
+			"path": "ESEA/eaeashows",
+			"style": {
+				"navigationBarTitleText": "美食详情"
+			}
+		}, {
+			"path": "ESEA/techanshow",
+			"style": {
+				"navigationBarTitleText": "特产详情"
+			}
+		}, {
+			"path": "ESEA/hotelshows",
+			"style": {
+				"navigationBarTitleText": "酒店民宿详情"
+			}
+		}, {
+			"path": "ESEA/pickshows",
+			"style": {
+				"navigationBarTitleText": "特色采摘详情"
+			}
+		}]
+	}],
+	"globalStyle": {
+		"navigationBarTextStyle": "black",
+		"navigationBarTitleText": "uView",
+		"navigationBarBackgroundColor": "#F8F8F8",
+		"backgroundColor": "#F8F8F8"
+	},
+
+	// "tabBar": {
+	// 	"color": "#909399",
+	// 	"selectedColor": "#303133",
+	// 	"backgroundColor": "#FFFFFF",
+	// 	"borderStyle": "black"
+	// 	// "list": [{}
+	// 	// ]
+	// },
+	"condition": { //模式配置，仅开发期间生效
+		"current": 0, //当前激活的模式(list 的索引项)
+		"list": [{
+			"name": "", //模式名称
+			"path": "", //启动页面，必选
+			"query": "" //启动参数，在页面的onLoad函数里面得到
+		}]
+	}
+}

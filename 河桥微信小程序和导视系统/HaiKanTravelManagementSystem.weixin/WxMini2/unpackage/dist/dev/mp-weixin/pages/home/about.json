@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "古韵河桥",
+  "enablePullDownRefresh": true,
+  "usingComponents": {
+    "u-swiper": "/uview-ui/components/u-swiper/u-swiper"
+  }
+}

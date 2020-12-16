@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "旅游攻略",
+  "usingComponents": {
+    "u-swiper": "/uview-ui/components/u-swiper/u-swiper"
+  }
+}

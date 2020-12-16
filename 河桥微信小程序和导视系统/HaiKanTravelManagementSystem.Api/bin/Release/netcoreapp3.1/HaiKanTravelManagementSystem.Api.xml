@@ -1,0 +1,4004 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>HaiKanTravelManagementSystem.Api</name>
+    </assembly>
+    <members>
+        <member name="T:HaiKanTravelManagementSystem.Api.Auth.AppAuthenticationSettings">
+            <summary>
+            JWT授权的配置项
+            </summary>
+        </member>
+        <member name="P:HaiKanTravelManagementSystem.Api.Auth.AppAuthenticationSettings.AppId">
+            <summary>
+            应用ID
+            </summary>
+        </member>
+        <member name="P:HaiKanTravelManagementSystem.Api.Auth.AppAuthenticationSettings.Secret">
+            <summary>
+            应用密钥(真实项目中可能区分应用,不同的应用对应惟一的密钥)
+            </summary>
+        </member>
+        <member name="M:HaiKanTravelManagementSystem.Api.Auth.JwtBearerAuthenticationExtension.AddJwtBearerAuthentication(Microsoft.Extensions.DependencyInjection.IServiceCollection,HaiKanTravelManagementSystem.Api.Auth.AppAuthenticationSettings)">
+            <summary>
+            注册JWT Bearer认证服务的静态扩展方法
+            </summary>
+            <param name="services"></param>
+            <param name="appSettings">JWT授权的配置项</param>
+        </member>
+        <member name="T:HaiKanTravelManagementSystem.Api.Configurations.AppSettings">
+            <summary>
+            程序配置选项
+            </summary>
+        </member>
+        <member name="P:HaiKanTravelManagementSystem.Api.Configurations.AppSettings.IsTrialVersion">
+            <summary>
+            是否是体验版
+            </summary>
+        </member>
+        <member name="T:HaiKanTravelManagementSystem.Api.Configurations.ConnectionStrings">
+            <summary>
+            数据库配置项
+            </summary>
+        </member>
+        <member name="P:HaiKanTravelManagementSystem.Api.Configurations.ConnectionStrings.DefaultConnection">
+            <summary>
+            数据库默认连接字符串
+            </summary>
+        </member>
+        <member name="T:HaiKanTravelManagementSystem.Api.Controllers.AccountController">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:HaiKanTravelManagementSystem.Api.Controllers.AccountController.#ctor(HaiKanTravelManagementSystem.Api.Entities.haikanHeQiaoContext)">
+            <summary>
+            
+            </summary>
+            <param name="dbContext"></param>
+        </member>
+        <member name="M:HaiKanTravelManagementSystem.Api.Controllers.AccountController.Profile">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanTravelManagementSystem.Api.Controllers.AccountController.Menu">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:HaiKanTravelManagementSystem.Api.Controllers.MenuItemHelper">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:HaiKanTravelManagementSystem.Api.Controllers.MenuItemHelper.BuildTree(System.Collections.Generic.List{HaiKanTravelManagementSystem.Api.ViewModels.Rbac.SystemMenu.MenuItem},System.String)">
+            <summary>
+            
+            </summary>
+            <param name="menus"></param>
+            <param name="selectedGuid"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanTravelManagementSystem.Api.Controllers.Api.V1.ArticleManagement.ArticleController.#ctor(HaiKanTravelManagementSystem.Api.Entities.haikanHeQiaoContext,AutoMapper.IMapper)">
+            <summary>
+            
+            </summary>
+            <param name="dbContext"></param>
+            <param name="mapper"></param>
+        </member>
+        <member name="M:HaiKanTravelManagementSystem.Api.Controllers.Api.V1.ArticleManagement.ArticleController.Articletypelist">
+            <summary>
+            文章类别
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanTravelManagementSystem.Api.Controllers.Api.V1.ArticleManagement.ArticleController.List(HaiKanTravelManagementSystem.Api.RequestPayload.ArticleManagement.articlequestpayload)">
+            <summary>
+            显示所有信息
+            </summary>
+            <param name="payload"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanTravelManagementSystem.Api.Controllers.Api.V1.ArticleManagement.ArticleController.Create(HaiKanTravelManagementSystem.Api.ViewModels.ArticlesManagement.ArticleViewModel)">
+            <summary>
+            添加
+            </summary>
+            <param name="model">视图实体</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanTravelManagementSystem.Api.Controllers.Api.V1.ArticleManagement.ArticleController.Edit(System.Guid)">
+            <summary>
+            编辑
+            </summary>
+            <param name="guid">惟一编码</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanTravelManagementSystem.Api.Controllers.Api.V1.ArticleManagement.ArticleController.Edit(HaiKanTravelManagementSystem.Api.ViewModels.ArticlesManagement.ArticleViewModel)">
+            <summary>
+            保存编辑后的信息
+            </summary>
+            <param name="model">视图实体</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanTravelManagementSystem.Api.Controllers.Api.V1.ArticleManagement.ArticleController.Batch(System.String,System.String)">
+            <summary>
+            批量操作
+            </summary>
+            <param name="command"></param>
+            <param name="ids">ID,多个以逗号分隔</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanTravelManagementSystem.Api.Controllers.Api.V1.ArticleManagement.ArticleController.detupdate(System.String,System.String)">
+            <summary>
+            删除
+            </summary>
+            <param name="command"></param>
+            <param name="ids">ID字符串,多个以逗号隔开</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanTravelManagementSystem.Api.Controllers.Api.V1.ArticleManagement.ArticleTypeController.#ctor(HaiKanTravelManagementSystem.Api.Entities.haikanHeQiaoContext,AutoMapper.IMapper)">
+            <summary>
+            
+            </summary>
+            <param name="dbContext"></param>
+            <param name="mapper"></param>
+        </member>
+        <member name="M:HaiKanTravelManagementSystem.Api.Controllers.Api.V1.ArticleManagement.ArticleTypeController.List(HaiKanTravelManagementSystem.Api.RequestPayload.ArticleManagement.ArticleTypeRequestPayload)">
+            <summary>
+            显示所有信息
+            </summary>
+            <param name="payload"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanTravelManagementSystem.Api.Controllers.Api.V1.ArticleManagement.ArticleTypeController.Create(HaiKanTravelManagementSystem.Api.ViewModels.ArticlesManagement.ArticleTypeViewModel)">
+            <summary>
+            添加
+            </summary>
+            <param name="model">视图实体</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanTravelManagementSystem.Api.Controllers.Api.V1.ArticleManagement.ArticleTypeController.Edit(System.Guid)">
+            <summary>
+            编辑
+            </summary>
+            <param name="guid">惟一编码</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanTravelManagementSystem.Api.Controllers.Api.V1.ArticleManagement.ArticleTypeController.Edit(HaiKanTravelManagementSystem.Api.ViewModels.ArticlesManagement.ArticleTypeViewModel)">
+            <summary>
+            保存编辑后的信息
+            </summary>
+            <param name="model">视图实体</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanTravelManagementSystem.Api.Controllers.Api.V1.ArticleManagement.ArticleTypeController.Batch(System.String,System.String)">
+            <summary>
+            批量操作
+            </summary>
+            <param name="command"></param>
+            <param name="ids">ID,多个以逗号分隔</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanTravelManagementSystem.Api.Controllers.Api.V1.ArticleManagement.ArticleTypeController.detupdate(System.String,System.String)">
+            <summary>
+            删除
+            </summary>
+            <param name="command"></param>
+            <param name="ids">ID字符串,多个以逗号隔开</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanTravelManagementSystem.Api.Controllers.Api.V1.Common.CommonController.#ctor(HaiKanTravelManagementSystem.Api.Entities.haikanHeQiaoContext,AutoMapper.IMapper,Microsoft.AspNetCore.Hosting.IWebHostEnvironment)">
+            <summary>
+            
+            </summary>
+            <param name="dbContext"></param>
+            <param name="mapper"></param>
+            <param name="hostingEnvironment"></param>
+        </member>
+        <member name="M:HaiKanTravelManagementSystem.Api.Controllers.Api.V1.Common.CommonController.UpLoadPictureAsync(HaiKanTravelManagementSystem.Api.ViewModels.FileCommon)">
+            <summary>
+            图片上传
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanTravelManagementSystem.Api.Controllers.Api.V1.Common.CommonController.UpLoadFileAsync(HaiKanTravelManagementSystem.Api.ViewModels.FileCommon)">
+            <summary>
+            文件上传
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanTravelManagementSystem.Api.Controllers.Api.V1.Common.CommonController.DeleteFile(HaiKanTravelManagementSystem.Api.ViewModels.FileCommon)">
+            <summary>
+            删除文件
+            </summary>
+            <param name="filename"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanTravelManagementSystem.Api.Controllers.Api.V1.Consult.ConsultController.#ctor(HaiKanTravelManagementSystem.Api.Entities.haikanHeQiaoContext,AutoMapper.IMapper)">
+            <summary>
+            
+            </summary>
+            <param name="dbContext"></param>
+            <param name="mapper"></param>
+        </member>
+        <member name="M:HaiKanTravelManagementSystem.Api.Controllers.Api.V1.Consult.ConsultController.List(HaiKanTravelManagementSystem.Api.RequestPayload.Consult.ConsultRequestpayload)">
+            <summary>
+            列表显示
+            </summary>
+            <param name="payload"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanTravelManagementSystem.Api.Controllers.Api.V1.Consult.ConsultController.Create(System.Object)">
+            <summary>
+            添加
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanTravelManagementSystem.Api.Controllers.Api.V1.Consult.ConsultController.Show(System.Guid)">
+            <summary>
+            详情
+            </summary>
+            <param name="guid"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanTravelManagementSystem.Api.Controllers.Api.V1.Consult.ConsultController.Edit(System.Object)">
+            <summary>
+            编辑
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanTravelManagementSystem.Api.Controllers.Api.V1.Consult.ConsultController.Delete(System.String)">
+            <summary>
+            删除单个角色
+            </summary>
+            <param name="ids">角色ID,多个以逗号分隔</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanTravelManagementSystem.Api.Controllers.Api.V1.Consult.ConsultController.UpdateIsDelete(HaiKanTravelManagementSystem.Api.Entities.Enums.CommonEnum.IsDeleted,System.String)">
+            <summary>
+            删除角色
+            </summary>
+            <param name="isDeleted"></param>
+            <param name="ids">角色ID字符串,多个以逗号隔开</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanTravelManagementSystem.Api.Controllers.Api.V1.Consult.ConsultController.Batch(System.String,System.String)">
+            <summary>
+            删除多条批量操作
+            </summary>
+            <param name="command"></param>
+            <param name="ids">角色ID,多个以逗号分隔</param>
+            <returns></returns>
+        </member>
+        <!-- Badly formed XML comment ignored for member "M:HaiKanTravelManagementSystem.Api.Controllers.Api.V1.DaoshiMap.DaoshiMapController.#ctor(HaiKanTravelManagementSystem.Api.Entities.haikanHeQiaoContext,AutoMapper.IMapper,Microsoft.AspNetCore.Hosting.IWebHostEnvironment)" -->
+        <!-- Badly formed XML comment ignored for member "M:HaiKanTravelManagementSystem.Api.Controllers.Api.V1.DaoshiMap.DaoshiMapController.indexrightpicture" -->
+        <member name="M:HaiKanTravelManagementSystem.Api.Controllers.Api.V1.DaoshiMap.DaoshiMapController.getcarparklist">
+            <summary>
+            地图请求停车场数据 
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanTravelManagementSystem.Api.Controllers.Api.V1.DaoshiMap.DaoshiMapController.getsharinglist">
+            <summary>
+            地图请求共享单车数据 
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanTravelManagementSystem.Api.Controllers.Api.V1.DaoshiMap.DaoshiMapController.gethospitallist">
+            <summary>
+            地图请求医院数据 
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanTravelManagementSystem.Api.Controllers.Api.V1.DaoshiMap.DaoshiMapController.getgtoiletlist">
+            <summary>
+            地图请求公共厕所数据 
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanTravelManagementSystem.Api.Controllers.Api.V1.DaoshiMap.DaoshiMapController.getbanklist">
+            <summary>
+            地图请求银行数据 
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanTravelManagementSystem.Api.Controllers.Api.V1.DaoshiMap.DaoshiMapController.getfoodtclist">
+            <summary>
+            地图请求特产商店数据 
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanTravelManagementSystem.Api.Controllers.Api.V1.DaoshiMap.DaoshiMapController.gethotellist">
+            <summary>
+            地图请求民宿数据 
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanTravelManagementSystem.Api.Controllers.Api.V1.DaoshiMap.DaoshiMapController.getspecialpicklist">
+            <summary>
+            地图请求特色采摘数据 
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanTravelManagementSystem.Api.Controllers.Api.V1.DaoshiMap.DaoshiMapController.getPointert(System.String)">
+            <summary>
+            通过机器编号 获取经纬度
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanTravelManagementSystem.Api.Controllers.Api.V1.Gereninfo.GereninfoController.#ctor(HaiKanTravelManagementSystem.Api.Entities.haikanHeQiaoContext,AutoMapper.IMapper,Microsoft.AspNetCore.Hosting.IWebHostEnvironment,Microsoft.Extensions.Logging.ILogger{HaiKanTravelManagementSystem.Api.Controllers.Api.V1.Gereninfo.GereninfoController})">
+            <summary>
+            
+            </summary>
+            <param name="dbContext"></param>
+            <param name="mapper"></param>
+        </member>
+        <member name="M:HaiKanTravelManagementSystem.Api.Controllers.Api.V1.Gereninfo.GereninfoController.conList(System.Guid)">
+            <summary>
+            个人信息
+            </summary>
+            <param name="systemUserUuid"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanTravelManagementSystem.Api.Controllers.Api.V1.Gereninfo.GereninfoController.GetList(System.Guid)">
+            <summary>
+            修改个人信息页面加载
+            </summary>
+            <param name="systemUserUuid"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanTravelManagementSystem.Api.Controllers.Api.V1.Gereninfo.GereninfoController.addlist(HaiKanTravelManagementSystem.Api.ViewModels.Strategy.UserViewModel)">
+            <summary>
+            修改个人信息保存
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanTravelManagementSystem.Api.Controllers.Api.V1.Gereninfo.GereninfoController.addliuyan(HaiKanTravelManagementSystem.Api.ViewModels.Strategy.UserViewModel)">
+            <summary>
+            留言建议
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanTravelManagementSystem.Api.Controllers.Api.V1.Gereninfo.GereninfoController.GetLiNew(System.Guid)">
+            <summary>
+            攻略列表
+            </summary>
+            <param name="systemUserUuid"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanTravelManagementSystem.Api.Controllers.Api.V1.Gereninfo.GereninfoController.GetLiNewAll">
+            <summary>
+            所有人可看攻略列表
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanTravelManagementSystem.Api.Controllers.Api.V1.Gereninfo.GereninfoController.addgonglue(HaiKanTravelManagementSystem.Api.ViewModels.Strategy.UserViewModel)">
+            <summary>
+            攻略发布
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanTravelManagementSystem.Api.Controllers.Api.V1.Gereninfo.GereninfoController.UpLoadAsync(System.Guid)">
+            <summary>
+            图片上传
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanTravelManagementSystem.Api.Controllers.Api.V1.Gereninfo.GereninfoController.DeleteFile(HaiKanTravelManagementSystem.Api.Controllers.Api.V1.Gereninfo.GereninfoController.LSPicture)">
+            <summary>
+            删除图片
+            </summary>
+            <param name="filename"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanTravelManagementSystem.Api.Controllers.Api.V1.Gereninfo.GereninfoController.ParkingList(HaiKanTravelManagementSystem.Api.RequestPayload.Parking.ParkingQueryPayload)">
+            <summary>
+            打卡页面详情
+            </summary>
+            <param name="payload"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanTravelManagementSystem.Api.Controllers.Api.V1.Guide.CulturalIntroducController.#ctor(HaiKanTravelManagementSystem.Api.Entities.haikanHeQiaoContext,AutoMapper.IMapper)">
+            <summary>
+            
+            </summary>
+            <param name="dbContext"></param>
+            <param name="mapper"></param>
+        </member>
+        <member name="M:HaiKanTravelManagementSystem.Api.Controllers.Api.V1.Guide.CulturalIntroducController.Create(HaiKanTravelManagementSystem.Api.ViewModels.Guide.CulturalViewModel)">
+            <summary>
+            创建
+            </summary>
+            <param name="model">视图实体</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanTravelManagementSystem.Api.Controllers.Api.V1.Guide.CulturalIntroducController.Load(System.Guid)">
+            <summary>
+            加载单条信息
+            </summary>
+            <param name="guid">惟一编码</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanTravelManagementSystem.Api.Controllers.Api.V1.Guide.CulturalIntroducController.Edit(HaiKanTravelManagementSystem.Api.ViewModels.Guide.CulturalViewModel)">
+            <summary>
+            保存编辑后的信息
+            </summary>
+            <param name="model">视图实体</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanTravelManagementSystem.Api.Controllers.Api.V1.Guide.CulturalIntroducController.Delete(System.String)">
+            <summary>
+            删除
+            </summary>
+            <param name="ids">ID,多个以逗号分隔</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanTravelManagementSystem.Api.Controllers.Api.V1.Guide.CulturalIntroducController.Batch(System.String,System.String)">
+            <summary>
+            批量操作
+            </summary>
+            <param name="command"></param>
+            <param name="ids">ID,多个以逗号分隔</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanTravelManagementSystem.Api.Controllers.Api.V1.Guide.CulturalIntroducController.UpdateIsDelete(HaiKanTravelManagementSystem.Api.Entities.Enums.CommonEnum.IsDeleted,System.String)">
+            <summary>
+            删除
+            </summary>
+            <param name="isDeleted"></param>
+            <param name="ids">ID字符串,多个以逗号隔开</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanTravelManagementSystem.Api.Controllers.Api.V1.Guide.NaturalResourcesController.#ctor(HaiKanTravelManagementSystem.Api.Entities.haikanHeQiaoContext,AutoMapper.IMapper)">
+            <summary>
+            
+            </summary>
+            <param name="dbContext"></param>
+            <param name="mapper"></param>
+        </member>
+        <member name="M:HaiKanTravelManagementSystem.Api.Controllers.Api.V1.Guide.NaturalResourcesController.Create(HaiKanTravelManagementSystem.Api.ViewModels.Guide.NaturalViewModel)">
+            <summary>
+            创建
+            </summary>
+            <param name="model">视图实体</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanTravelManagementSystem.Api.Controllers.Api.V1.Guide.NaturalResourcesController.Load(System.Guid)">
+            <summary>
+            加载单条信息
+            </summary>
+            <param name="guid">惟一编码</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanTravelManagementSystem.Api.Controllers.Api.V1.Guide.NaturalResourcesController.Edit(HaiKanTravelManagementSystem.Api.ViewModels.Guide.NaturalViewModel)">
+            <summary>
+            保存编辑后的信息
+            </summary>
+            <param name="model">视图实体</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanTravelManagementSystem.Api.Controllers.Api.V1.Guide.NaturalResourcesController.Delete(System.String)">
+            <summary>
+            删除
+            </summary>
+            <param name="ids">ID,多个以逗号分隔</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanTravelManagementSystem.Api.Controllers.Api.V1.Guide.NaturalResourcesController.Batch(System.String,System.String)">
+            <summary>
+            批量操作
+            </summary>
+            <param name="command"></param>
+            <param name="ids">ID,多个以逗号分隔</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanTravelManagementSystem.Api.Controllers.Api.V1.Guide.NaturalResourcesController.UpdateIsDelete(HaiKanTravelManagementSystem.Api.Entities.Enums.CommonEnum.IsDeleted,System.String)">
+            <summary>
+            删除
+            </summary>
+            <param name="isDeleted"></param>
+            <param name="ids">ID字符串,多个以逗号隔开</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanTravelManagementSystem.Api.Controllers.Api.V1.Guide.PointerController.#ctor(HaiKanTravelManagementSystem.Api.Entities.haikanHeQiaoContext,AutoMapper.IMapper)">
+            <summary>
+            
+            </summary>
+            <param PointerName="dbContext"></param>
+            <param PointerName="mapper"></param>
+        </member>
+        <member name="M:HaiKanTravelManagementSystem.Api.Controllers.Api.V1.Guide.PointerController.List(HaiKanTravelManagementSystem.Api.RequestPayload.Scene.ScenicSpotRequestPayload)">
+            <summary>
+            显示所有信息
+            </summary>
+            <param PointerName="payload"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanTravelManagementSystem.Api.Controllers.Api.V1.Guide.PointerController.Create(HaiKanTravelManagementSystem.Api.ViewModels.Guide.PointerViewModel)">
+            <summary>
+            创建
+            </summary>
+            <param PointerName="model">视图实体</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanTravelManagementSystem.Api.Controllers.Api.V1.Guide.PointerController.Edit(System.Guid)">
+            <summary>
+            编辑
+            </summary>
+            <param PointerName="guid">惟一编码</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanTravelManagementSystem.Api.Controllers.Api.V1.Guide.PointerController.Edit(HaiKanTravelManagementSystem.Api.ViewModels.Guide.PointerViewModel)">
+            <summary>
+            保存编辑后的信息
+            </summary>
+            <param PointerName="model">视图实体</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanTravelManagementSystem.Api.Controllers.Api.V1.Guide.PointerController.Delete(System.String)">
+            <summary>
+            删除
+            </summary>
+            <param PointerName="ids">ID,多个以逗号分隔</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanTravelManagementSystem.Api.Controllers.Api.V1.Guide.PointerController.Batch(System.String,System.String)">
+            <summary>
+            批量操作
+            </summary>
+            <param PointerName="command"></param>
+            <param PointerName="ids">ID,多个以逗号分隔</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanTravelManagementSystem.Api.Controllers.Api.V1.Guide.PointerController.UpdateIsDelete(HaiKanTravelManagementSystem.Api.Entities.Enums.CommonEnum.IsDeleted,System.String)">
+            <summary>
+            删除
+            </summary>
+            <param PointerName="isDeleted"></param>
+            <param PointerName="ids">ID字符串,多个以逗号隔开</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanTravelManagementSystem.Api.Controllers.Api.V1.Guide.PublicityPictureController.#ctor(HaiKanTravelManagementSystem.Api.Entities.haikanHeQiaoContext,AutoMapper.IMapper)">
+            <summary>
+            
+            </summary>
+            <param name="dbContext"></param>
+            <param name="mapper"></param>
+        </member>
+        <member name="M:HaiKanTravelManagementSystem.Api.Controllers.Api.V1.Guide.PublicityPictureController.Create(HaiKanTravelManagementSystem.Api.ViewModels.Guide.PublicityPViewModel)">
+            <summary>
+            创建
+            </summary>
+            <param name="model">视图实体</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanTravelManagementSystem.Api.Controllers.Api.V1.Guide.PublicityPictureController.Load(System.Guid)">
+            <summary>
+            加载单条信息
+            </summary>
+            <param name="guid">惟一编码</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanTravelManagementSystem.Api.Controllers.Api.V1.Guide.PublicityPictureController.Edit(HaiKanTravelManagementSystem.Api.ViewModels.Guide.PublicityPViewModel)">
+            <summary>
+            保存编辑后的信息
+            </summary>
+            <param name="model">视图实体</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanTravelManagementSystem.Api.Controllers.Api.V1.Guide.PublicityPictureController.Delete(System.String)">
+            <summary>
+            删除
+            </summary>
+            <param name="ids">ID,多个以逗号分隔</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanTravelManagementSystem.Api.Controllers.Api.V1.Guide.PublicityPictureController.Batch(System.String,System.String)">
+            <summary>
+            批量操作
+            </summary>
+            <param name="command"></param>
+            <param name="ids">ID,多个以逗号分隔</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanTravelManagementSystem.Api.Controllers.Api.V1.Guide.PublicityPictureController.UpdateIsDelete(HaiKanTravelManagementSystem.Api.Entities.Enums.CommonEnum.IsDeleted,System.String)">
+            <summary>
+            删除
+            </summary>
+            <param name="isDeleted"></param>
+            <param name="ids">ID字符串,多个以逗号隔开</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanTravelManagementSystem.Api.Controllers.Api.V1.Guide.ScienZixunController.#ctor(HaiKanTravelManagementSystem.Api.Entities.haikanHeQiaoContext,AutoMapper.IMapper)">
+            <summary>
+            
+            </summary>
+            <param name="dbContext"></param>
+            <param name="mapper"></param>
+        </member>
+        <member name="M:HaiKanTravelManagementSystem.Api.Controllers.Api.V1.Guide.ScienZixunController.Create(HaiKanTravelManagementSystem.Api.ViewModels.Guide.CulturalViewModel)">
+            <summary>
+            创建
+            </summary>
+            <param name="model">视图实体</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanTravelManagementSystem.Api.Controllers.Api.V1.Guide.ScienZixunController.Load(System.Guid)">
+            <summary>
+            加载单条信息
+            </summary>
+            <param name="guid">惟一编码</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanTravelManagementSystem.Api.Controllers.Api.V1.Guide.ScienZixunController.Edit(HaiKanTravelManagementSystem.Api.ViewModels.Guide.CulturalViewModel)">
+            <summary>
+            保存编辑后的信息
+            </summary>
+            <param name="model">视图实体</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanTravelManagementSystem.Api.Controllers.Api.V1.Guide.ScienZixunController.Delete(System.String)">
+            <summary>
+            删除
+            </summary>
+            <param name="ids">ID,多个以逗号分隔</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanTravelManagementSystem.Api.Controllers.Api.V1.Guide.ScienZixunController.Batch(System.String,System.String)">
+            <summary>
+            批量操作
+            </summary>
+            <param name="command"></param>
+            <param name="ids">ID,多个以逗号分隔</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanTravelManagementSystem.Api.Controllers.Api.V1.Guide.ScienZixunController.UpdateIsDelete(HaiKanTravelManagementSystem.Api.Entities.Enums.CommonEnum.IsDeleted,System.String)">
+            <summary>
+            删除
+            </summary>
+            <param name="isDeleted"></param>
+            <param name="ids">ID字符串,多个以逗号隔开</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanTravelManagementSystem.Api.Controllers.Api.V1.Intelligentguide.CarParkController.#ctor(HaiKanTravelManagementSystem.Api.Entities.haikanHeQiaoContext,AutoMapper.IMapper)">
+            <summary>
+            
+            </summary>
+            <param name="dbContext"></param>
+            <param name="mapper"></param>
+        </member>
+        <member name="M:HaiKanTravelManagementSystem.Api.Controllers.Api.V1.Intelligentguide.CarParkController.List(HaiKanTravelManagementSystem.Api.RequestPayload.Intelligentguide.CarParkRequestPayload)">
+            <summary>
+            显示所有信息
+            </summary>
+            <param name="payload"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanTravelManagementSystem.Api.Controllers.Api.V1.Intelligentguide.CarParkController.Create(HaiKanTravelManagementSystem.Api.ViewModels.Intelligentguide.CarPark.CarParkViewModel)">
+            <summary>
+            创建
+            </summary>
+            <param name="model">视图实体</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanTravelManagementSystem.Api.Controllers.Api.V1.Intelligentguide.CarParkController.Edit(System.Guid)">
+            <summary>
+            编辑
+            </summary>
+            <param name="guid">惟一编码</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanTravelManagementSystem.Api.Controllers.Api.V1.Intelligentguide.CarParkController.Edit(HaiKanTravelManagementSystem.Api.ViewModels.Intelligentguide.CarPark.CarParkViewModel)">
+            <summary>
+            保存编辑后的信息
+            </summary>
+            <param name="model">视图实体</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanTravelManagementSystem.Api.Controllers.Api.V1.Intelligentguide.CarParkController.Delete(System.String)">
+            <summary>
+            删除
+            </summary>
+            <param name="ids">ID,多个以逗号分隔</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanTravelManagementSystem.Api.Controllers.Api.V1.Intelligentguide.CarParkController.Batch(System.String,System.String)">
+            <summary>
+            批量操作
+            </summary>
+            <param name="command"></param>
+            <param name="ids">ID,多个以逗号分隔</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanTravelManagementSystem.Api.Controllers.Api.V1.Intelligentguide.CarParkController.UpdateIsDelete(HaiKanTravelManagementSystem.Api.Entities.Enums.CommonEnum.IsDeleted,System.String)">
+            <summary>
+            删除
+            </summary>
+            <param name="isDeleted"></param>
+            <param name="ids">ID字符串,多个以逗号隔开</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanTravelManagementSystem.Api.Controllers.Api.V1.Intelligentguide.FoodController.#ctor(HaiKanTravelManagementSystem.Api.Entities.haikanHeQiaoContext,AutoMapper.IMapper)">
+            <summary>
+            
+            </summary>
+            <param name="dbContext"></param>
+            <param name="mapper"></param>
+        </member>
+        <member name="M:HaiKanTravelManagementSystem.Api.Controllers.Api.V1.Intelligentguide.FoodController.List(HaiKanTravelManagementSystem.Api.RequestPayload.Intelligentguide.FoodRequestPayload)">
+            <summary>
+            显示所有信息
+            </summary>
+            <param name="payload"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanTravelManagementSystem.Api.Controllers.Api.V1.Intelligentguide.FoodController.Create(HaiKanTravelManagementSystem.Api.ViewModels.Intelligentguide.Food.FoodViewModel)">
+            <summary>
+            创建
+            </summary>
+            <param name="model">视图实体</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanTravelManagementSystem.Api.Controllers.Api.V1.Intelligentguide.FoodController.Edit(System.Guid)">
+            <summary>
+            编辑
+            </summary>
+            <param name="guid">惟一编码</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanTravelManagementSystem.Api.Controllers.Api.V1.Intelligentguide.FoodController.Edit(HaiKanTravelManagementSystem.Api.ViewModels.Intelligentguide.Food.FoodViewModel)">
+            <summary>
+            保存编辑后的信息
+            </summary>
+            <param name="model">视图实体</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanTravelManagementSystem.Api.Controllers.Api.V1.Intelligentguide.FoodController.Delete(System.String)">
+            <summary>
+            删除
+            </summary>
+            <param name="ids">ID,多个以逗号分隔</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanTravelManagementSystem.Api.Controllers.Api.V1.Intelligentguide.FoodController.Batch(System.String,System.String)">
+            <summary>
+            批量操作
+            </summary>
+            <param name="command"></param>
+            <param name="ids">ID,多个以逗号分隔</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanTravelManagementSystem.Api.Controllers.Api.V1.Intelligentguide.FoodController.UpdateIsDelete(HaiKanTravelManagementSystem.Api.Entities.Enums.CommonEnum.IsDeleted,System.String)">
+            <summary>
+            删除
+            </summary>
+            <param name="isDeleted"></param>
+            <param name="ids">ID字符串,多个以逗号隔开</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanTravelManagementSystem.Api.Controllers.Api.V1.Intelligentguide.FoodController.ShowList">
+            <summary>
+            小程序美食列表
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanTravelManagementSystem.Api.Controllers.Api.V1.Intelligentguide.FoodController.ShowtcList">
+            <summary>
+            小程序特产列表
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanTravelManagementSystem.Api.Controllers.Api.V1.Intelligentguide.FoodController.image1url(System.String)">
+            <summary>
+            拼接图片路径
+            </summary>
+            <param name="imgname"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanTravelManagementSystem.Api.Controllers.Api.V1.Intelligentguide.HotelController.#ctor(HaiKanTravelManagementSystem.Api.Entities.haikanHeQiaoContext,AutoMapper.IMapper)">
+            <summary>
+            
+            </summary>
+            <param name="dbContext"></param>
+            <param name="mapper"></param>
+        </member>
+        <member name="M:HaiKanTravelManagementSystem.Api.Controllers.Api.V1.Intelligentguide.HotelController.List(HaiKanTravelManagementSystem.Api.RequestPayload.Intelligentguide.HotelRequestPayload)">
+            <summary>
+            显示所有信息
+            </summary>
+            <param name="payload"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanTravelManagementSystem.Api.Controllers.Api.V1.Intelligentguide.HotelController.Create(HaiKanTravelManagementSystem.Api.ViewModels.Intelligentguide.Hotel.HotelViewModel)">
+            <summary>
+            创建
+            </summary>
+            <param name="model">视图实体</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanTravelManagementSystem.Api.Controllers.Api.V1.Intelligentguide.HotelController.Edit(System.Guid)">
+            <summary>
+            编辑
+            </summary>
+            <param name="guid">惟一编码</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanTravelManagementSystem.Api.Controllers.Api.V1.Intelligentguide.HotelController.Edit(HaiKanTravelManagementSystem.Api.ViewModels.Intelligentguide.Hotel.HotelViewModel)">
+            <summary>
+            保存编辑后的信息
+            </summary>
+            <param name="model">视图实体</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanTravelManagementSystem.Api.Controllers.Api.V1.Intelligentguide.HotelController.Delete(System.String)">
+            <summary>
+            删除
+            </summary>
+            <param name="ids">ID,多个以逗号分隔</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanTravelManagementSystem.Api.Controllers.Api.V1.Intelligentguide.HotelController.Batch(System.String,System.String)">
+            <summary>
+            批量操作
+            </summary>
+            <param name="command"></param>
+            <param name="ids">ID,多个以逗号分隔</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanTravelManagementSystem.Api.Controllers.Api.V1.Intelligentguide.HotelController.UpdateIsDelete(HaiKanTravelManagementSystem.Api.Entities.Enums.CommonEnum.IsDeleted,System.String)">
+            <summary>
+            删除
+            </summary>
+            <param name="isDeleted"></param>
+            <param name="ids">ID字符串,多个以逗号隔开</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanTravelManagementSystem.Api.Controllers.Api.V1.Intelligentguide.HotelController.DecompInfo(HaiKanTravelManagementSystem.Api.RequestPayload.Intelligentguide.HotelRequestPayload)">
+            <summary>
+            当前酒店房型信息列表
+            </summary>
+            <param name="payload"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanTravelManagementSystem.Api.Controllers.Api.V1.Intelligentguide.HotelController.InfoCreate(HaiKanTravelManagementSystem.Api.ViewModels.Intelligentguide.Hotel.HotelRoomViewModel)">
+            <summary>
+            添加
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanTravelManagementSystem.Api.Controllers.Api.V1.Intelligentguide.HotelController.InfoEdit(HaiKanTravelManagementSystem.Api.ViewModels.Intelligentguide.Hotel.HotelRoomViewModel)">
+            <summary>
+            编辑
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanTravelManagementSystem.Api.Controllers.Api.V1.Intelligentguide.HotelController.InfoLoad(System.Guid)">
+            <summary>
+            获取当前条信息
+            </summary>
+            <param name="guid"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanTravelManagementSystem.Api.Controllers.Api.V1.Intelligentguide.HotelController.InfoDelete(System.String)">
+            <summary>
+            删除单个角色
+            </summary>
+            <param name="ids">ID,多个以逗号分隔</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanTravelManagementSystem.Api.Controllers.Api.V1.Intelligentguide.HotelController.UpdateIsDelete2(HaiKanTravelManagementSystem.Api.Entities.Enums.CommonEnum.IsDeleted,System.String)">
+            <summary>
+            删除角色
+            </summary>
+            <param name="isDeleted"></param>
+            <param name="ids">角色ID字符串,多个以逗号隔开</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanTravelManagementSystem.Api.Controllers.Api.V1.Intelligentguide.HotelController.InfoBatch(System.String,System.String)">
+            <summary>
+            删除多条批量操作
+            </summary>
+            <param name="command"></param>
+            <param name="ids">角色ID,多个以逗号分隔</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanTravelManagementSystem.Api.Controllers.Api.V1.Intelligentguide.MapmarkController.#ctor(HaiKanTravelManagementSystem.Api.Entities.haikanHeQiaoContext,AutoMapper.IMapper)">
+            <summary>
+            
+            </summary>
+            <param name="dbContext"></param>
+            <param name="mapper"></param>
+        </member>
+        <member name="M:HaiKanTravelManagementSystem.Api.Controllers.Api.V1.Intelligentguide.MapmarkController.MarkList">
+            <summary>
+            获取标识可用列表
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanTravelManagementSystem.Api.Controllers.Api.V1.Intelligentguide.MapmarkController.List(HaiKanTravelManagementSystem.Api.RequestPayload.Intelligentguide.MapmarkRequestPayload)">
+            <summary>
+            显示所有信息
+            </summary>
+            <param name="payload"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanTravelManagementSystem.Api.Controllers.Api.V1.Intelligentguide.MapmarkController.Create(HaiKanTravelManagementSystem.Api.ViewModels.Intelligentguide.Mapmark.MapmarkViewModel)">
+            <summary>
+            创建
+            </summary>
+            <param name="model">视图实体</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanTravelManagementSystem.Api.Controllers.Api.V1.Intelligentguide.MapmarkController.Edit(System.Guid)">
+            <summary>
+            编辑
+            </summary>
+            <param name="guid">惟一编码</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanTravelManagementSystem.Api.Controllers.Api.V1.Intelligentguide.MapmarkController.Edit(HaiKanTravelManagementSystem.Api.ViewModels.Intelligentguide.Mapmark.MapmarkViewModel)">
+            <summary>
+            保存编辑后的信息
+            </summary>
+            <param name="model">视图实体</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanTravelManagementSystem.Api.Controllers.Api.V1.Intelligentguide.MapmarkController.Delete(System.String)">
+            <summary>
+            删除
+            </summary>
+            <param name="ids">ID,多个以逗号分隔</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanTravelManagementSystem.Api.Controllers.Api.V1.Intelligentguide.MapmarkController.Batch(System.String,System.String)">
+            <summary>
+            批量操作
+            </summary>
+            <param name="command"></param>
+            <param name="ids">ID,多个以逗号分隔</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanTravelManagementSystem.Api.Controllers.Api.V1.Intelligentguide.MapmarkController.UpdateIsDelete(HaiKanTravelManagementSystem.Api.Entities.Enums.CommonEnum.IsDeleted,System.String)">
+            <summary>
+            删除
+            </summary>
+            <param name="isDeleted"></param>
+            <param name="ids">ID字符串,多个以逗号隔开</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanTravelManagementSystem.Api.Controllers.Api.V1.Intelligentguide.MarkController.#ctor(HaiKanTravelManagementSystem.Api.Entities.haikanHeQiaoContext,AutoMapper.IMapper)">
+            <summary>
+            
+            </summary>
+            <param name="dbContext"></param>
+            <param name="mapper"></param>
+        </member>
+        <member name="M:HaiKanTravelManagementSystem.Api.Controllers.Api.V1.Intelligentguide.MarkController.List(HaiKanTravelManagementSystem.Api.RequestPayload.Intelligentguide.MarkRequestPayload)">
+            <summary>
+            显示所有信息
+            </summary>
+            <param name="payload"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanTravelManagementSystem.Api.Controllers.Api.V1.Intelligentguide.MarkController.Create(HaiKanTravelManagementSystem.Api.ViewModels.Intelligentguide.Mark.MarkViewModel)">
+            <summary>
+            创建
+            </summary>
+            <param name="model">视图实体</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanTravelManagementSystem.Api.Controllers.Api.V1.Intelligentguide.MarkController.Edit(System.Guid)">
+            <summary>
+            编辑
+            </summary>
+            <param name="guid">惟一编码</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanTravelManagementSystem.Api.Controllers.Api.V1.Intelligentguide.MarkController.Edit(HaiKanTravelManagementSystem.Api.ViewModels.Intelligentguide.Mark.MarkViewModel)">
+            <summary>
+            保存编辑后的信息
+            </summary>
+            <param name="model">视图实体</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanTravelManagementSystem.Api.Controllers.Api.V1.Intelligentguide.MarkController.Delete(System.String)">
+            <summary>
+            删除
+            </summary>
+            <param name="ids">ID,多个以逗号分隔</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanTravelManagementSystem.Api.Controllers.Api.V1.Intelligentguide.MarkController.Batch(System.String,System.String)">
+            <summary>
+            批量操作
+            </summary>
+            <param name="command"></param>
+            <param name="ids">ID,多个以逗号分隔</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanTravelManagementSystem.Api.Controllers.Api.V1.Intelligentguide.MarkController.UpdateIsDelete(HaiKanTravelManagementSystem.Api.Entities.Enums.CommonEnum.IsDeleted,System.String)">
+            <summary>
+            删除
+            </summary>
+            <param name="isDeleted"></param>
+            <param name="ids">ID字符串,多个以逗号隔开</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanTravelManagementSystem.Api.Controllers.Api.V1.Intelligentguide.SpecialpickController.#ctor(HaiKanTravelManagementSystem.Api.Entities.haikanHeQiaoContext,AutoMapper.IMapper)">
+            <summary>
+            
+            </summary>
+            <param name="dbContext"></param>
+            <param name="mapper"></param>
+        </member>
+        <member name="M:HaiKanTravelManagementSystem.Api.Controllers.Api.V1.Intelligentguide.SpecialpickController.List(HaiKanTravelManagementSystem.Api.RequestPayload.Intelligentguide.SpecialpickRequestPayload)">
+            <summary>
+            显示所有信息
+            </summary>
+            <param name="payload"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanTravelManagementSystem.Api.Controllers.Api.V1.Intelligentguide.SpecialpickController.Create(HaiKanTravelManagementSystem.Api.ViewModels.Intelligentguide.SpecialPick.SpecialPickViewModel)">
+            <summary>
+            创建
+            </summary>
+            <param name="model">视图实体</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanTravelManagementSystem.Api.Controllers.Api.V1.Intelligentguide.SpecialpickController.Edit(System.Guid)">
+            <summary>
+            编辑
+            </summary>
+            <param name="guid">惟一编码</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanTravelManagementSystem.Api.Controllers.Api.V1.Intelligentguide.SpecialpickController.Edit(HaiKanTravelManagementSystem.Api.ViewModels.Intelligentguide.SpecialPick.SpecialPickViewModel)">
+            <summary>
+            保存编辑后的信息
+            </summary>
+            <param name="model">视图实体</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanTravelManagementSystem.Api.Controllers.Api.V1.Intelligentguide.SpecialpickController.Delete(System.String)">
+            <summary>
+            删除
+            </summary>
+            <param name="ids">ID,多个以逗号分隔</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanTravelManagementSystem.Api.Controllers.Api.V1.Intelligentguide.SpecialpickController.Batch(System.String,System.String)">
+            <summary>
+            批量操作
+            </summary>
+            <param name="command"></param>
+            <param name="ids">ID,多个以逗号分隔</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanTravelManagementSystem.Api.Controllers.Api.V1.Intelligentguide.SpecialpickController.UpdateIsDelete(HaiKanTravelManagementSystem.Api.Entities.Enums.CommonEnum.IsDeleted,System.String)">
+            <summary>
+            删除
+            </summary>
+            <param name="isDeleted"></param>
+            <param name="ids">ID字符串,多个以逗号隔开</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanTravelManagementSystem.Api.Controllers.Api.V1.Intelligentguide.VideoMarkController.#ctor(HaiKanTravelManagementSystem.Api.Entities.haikanHeQiaoContext,AutoMapper.IMapper)">
+            <summary>
+            
+            </summary>
+            <param name="dbContext"></param>
+            <param name="mapper"></param>
+        </member>
+        <member name="M:HaiKanTravelManagementSystem.Api.Controllers.Api.V1.Intelligentguide.VideoMarkController.List(HaiKanTravelManagementSystem.Api.RequestPayload.Intelligentguide.VideoMarkRequestPayload)">
+            <summary>
+            显示所有信息
+            </summary>
+            <param name="payload"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanTravelManagementSystem.Api.Controllers.Api.V1.Intelligentguide.VideoMarkController.Create(HaiKanTravelManagementSystem.Api.ViewModels.Intelligentguide.VideoMark.VideoMarkViewModel)">
+            <summary>
+            创建
+            </summary>
+            <param name="model">视图实体</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanTravelManagementSystem.Api.Controllers.Api.V1.Intelligentguide.VideoMarkController.Edit(System.Guid)">
+            <summary>
+            编辑
+            </summary>
+            <param name="guid">惟一编码</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanTravelManagementSystem.Api.Controllers.Api.V1.Intelligentguide.VideoMarkController.Edit(HaiKanTravelManagementSystem.Api.ViewModels.Intelligentguide.VideoMark.VideoMarkViewModel)">
+            <summary>
+            保存编辑后的信息
+            </summary>
+            <param name="model">视图实体</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanTravelManagementSystem.Api.Controllers.Api.V1.Intelligentguide.VideoMarkController.Delete(System.String)">
+            <summary>
+            删除
+            </summary>
+            <param name="ids">ID,多个以逗号分隔</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanTravelManagementSystem.Api.Controllers.Api.V1.Intelligentguide.VideoMarkController.Batch(System.String,System.String)">
+            <summary>
+            批量操作
+            </summary>
+            <param name="command"></param>
+            <param name="ids">ID,多个以逗号分隔</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanTravelManagementSystem.Api.Controllers.Api.V1.Intelligentguide.VideoMarkController.UpdateIsDelete(HaiKanTravelManagementSystem.Api.Entities.Enums.CommonEnum.IsDeleted,System.String)">
+            <summary>
+            删除
+            </summary>
+            <param name="isDeleted"></param>
+            <param name="ids">ID字符串,多个以逗号隔开</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanTravelManagementSystem.Api.Controllers.Api.V1.Intelligenttravel.BankController.#ctor(HaiKanTravelManagementSystem.Api.Entities.haikanHeQiaoContext,AutoMapper.IMapper,Microsoft.AspNetCore.Hosting.IWebHostEnvironment)">
+            <summary>
+            
+            </summary>
+            <param name="dbContext"></param>
+            <param name="mapper"></param>
+        </member>
+        <member name="M:HaiKanTravelManagementSystem.Api.Controllers.Api.V1.Intelligenttravel.BankController.List(HaiKanTravelManagementSystem.Api.RequestPayload.Intelligentguide.GtoiletRequestPayload)">
+            <summary>
+            显示所有信息
+            </summary>
+            <param name="payload"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanTravelManagementSystem.Api.Controllers.Api.V1.Intelligenttravel.BankController.Create(HaiKanTravelManagementSystem.Api.ViewModels.Intelligentguide.Life.GtoiletViewModel)">
+            <summary>
+            创建
+            </summary>
+            <param name="model">视图实体</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanTravelManagementSystem.Api.Controllers.Api.V1.Intelligenttravel.BankController.Edit(System.Guid)">
+            <summary>
+            编辑
+            </summary>
+            <param name="guid">惟一编码</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanTravelManagementSystem.Api.Controllers.Api.V1.Intelligenttravel.BankController.Edit(HaiKanTravelManagementSystem.Api.ViewModels.Intelligentguide.Life.GtoiletViewModel)">
+            <summary>
+            保存编辑后的信息
+            </summary>
+            <param name="model">视图实体</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanTravelManagementSystem.Api.Controllers.Api.V1.Intelligenttravel.BankController.Delete(System.String)">
+            <summary>
+            删除
+            </summary>
+            <param name="ids">ID,多个以逗号分隔</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanTravelManagementSystem.Api.Controllers.Api.V1.Intelligenttravel.BankController.Batch(System.String,System.String)">
+            <summary>
+            批量操作
+            </summary>
+            <param name="command"></param>
+            <param name="ids">ID,多个以逗号分隔</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanTravelManagementSystem.Api.Controllers.Api.V1.Intelligenttravel.BankController.UpdateIsDelete(HaiKanTravelManagementSystem.Api.Entities.Enums.CommonEnum.IsDeleted,System.String)">
+            <summary>
+            删除
+            </summary>
+            <param name="isDeleted"></param>
+            <param name="ids">ID字符串,多个以逗号隔开</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanTravelManagementSystem.Api.Controllers.Api.V1.Intelligenttravel.GtoiletController.#ctor(HaiKanTravelManagementSystem.Api.Entities.haikanHeQiaoContext,AutoMapper.IMapper,Microsoft.AspNetCore.Hosting.IWebHostEnvironment)">
+            <summary>
+            
+            </summary>
+            <param name="dbContext"></param>
+            <param name="mapper"></param>
+        </member>
+        <member name="M:HaiKanTravelManagementSystem.Api.Controllers.Api.V1.Intelligenttravel.GtoiletController.List(HaiKanTravelManagementSystem.Api.RequestPayload.Intelligentguide.GtoiletRequestPayload)">
+            <summary>
+            显示所有信息
+            </summary>
+            <param name="payload"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanTravelManagementSystem.Api.Controllers.Api.V1.Intelligenttravel.GtoiletController.Create(HaiKanTravelManagementSystem.Api.ViewModels.Intelligentguide.Life.GtoiletViewModel)">
+            <summary>
+            创建
+            </summary>
+            <param name="model">视图实体</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanTravelManagementSystem.Api.Controllers.Api.V1.Intelligenttravel.GtoiletController.Edit(System.Guid)">
+            <summary>
+            编辑
+            </summary>
+            <param name="guid">惟一编码</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanTravelManagementSystem.Api.Controllers.Api.V1.Intelligenttravel.GtoiletController.Edit(HaiKanTravelManagementSystem.Api.ViewModels.Intelligentguide.Life.GtoiletViewModel)">
+            <summary>
+            保存编辑后的信息
+            </summary>
+            <param name="model">视图实体</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanTravelManagementSystem.Api.Controllers.Api.V1.Intelligenttravel.GtoiletController.Delete(System.String)">
+            <summary>
+            删除
+            </summary>
+            <param name="ids">ID,多个以逗号分隔</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanTravelManagementSystem.Api.Controllers.Api.V1.Intelligenttravel.GtoiletController.Batch(System.String,System.String)">
+            <summary>
+            批量操作
+            </summary>
+            <param name="command"></param>
+            <param name="ids">ID,多个以逗号分隔</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanTravelManagementSystem.Api.Controllers.Api.V1.Intelligenttravel.GtoiletController.UpdateIsDelete(HaiKanTravelManagementSystem.Api.Entities.Enums.CommonEnum.IsDeleted,System.String)">
+            <summary>
+            删除
+            </summary>
+            <param name="isDeleted"></param>
+            <param name="ids">ID字符串,多个以逗号隔开</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanTravelManagementSystem.Api.Controllers.Api.V1.Intelligenttravel.GtoiletController.GtoiletImport(Microsoft.AspNetCore.Http.IFormFile)">
+            <summary>
+            导入信息
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanTravelManagementSystem.Api.Controllers.Api.V1.Intelligenttravel.GtoiletController.GtoiletExport(System.String)">
+            <summary>
+            导出信息
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanTravelManagementSystem.Api.Controllers.Api.V1.Intelligenttravel.HospitalController.#ctor(HaiKanTravelManagementSystem.Api.Entities.haikanHeQiaoContext,AutoMapper.IMapper,Microsoft.AspNetCore.Hosting.IWebHostEnvironment)">
+            <summary>
+            
+            </summary>
+            <param name="dbContext"></param>
+            <param name="mapper"></param>
+        </member>
+        <member name="M:HaiKanTravelManagementSystem.Api.Controllers.Api.V1.Intelligenttravel.HospitalController.List(HaiKanTravelManagementSystem.Api.RequestPayload.Intelligentguide.GtoiletRequestPayload)">
+            <summary>
+            显示所有信息
+            </summary>
+            <param name="payload"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanTravelManagementSystem.Api.Controllers.Api.V1.Intelligenttravel.HospitalController.Create(HaiKanTravelManagementSystem.Api.ViewModels.Intelligentguide.Life.GtoiletViewModel)">
+            <summary>
+            创建
+            </summary>
+            <param name="model">视图实体</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanTravelManagementSystem.Api.Controllers.Api.V1.Intelligenttravel.HospitalController.Edit(System.Guid)">
+            <summary>
+            编辑
+            </summary>
+            <param name="guid">惟一编码</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanTravelManagementSystem.Api.Controllers.Api.V1.Intelligenttravel.HospitalController.Edit(HaiKanTravelManagementSystem.Api.ViewModels.Intelligentguide.Life.GtoiletViewModel)">
+            <summary>
+            保存编辑后的信息
+            </summary>
+            <param name="model">视图实体</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanTravelManagementSystem.Api.Controllers.Api.V1.Intelligenttravel.HospitalController.Delete(System.String)">
+            <summary>
+            删除
+            </summary>
+            <param name="ids">ID,多个以逗号分隔</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanTravelManagementSystem.Api.Controllers.Api.V1.Intelligenttravel.HospitalController.Batch(System.String,System.String)">
+            <summary>
+            批量操作
+            </summary>
+            <param name="command"></param>
+            <param name="ids">ID,多个以逗号分隔</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanTravelManagementSystem.Api.Controllers.Api.V1.Intelligenttravel.HospitalController.UpdateIsDelete(HaiKanTravelManagementSystem.Api.Entities.Enums.CommonEnum.IsDeleted,System.String)">
+            <summary>
+            删除
+            </summary>
+            <param name="isDeleted"></param>
+            <param name="ids">ID字符串,多个以逗号隔开</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanTravelManagementSystem.Api.Controllers.Api.V1.Introduce.AppIntroduceController.#ctor(HaiKanTravelManagementSystem.Api.Entities.haikanHeQiaoContext,AutoMapper.IMapper)">
+            <summary>
+            
+            </summary>
+            <param name="dbContext"></param>
+            <param name="mapper"></param>
+        </member>
+        <member name="M:HaiKanTravelManagementSystem.Api.Controllers.Api.V1.Introduce.AppIntroduceController.List">
+            <summary>
+            景点介绍列表
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanTravelManagementSystem.Api.Controllers.Api.V1.Leavemessage.LiuyanController.#ctor(HaiKanTravelManagementSystem.Api.Entities.haikanHeQiaoContext,AutoMapper.IMapper)">
+            <summary>
+            
+            </summary>
+            <param name="dbContext"></param>
+            <param name="mapper"></param>
+        </member>
+        <member name="M:HaiKanTravelManagementSystem.Api.Controllers.Api.V1.Leavemessage.LiuyanController.List(HaiKanTravelManagementSystem.Api.RequestPayload.Leavemessage.LiuyanRequestPayload)">
+            <summary>
+            显示所有留言信息
+            </summary>
+            <param name="payload"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanTravelManagementSystem.Api.Controllers.Api.V1.Leavemessage.LiuyanController.Batch(System.String,System.String)">
+            <summary>
+            批量操作
+            </summary>
+            <param name="command">操作类型(删除,恢复)</param>
+            <param name="ids">用户id,多个以逗号分隔</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanTravelManagementSystem.Api.Controllers.Api.V1.Leavemessage.LiuyanController.detupdate(System.String,System.String)">
+            <summary>
+            删除(更新为删除状态)
+            </summary>
+            <param name = "command" > 操作类型(删除,恢复)</param>
+            <param name = "ids" > ID字符串, 多个以逗号隔开</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanTravelManagementSystem.Api.Controllers.Api.V1.Parking.ParkingLotController.#ctor(HaiKanTravelManagementSystem.Api.Entities.haikanHeQiaoContext,AutoMapper.IMapper)">
+            <summary>
+            
+            </summary>
+            <param name="dbContext"></param>
+            <param name="mapper"></param>
+        </member>
+        <member name="M:HaiKanTravelManagementSystem.Api.Controllers.Api.V1.Parking.ParkingLotController.ParkingList(HaiKanTravelManagementSystem.Api.RequestPayload.Parking.ParkingQueryPayload)">
+            <summary>
+            小程序停车场列表
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanTravelManagementSystem.Api.Controllers.Api.V1.Parking.ParkingLotController.Rad(System.Double)">
+            <summary>
+            经纬度转化成弧度
+            </summary>
+            <param name="d"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanTravelManagementSystem.Api.Controllers.Api.V1.Parking.ParkingLotController.ParkingInfo(System.Guid)">
+            <summary>
+            小程序停车场详情
+            </summary>
+            <param name="uuid"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanTravelManagementSystem.Api.Controllers.Api.V1.Parking.ParkingLotController.Businfo(System.Guid)">
+            <summary>
+            小程序公交线路详情
+            </summary>
+            <param name="uuid"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanTravelManagementSystem.Api.Controllers.Api.V1.pick.HotelController.#ctor(HaiKanTravelManagementSystem.Api.Entities.haikanHeQiaoContext,AutoMapper.IMapper)">
+            <summary>
+            
+            </summary>
+            <param name="dbContext"></param>
+            <param name="mapper"></param>
+        </member>
+        <member name="M:HaiKanTravelManagementSystem.Api.Controllers.Api.V1.pick.HotelController.ShowList">
+            <summary>
+            app特色采摘信息
+             </summary>
+        </member>
+        <member name="M:HaiKanTravelManagementSystem.Api.Controllers.Api.V1.pick.PickController.#ctor(HaiKanTravelManagementSystem.Api.Entities.haikanHeQiaoContext,AutoMapper.IMapper)">
+            <summary>
+            
+            </summary>
+            <param name="dbContext"></param>
+            <param name="mapper"></param>
+        </member>
+        <member name="M:HaiKanTravelManagementSystem.Api.Controllers.Api.V1.pick.PickController.ShowList">
+            <summary>
+            app特色采摘信息
+             </summary>
+        </member>
+        <member name="M:HaiKanTravelManagementSystem.Api.Controllers.Api.V1.pick.PickController.ShowList2">
+            <summary>
+            app特色采摘信息
+             </summary>
+        </member>
+        <member name="M:HaiKanTravelManagementSystem.Api.Controllers.Api.V1.Rbac.IconController.#ctor(HaiKanTravelManagementSystem.Api.Entities.haikanHeQiaoContext,AutoMapper.IMapper)">
+            <summary>
+            
+            </summary>
+            <param name="dbContext"></param>
+            <param name="mapper"></param>
+        </member>
+        <member name="M:HaiKanTravelManagementSystem.Api.Controllers.Api.V1.Rbac.IconController.FindByKeyword(System.String)">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:HaiKanTravelManagementSystem.Api.Controllers.Api.V1.Rbac.RoleController">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:HaiKanTravelManagementSystem.Api.Controllers.Api.V1.Rbac.RoleController.#ctor(HaiKanTravelManagementSystem.Api.Entities.haikanHeQiaoContext,AutoMapper.IMapper)">
+            <summary>
+            
+            </summary>
+            <param name="dbContext"></param>
+            <param name="mapper"></param>
+        </member>
+        <member name="M:HaiKanTravelManagementSystem.Api.Controllers.Api.V1.Rbac.RoleController.List(HaiKanTravelManagementSystem.Api.RequestPayload.Rbac.Role.RoleRequestPayload)">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanTravelManagementSystem.Api.Controllers.Api.V1.Rbac.RoleController.Create(HaiKanTravelManagementSystem.Api.ViewModels.Rbac.SystemRole.RoleCreateViewModel)">
+            <summary>
+            创建角色
+            </summary>
+            <param name="model">角色视图实体</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanTravelManagementSystem.Api.Controllers.Api.V1.Rbac.RoleController.Edit(System.Guid)">
+            <summary>
+            编辑角色
+            </summary>
+            <param name="guid">角色惟一编码</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanTravelManagementSystem.Api.Controllers.Api.V1.Rbac.RoleController.Edit(HaiKanTravelManagementSystem.Api.ViewModels.Rbac.SystemRole.RoleCreateViewModel)">
+            <summary>
+            保存编辑后的角色信息
+            </summary>
+            <param name="model">角色视图实体</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanTravelManagementSystem.Api.Controllers.Api.V1.Rbac.RoleController.Delete(System.String)">
+            <summary>
+            删除角色
+            </summary>
+            <param name="ids">角色ID,多个以逗号分隔</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanTravelManagementSystem.Api.Controllers.Api.V1.Rbac.RoleController.Recover(System.String)">
+            <summary>
+            恢复角色
+            </summary>
+            <param name="ids">角色ID,多个以逗号分隔</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanTravelManagementSystem.Api.Controllers.Api.V1.Rbac.RoleController.Batch(System.String,System.String)">
+            <summary>
+            批量操作
+            </summary>
+            <param name="command"></param>
+            <param name="ids">角色ID,多个以逗号分隔</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanTravelManagementSystem.Api.Controllers.Api.V1.Rbac.RoleController.AssignPermission(HaiKanTravelManagementSystem.Api.RequestPayload.Rbac.Role.RoleAssignPermissionPayload)">
+            <summary>
+            为指定角色分配权限
+            </summary>
+            <param name="payload">角色分配权限的请求载体类</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanTravelManagementSystem.Api.Controllers.Api.V1.Rbac.RoleController.FindListByUserGuid(System.Guid)">
+            <summary>
+            获取指定用户的角色列表
+            </summary>
+            <param name="guid">用户GUID</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanTravelManagementSystem.Api.Controllers.Api.V1.Rbac.RoleController.FindSimpleList">
+            <summary>
+            查询所有角色列表(只包含主要的字段信息:name,code)
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanTravelManagementSystem.Api.Controllers.Api.V1.Rbac.RoleController.UpdateIsDelete(HaiKanTravelManagementSystem.Api.Entities.Enums.CommonEnum.IsDeleted,System.String)">
+            <summary>
+            删除角色
+            </summary>
+            <param name="isDeleted"></param>
+            <param name="ids">角色ID字符串,多个以逗号隔开</param>
+            <returns></returns>
+        </member>
+        <member name="T:HaiKanTravelManagementSystem.Api.Controllers.Api.V1.Rbac.UserController">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:HaiKanTravelManagementSystem.Api.Controllers.Api.V1.Rbac.UserController.#ctor(HaiKanTravelManagementSystem.Api.Entities.haikanHeQiaoContext,AutoMapper.IMapper,Microsoft.Extensions.Options.IOptions{HaiKanTravelManagementSystem.Api.Configurations.MdDesEncrypt},Microsoft.Extensions.Options.IOptions{HaiKanTravelManagementSystem.Api.Auth.AppAuthenticationSettings})">
+            <summary>
+            
+            </summary>
+            <param name="dbContext"></param>
+            <param name="mapper"></param>
+        </member>
+        <member name="M:HaiKanTravelManagementSystem.Api.Controllers.Api.V1.Rbac.UserController.List(HaiKanTravelManagementSystem.Api.RequestPayload.Rbac.User.UserRequestPayload)">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanTravelManagementSystem.Api.Controllers.Api.V1.Rbac.UserController.Create(HaiKanTravelManagementSystem.Api.ViewModels.Rbac.SystemUser.UserCreateViewModel)">
+            <summary>
+            创建用户
+            </summary>
+            <param name="model">用户视图实体</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanTravelManagementSystem.Api.Controllers.Api.V1.Rbac.UserController.Edit(System.Guid)">
+            <summary>
+            编辑用户
+            </summary>
+            <param name="guid">用户GUID</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanTravelManagementSystem.Api.Controllers.Api.V1.Rbac.UserController.Edit(HaiKanTravelManagementSystem.Api.ViewModels.Rbac.SystemUser.UserEditViewModel)">
+            <summary>
+            保存编辑后的用户信息
+            </summary>
+            <param name="model">用户视图实体</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanTravelManagementSystem.Api.Controllers.Api.V1.Rbac.UserController.EditUserPwd(HaiKanTravelManagementSystem.Api.ViewModels.Rbac.SystemUser.UserPwdViewModel)">
+            <summary>
+            修改用户密码
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanTravelManagementSystem.Api.Controllers.Api.V1.Rbac.UserController.Delete(System.String)">
+            <summary>
+            删除用户
+            </summary>
+            <param name="ids">用户GUID,多个以逗号分隔</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanTravelManagementSystem.Api.Controllers.Api.V1.Rbac.UserController.Recover(System.String)">
+            <summary>
+            恢复用户
+            </summary>
+            <param name="ids">用户GUID,多个以逗号分隔</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanTravelManagementSystem.Api.Controllers.Api.V1.Rbac.UserController.Batch(System.String,System.String)">
+            <summary>
+            批量操作
+            </summary>
+            <param name="command"></param>
+            <param name="ids">用户ID,多个以逗号分隔</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanTravelManagementSystem.Api.Controllers.Api.V1.Rbac.UserController.SetIDCard(HaiKanTravelManagementSystem.Api.ViewModels.Rbac.SystemUser.IdCardInfo)">
+            <summary>
+            绑定身份证号
+            </summary>
+            <param name="info"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanTravelManagementSystem.Api.Controllers.Api.V1.Rbac.UserController.SaveRoles(HaiKanTravelManagementSystem.Api.ViewModels.Rbac.SystemUser.SaveUserRolesViewModel)">
+            <summary>
+            保存用户-角色的关系映射数据
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanTravelManagementSystem.Api.Controllers.Api.V1.Rbac.UserController.UpdateIsDelete(HaiKanTravelManagementSystem.Api.Entities.Enums.CommonEnum.IsDeleted,System.String)">
+            <summary>
+            删除用户
+            </summary>
+            <param name="isDeleted"></param>
+            <param name="ids">用户ID字符串,多个以逗号隔开</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanTravelManagementSystem.Api.Controllers.Api.V1.Scene.ScenicSpotController.#ctor(HaiKanTravelManagementSystem.Api.Entities.haikanHeQiaoContext,AutoMapper.IMapper)">
+            <summary>
+            
+            </summary>
+            <param name="dbContext"></param>
+            <param name="mapper"></param>
+        </member>
+        <member name="M:HaiKanTravelManagementSystem.Api.Controllers.Api.V1.Scene.ScenicSpotController.List(HaiKanTravelManagementSystem.Api.RequestPayload.Scene.ScenicSpotRequestPayload)">
+            <summary>
+            显示所有信息
+            </summary>
+            <param name="payload"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanTravelManagementSystem.Api.Controllers.Api.V1.Scene.ScenicSpotController.Create(HaiKanTravelManagementSystem.Api.ViewModels.Scene.ScenicSpotViewModel)">
+            <summary>
+            创建
+            </summary>
+            <param name="model">视图实体</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanTravelManagementSystem.Api.Controllers.Api.V1.Scene.ScenicSpotController.Edit(System.Guid)">
+            <summary>
+            编辑
+            </summary>
+            <param name="guid">惟一编码</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanTravelManagementSystem.Api.Controllers.Api.V1.Scene.ScenicSpotController.Edit(HaiKanTravelManagementSystem.Api.ViewModels.Scene.ScenicSpotViewModel)">
+            <summary>
+            保存编辑后的信息
+            </summary>
+            <param name="model">视图实体</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanTravelManagementSystem.Api.Controllers.Api.V1.Scene.ScenicSpotController.Delete(System.String)">
+            <summary>
+            删除
+            </summary>
+            <param name="ids">ID,多个以逗号分隔</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanTravelManagementSystem.Api.Controllers.Api.V1.Scene.ScenicSpotController.Batch(System.String,System.String)">
+            <summary>
+            批量操作
+            </summary>
+            <param name="command"></param>
+            <param name="ids">ID,多个以逗号分隔</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanTravelManagementSystem.Api.Controllers.Api.V1.Scene.ScenicSpotController.UpdateIsDelete(HaiKanTravelManagementSystem.Api.Entities.Enums.CommonEnum.IsDeleted,System.String)">
+            <summary>
+            删除
+            </summary>
+            <param name="isDeleted"></param>
+            <param name="ids">ID字符串,多个以逗号隔开</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanTravelManagementSystem.Api.Controllers.Api.V1.Scene.ScenicSpotController.jingqu">
+            <summary>
+            获取景区下拉框
+            </summary>
+            <param name="guid">惟一编码</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanTravelManagementSystem.Api.Controllers.Api.V1.SpotPublicity.PromotionalVideoController.#ctor(HaiKanTravelManagementSystem.Api.Entities.haikanHeQiaoContext,AutoMapper.IMapper)">
+            <summary>
+            
+            </summary>
+            <param name="dbContext"></param>
+            <param name="mapper"></param>
+        </member>
+        <member name="M:HaiKanTravelManagementSystem.Api.Controllers.Api.V1.SpotPublicity.PromotionalVideoController.List(HaiKanTravelManagementSystem.Api.RequestPayload.SpotPublicity.PromotionalVideoRequestPayload)">
+            <summary>
+            显示所有信息
+            </summary>
+            <param name="payload"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanTravelManagementSystem.Api.Controllers.Api.V1.SpotPublicity.PromotionalVideoController.Create(HaiKanTravelManagementSystem.Api.ViewModels.SpotPublicity.PromotionalVideoViewModel)">
+            <summary>
+            创建
+            </summary>
+            <param name="model">视图实体</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanTravelManagementSystem.Api.Controllers.Api.V1.SpotPublicity.PromotionalVideoController.Edit(System.Guid)">
+            <summary>
+            编辑
+            </summary>
+            <param name="guid">惟一编码</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanTravelManagementSystem.Api.Controllers.Api.V1.SpotPublicity.PromotionalVideoController.Edit(HaiKanTravelManagementSystem.Api.ViewModels.SpotPublicity.PromotionalVideoViewModel)">
+            <summary>
+            保存编辑后的信息
+            </summary>
+            <param name="model">视图实体</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanTravelManagementSystem.Api.Controllers.Api.V1.SpotPublicity.PromotionalVideoController.Delete(System.String)">
+            <summary>
+            删除
+            </summary>
+            <param name="ids">ID,多个以逗号分隔</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanTravelManagementSystem.Api.Controllers.Api.V1.SpotPublicity.PromotionalVideoController.Batch(System.String,System.String)">
+            <summary>
+            批量操作
+            </summary>
+            <param name="command"></param>
+            <param name="ids">ID,多个以逗号分隔</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanTravelManagementSystem.Api.Controllers.Api.V1.SpotPublicity.PromotionalVideoController.UpdateIsDelete(HaiKanTravelManagementSystem.Api.Entities.Enums.CommonEnum.IsDeleted,System.String)">
+            <summary>
+            删除
+            </summary>
+            <param name="isDeleted"></param>
+            <param name="ids">ID字符串,多个以逗号隔开</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanTravelManagementSystem.Api.Controllers.Api.V1.SpotPublicity.PublicityController.#ctor(HaiKanTravelManagementSystem.Api.Entities.haikanHeQiaoContext,AutoMapper.IMapper)">
+            <summary>
+            
+            </summary>
+            <param name="dbContext"></param>
+            <param name="mapper"></param>
+        </member>
+        <member name="M:HaiKanTravelManagementSystem.Api.Controllers.Api.V1.SpotPublicity.PublicityController.Publicitytypelist">
+            <summary>
+            宣传类别
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanTravelManagementSystem.Api.Controllers.Api.V1.SpotPublicity.PublicityController.List(HaiKanTravelManagementSystem.Api.RequestPayload.SpotPublicity.PublicityRequestPayload)">
+            <summary>
+            显示所有信息
+            </summary>
+            <param name="payload"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanTravelManagementSystem.Api.Controllers.Api.V1.SpotPublicity.PublicityController.Create(HaiKanTravelManagementSystem.Api.ViewModels.SpotPublicity.PublicityViewModel)">
+            <summary>
+            创建
+            </summary>
+            <param name="model">视图实体</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanTravelManagementSystem.Api.Controllers.Api.V1.SpotPublicity.PublicityController.Edit(System.Guid)">
+            <summary>
+            编辑
+            </summary>
+            <param name="guid">惟一编码</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanTravelManagementSystem.Api.Controllers.Api.V1.SpotPublicity.PublicityController.Edit(HaiKanTravelManagementSystem.Api.ViewModels.SpotPublicity.PublicityViewModel)">
+            <summary>
+            保存编辑后的信息
+            </summary>
+            <param name="model">视图实体</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanTravelManagementSystem.Api.Controllers.Api.V1.SpotPublicity.PublicityController.Delete(System.String)">
+            <summary>
+            删除
+            </summary>
+            <param name="ids">ID,多个以逗号分隔</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanTravelManagementSystem.Api.Controllers.Api.V1.SpotPublicity.PublicityController.Batch(System.String,System.String)">
+            <summary>
+            批量操作
+            </summary>
+            <param name="command"></param>
+            <param name="ids">ID,多个以逗号分隔</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanTravelManagementSystem.Api.Controllers.Api.V1.SpotPublicity.PublicityController.UpdateIsDelete(HaiKanTravelManagementSystem.Api.Entities.Enums.CommonEnum.IsDeleted,System.String)">
+            <summary>
+            删除
+            </summary>
+            <param name="isDeleted"></param>
+            <param name="ids">ID字符串,多个以逗号隔开</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanTravelManagementSystem.Api.Controllers.Api.V1.SpotPublicity.PublicityTypeController.#ctor(HaiKanTravelManagementSystem.Api.Entities.haikanHeQiaoContext,AutoMapper.IMapper)">
+            <summary>
+            
+            </summary>
+            <param name="dbContext"></param>
+            <param name="mapper"></param>
+        </member>
+        <member name="M:HaiKanTravelManagementSystem.Api.Controllers.Api.V1.SpotPublicity.PublicityTypeController.List(HaiKanTravelManagementSystem.Api.RequestPayload.SpotPublicity.PublicityTypeRequestPayload)">
+            <summary>
+            显示所有信息
+            </summary>
+            <param name="payload"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanTravelManagementSystem.Api.Controllers.Api.V1.SpotPublicity.PublicityTypeController.Create(HaiKanTravelManagementSystem.Api.ViewModels.SpotPublicity.PublicityTypeViewModel)">
+            <summary>
+            创建
+            </summary>
+            <param name="model">视图实体</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanTravelManagementSystem.Api.Controllers.Api.V1.SpotPublicity.PublicityTypeController.Edit(System.Guid)">
+            <summary>
+            编辑
+            </summary>
+            <param name="guid">惟一编码</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanTravelManagementSystem.Api.Controllers.Api.V1.SpotPublicity.PublicityTypeController.Edit(HaiKanTravelManagementSystem.Api.ViewModels.SpotPublicity.PublicityTypeViewModel)">
+            <summary>
+            保存编辑后的信息
+            </summary>
+            <param name="model">视图实体</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanTravelManagementSystem.Api.Controllers.Api.V1.SpotPublicity.PublicityTypeController.Delete(System.String)">
+            <summary>
+            删除
+            </summary>
+            <param name="ids">ID,多个以逗号分隔</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanTravelManagementSystem.Api.Controllers.Api.V1.SpotPublicity.PublicityTypeController.Batch(System.String,System.String)">
+            <summary>
+            批量操作
+            </summary>
+            <param name="command"></param>
+            <param name="ids">ID,多个以逗号分隔</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanTravelManagementSystem.Api.Controllers.Api.V1.SpotPublicity.PublicityTypeController.UpdateIsDelete(HaiKanTravelManagementSystem.Api.Entities.Enums.CommonEnum.IsDeleted,System.String)">
+            <summary>
+            删除
+            </summary>
+            <param name="isDeleted"></param>
+            <param name="ids">ID字符串,多个以逗号隔开</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanTravelManagementSystem.Api.Controllers.Api.V1.Strategy.StrategyController.#ctor(HaiKanTravelManagementSystem.Api.Entities.haikanHeQiaoContext,AutoMapper.IMapper)">
+            <summary>
+            
+            </summary>
+            <param name="dbContext"></param>
+            <param name="mapper"></param>
+        </member>
+        <member name="M:HaiKanTravelManagementSystem.Api.Controllers.Api.V1.Strategy.StrategyController.Edit(System.Guid)">
+            <summary>
+            查看详情
+            </summary>
+            <param name="guid">惟一编码</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanTravelManagementSystem.Api.Controllers.Api.V1.Strategy.StrategyController.editggboy(HaiKanTravelManagementSystem.Api.ViewModels.Strategy.StrategyViewModels)">
+            <summary>
+            修改状态
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanTravelManagementSystem.Api.Controllers.Api.V1.Strategy.StrategyController.listvideo">
+            <summary>
+            获取视频
+            </summary>
+            <param name="guid">惟一编码</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanTravelManagementSystem.Api.Controllers.Api.V1.Strategy.StrategyController.createvideo(HaiKanTravelManagementSystem.Api.ViewModels.Strategy.StrategyViewModels)">
+            <summary>
+            保存视频路径
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanTravelManagementSystem.Api.Controllers.Api.V1.Strategy.TjLuxianController.#ctor(HaiKanTravelManagementSystem.Api.Entities.haikanHeQiaoContext,AutoMapper.IMapper)">
+            <summary>
+            
+            </summary>
+            <param name="dbContext"></param>
+            <param name="mapper"></param>
+        </member>
+        <member name="M:HaiKanTravelManagementSystem.Api.Controllers.Api.V1.Strategy.TjLuxianController.List(HaiKanTravelManagementSystem.Api.RequestPayload.Intelligentguide.SpecialpickRequestPayload)">
+            <summary>
+            显示所有信息
+            </summary>
+            <param name="payload"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanTravelManagementSystem.Api.Controllers.Api.V1.Strategy.TjLuxianController.Create(HaiKanTravelManagementSystem.Api.ViewModels.Intelligentguide.SpecialPick.SpecialPickViewModel)">
+            <summary>
+            创建
+            </summary>
+            <param name="model">视图实体</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanTravelManagementSystem.Api.Controllers.Api.V1.Strategy.TjLuxianController.Edit(System.Guid)">
+            <summary>
+            编辑
+            </summary>
+            <param name="guid">惟一编码</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanTravelManagementSystem.Api.Controllers.Api.V1.Strategy.TjLuxianController.Edit(HaiKanTravelManagementSystem.Api.ViewModels.Intelligentguide.SpecialPick.SpecialPickViewModel)">
+            <summary>
+            保存编辑后的信息
+            </summary>
+            <param name="model">视图实体</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanTravelManagementSystem.Api.Controllers.Api.V1.Strategy.TjLuxianController.Delete(System.String)">
+            <summary>
+            删除
+            </summary>
+            <param name="ids">ID,多个以逗号分隔</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanTravelManagementSystem.Api.Controllers.Api.V1.Strategy.TjLuxianController.Batch(System.String,System.String)">
+            <summary>
+            批量操作
+            </summary>
+            <param name="command"></param>
+            <param name="ids">ID,多个以逗号分隔</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanTravelManagementSystem.Api.Controllers.Api.V1.Strategy.TjLuxianController.UpdateIsDelete(HaiKanTravelManagementSystem.Api.Entities.Enums.CommonEnum.IsDeleted,System.String)">
+            <summary>
+            删除
+            </summary>
+            <param name="isDeleted"></param>
+            <param name="ids">ID字符串,多个以逗号隔开</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanTravelManagementSystem.Api.Controllers.Api.V1.TourGuide.TourGuideController.#ctor(HaiKanTravelManagementSystem.Api.Entities.haikanHeQiaoContext,AutoMapper.IMapper)">
+            <summary>
+            
+            </summary>
+            <param name="dbContext"></param>
+            <param name="mapper"></param>
+        </member>
+        <member name="M:HaiKanTravelManagementSystem.Api.Controllers.Api.V1.TourGuide.TourGuideController.List(HaiKanTravelManagementSystem.Api.RequestPayload.TourGuide.TourGuideRequestpayload)">
+            <summary>
+            列表显示
+            </summary>
+            <param name="payload"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanTravelManagementSystem.Api.Controllers.Api.V1.TourGuide.TourGuideController.Create(System.Object)">
+            <summary>
+            添加
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanTravelManagementSystem.Api.Controllers.Api.V1.TourGuide.TourGuideController.Show(System.Guid)">
+            <summary>
+            详情
+            </summary>
+            <param name="guid"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanTravelManagementSystem.Api.Controllers.Api.V1.TourGuide.TourGuideController.Edit(System.Object)">
+            <summary>
+            编辑
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanTravelManagementSystem.Api.Controllers.Api.V1.TourGuide.TourGuideController.Delete(System.String)">
+            <summary>
+            删除单个角色
+            </summary>
+            <param name="ids">角色ID,多个以逗号分隔</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanTravelManagementSystem.Api.Controllers.Api.V1.TourGuide.TourGuideController.UpdateIsDelete(HaiKanTravelManagementSystem.Api.Entities.Enums.CommonEnum.IsDeleted,System.String)">
+            <summary>
+            删除角色
+            </summary>
+            <param name="isDeleted"></param>
+            <param name="ids">角色ID字符串,多个以逗号隔开</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanTravelManagementSystem.Api.Controllers.Api.V1.TourGuide.TourGuideController.Batch(System.String,System.String)">
+            <summary>
+            删除多条批量操作
+            </summary>
+            <param name="command"></param>
+            <param name="ids">角色ID,多个以逗号分隔</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanTravelManagementSystem.Api.Controllers.Api.V1.Tourism.TourismiffoController.#ctor(HaiKanTravelManagementSystem.Api.Entities.haikanHeQiaoContext,AutoMapper.IMapper)">
+            <summary>
+            
+            </summary>
+            <param name="dbContext"></param>
+            <param name="mapper"></param>
+        </member>
+        <member name="M:HaiKanTravelManagementSystem.Api.Controllers.Api.V1.Tourism.TourismiffoController.List(HaiKanTravelManagementSystem.Api.RequestPayload.Scene.ScenicSpotRequestPayload)">
+            <summary>
+            显示所有信息
+            </summary>
+            <param name="payload"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanTravelManagementSystem.Api.Controllers.Api.V1.Tourism.TourismiffoController.Create(HaiKanTravelManagementSystem.Api.ViewModels.Scene.ScenicSpotViewModel)">
+            <summary>
+            创建
+            </summary>
+            <param name="model">视图实体</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanTravelManagementSystem.Api.Controllers.Api.V1.Tourism.TourismiffoController.Edit(System.Guid)">
+            <summary>
+            编辑
+            </summary>
+            <param name="guid">惟一编码</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanTravelManagementSystem.Api.Controllers.Api.V1.Tourism.TourismiffoController.Edit(HaiKanTravelManagementSystem.Api.ViewModels.Scene.ScenicSpotViewModel)">
+            <summary>
+            保存编辑后的信息
+            </summary>
+            <param name="model">视图实体</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanTravelManagementSystem.Api.Controllers.Api.V1.Tourism.TourismiffoController.Delete(System.String)">
+            <summary>
+            删除
+            </summary>
+            <param name="ids">ID,多个以逗号分隔</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanTravelManagementSystem.Api.Controllers.Api.V1.Tourism.TourismiffoController.Batch(System.String,System.String)">
+            <summary>
+            批量操作
+            </summary>
+            <param name="command"></param>
+            <param name="ids">ID,多个以逗号分隔</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanTravelManagementSystem.Api.Controllers.Api.V1.Tourism.TourismiffoController.UpdateIsDelete(HaiKanTravelManagementSystem.Api.Entities.Enums.CommonEnum.IsDeleted,System.String)">
+            <summary>
+            删除
+            </summary>
+            <param name="isDeleted"></param>
+            <param name="ids">ID字符串,多个以逗号隔开</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanTravelManagementSystem.Api.Controllers.Api.V1.Treasurerecord.BaozangController.#ctor(HaiKanTravelManagementSystem.Api.Entities.haikanHeQiaoContext,AutoMapper.IMapper)">
+            <summary>
+            
+            </summary>
+            <param name="dbContext"></param>
+            <param name="mapper"></param>
+        </member>
+        <member name="M:HaiKanTravelManagementSystem.Api.Controllers.Api.V1.Treasurerecord.BaozangController.List(HaiKanTravelManagementSystem.Api.RequestPayload.Treasurerecord.TreasurerecordRequestPayload)">
+            <summary>
+            显示所有宝藏信息
+            </summary>
+            <param name="payload"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanTravelManagementSystem.Api.Controllers.Api.V1.Walk.BusInfoController.#ctor(HaiKanTravelManagementSystem.Api.Entities.haikanHeQiaoContext,AutoMapper.IMapper)">
+            <summary>
+            
+            </summary>
+            <param name="dbContext"></param>
+            <param name="mapper"></param>
+        </member>
+        <member name="M:HaiKanTravelManagementSystem.Api.Controllers.Api.V1.Walk.BusInfoController.List(HaiKanTravelManagementSystem.Api.RequestPayload.Intelligentguide.FoodRequestPayload)">
+            <summary>
+            显示所有信息
+            </summary>
+            <param name="payload"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanTravelManagementSystem.Api.Controllers.Api.V1.Walk.BusInfoController.Create(HaiKanTravelManagementSystem.Api.ViewModels.Walk.BusViewModel)">
+            <summary>
+            创建
+            </summary>
+            <param name="model">视图实体</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanTravelManagementSystem.Api.Controllers.Api.V1.Walk.BusInfoController.Edit(System.Guid)">
+            <summary>
+            编辑
+            </summary>
+            <param name="guid">惟一编码</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanTravelManagementSystem.Api.Controllers.Api.V1.Walk.BusInfoController.Edit(HaiKanTravelManagementSystem.Api.ViewModels.Walk.BusViewModel)">
+            <summary>
+            保存编辑后的信息
+            </summary>
+            <param name="model">视图实体</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanTravelManagementSystem.Api.Controllers.Api.V1.Walk.BusInfoController.Delete(System.String)">
+            <summary>
+            删除
+            </summary>
+            <param name="ids">ID,多个以逗号分隔</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanTravelManagementSystem.Api.Controllers.Api.V1.Walk.BusInfoController.Batch(System.String,System.String)">
+            <summary>
+            批量操作
+            </summary>
+            <param name="command"></param>
+            <param name="ids">ID,多个以逗号分隔</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanTravelManagementSystem.Api.Controllers.Api.V1.Walk.BusInfoController.UpdateIsDelete(HaiKanTravelManagementSystem.Api.Entities.Enums.CommonEnum.IsDeleted,System.String)">
+            <summary>
+            删除
+            </summary>
+            <param name="isDeleted"></param>
+            <param name="ids">ID字符串,多个以逗号隔开</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanTravelManagementSystem.Api.Controllers.Api.V1.Walk.SharingController.#ctor(HaiKanTravelManagementSystem.Api.Entities.haikanHeQiaoContext,AutoMapper.IMapper)">
+            <summary>
+            
+            </summary>
+            <param name="dbContext"></param>
+            <param name="mapper"></param>
+        </member>
+        <member name="M:HaiKanTravelManagementSystem.Api.Controllers.Api.V1.Walk.SharingController.List(HaiKanTravelManagementSystem.Api.RequestPayload.Intelligentguide.FoodRequestPayload)">
+            <summary>
+            显示所有信息
+            </summary>
+            <param name="payload"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanTravelManagementSystem.Api.Controllers.Api.V1.Walk.SharingController.Create(HaiKanTravelManagementSystem.Api.ViewModels.Walk.BusViewModel)">
+            <summary>
+            创建
+            </summary>
+            <param name="model">视图实体</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanTravelManagementSystem.Api.Controllers.Api.V1.Walk.SharingController.Edit(System.Guid)">
+            <summary>
+            编辑
+            </summary>
+            <param name="guid">惟一编码</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanTravelManagementSystem.Api.Controllers.Api.V1.Walk.SharingController.Edit(HaiKanTravelManagementSystem.Api.ViewModels.Walk.BusViewModel)">
+            <summary>
+            保存编辑后的信息
+            </summary>
+            <param name="model">视图实体</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanTravelManagementSystem.Api.Controllers.Api.V1.Walk.SharingController.Delete(System.String)">
+            <summary>
+            删除
+            </summary>
+            <param name="ids">ID,多个以逗号分隔</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanTravelManagementSystem.Api.Controllers.Api.V1.Walk.SharingController.Batch(System.String,System.String)">
+            <summary>
+            批量操作
+            </summary>
+            <param name="command"></param>
+            <param name="ids">ID,多个以逗号分隔</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanTravelManagementSystem.Api.Controllers.Api.V1.Walk.SharingController.UpdateIsDelete(HaiKanTravelManagementSystem.Api.Entities.Enums.CommonEnum.IsDeleted,System.String)">
+            <summary>
+            删除
+            </summary>
+            <param name="isDeleted"></param>
+            <param name="ids">ID字符串,多个以逗号隔开</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanTravelManagementSystem.Api.Controllers.Api.V1.WxOpenID.WxInfoController.GetWechat(HaiKanTravelManagementSystem.Api.ViewModels.WxOpenID.WechatModel)">
+            <summary>
+            获取openid
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanTravelManagementSystem.Api.Controllers.Api.V1.Wx.home.HomeController.#ctor(HaiKanTravelManagementSystem.Api.Entities.haikanHeQiaoContext,AutoMapper.IMapper)">
+            <summary>
+            
+            </summary>
+            <param name="dbContext"></param>
+            <param name="mapper"></param>
+        </member>
+        <member name="M:HaiKanTravelManagementSystem.Api.Controllers.Api.V1.Wx.home.HomeController.List2(HaiKanTravelManagementSystem.Api.RequestPayload.Wx.home.HomeRequestPayload2)">
+            <summary>
+            全局搜索
+            </summary>
+            <param name="payload"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanTravelManagementSystem.Api.Controllers.Api.V1.Wx.home.HomeController.List(HaiKanTravelManagementSystem.Api.RequestPayload.Wx.home.HomeRequestPayload)">
+            <summary>
+            显示所有信息
+            </summary>
+            <param name="payload"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanTravelManagementSystem.Api.Controllers.Api.V1.Wx.home.HomeController.HotelList">
+            <summary>
+            显示所有酒店民宿信息
+            </summary>
+            <param name="payload"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanTravelManagementSystem.Api.Controllers.Api.V1.Wx.home.HomeController.Foodlist">
+            <summary>
+            显示所有美食信息
+            </summary>
+            <param name="payload"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanTravelManagementSystem.Api.Controllers.Api.V1.Wx.home.HomeController.FoodorList">
+            <summary>
+            显示所有特产信息
+            </summary>
+            <param name="payload"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanTravelManagementSystem.Api.Controllers.Api.V1.Wx.home.HomeController.Picklist">
+            <summary>
+            显示所有停车场信息
+            </summary>
+            <param name="payload"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanTravelManagementSystem.Api.Controllers.Api.V1.Wx.home.HomeController.Scienlist(System.Guid)">
+            <summary>
+            显示所有景点信息
+            </summary>
+            <param name="payload"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanTravelManagementSystem.Api.Controllers.Api.V1.Wx.home.HomeController.Gtoiletlist">
+            <summary>
+            显示所有公厕信息
+            </summary>
+            <param name="payload"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanTravelManagementSystem.Api.Controllers.Api.V1.Wx.home.HomeController.banklist">
+            <summary>
+            显示所有银行
+            </summary>
+            <param name="payload"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanTravelManagementSystem.Api.Controllers.Api.V1.Wx.home.HomeController.hospitallist">
+            <summary>
+            显示所有医院
+            </summary>
+            <param name="payload"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanTravelManagementSystem.Api.Controllers.Api.V1.Wx.home.HomeController.ggggtoiletlist">
+            <summary>
+            显示所有公厕
+            </summary>
+            <param name="payload"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanTravelManagementSystem.Api.Controllers.Api.V1.Wx.home.HomeController.addlist(HaiKanTravelManagementSystem.Api.ViewModels.Strategy.UserViewModel)">
+            <summary>
+            添加打卡信息
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanTravelManagementSystem.Api.Controllers.Api.V1.Wx.home.HomeController.infolist1(HaiKanTravelManagementSystem.Api.RequestPayload.Wx.home.HomeRequestPayload)">
+            <summary>
+            显示所有改景点的评论
+            </summary>
+            <param name="payload"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanTravelManagementSystem.Api.Controllers.Api.V1.Wx.home.HomeController.image1url(System.String)">
+            <summary>
+            拼接图片路径
+            </summary>
+            <param name="imgname"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanTravelManagementSystem.Api.Controllers.Api.V1.Wx.home.HomeController.Recommend(HaiKanTravelManagementSystem.Api.RequestPayload.Wx.home.HomeRequestPayload)">
+            <summary>
+            推荐列表
+            </summary>
+            <param name="payload"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanTravelManagementSystem.Api.Controllers.Api.V1.Wx.home.HomeController.Discovery(HaiKanTravelManagementSystem.Api.RequestPayload.Wx.home.HomeRequestPayload)">
+            <summary>
+            非推荐列表
+            </summary>
+            <param name="payload"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanTravelManagementSystem.Api.Controllers.Api.V1.Wx.home.HomeController.Info(System.String,System.Guid)">
+            <summary>
+            获取文章详情
+            </summary>
+            <param name="type"></param>
+            <param name="uuid"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanTravelManagementSystem.Api.Controllers.Api.V1.Wx.home.HomeController.GetContent(System.String)">
+            <summary>
+            获取正文
+            </summary>
+            <param name="content"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanTravelManagementSystem.Api.Controllers.Api.V1.Wx.scene.SceneController.#ctor(HaiKanTravelManagementSystem.Api.Entities.haikanHeQiaoContext,AutoMapper.IMapper)">
+            <summary>
+            
+            </summary>
+            <param name="dbContext"></param>
+            <param name="mapper"></param>
+        </member>
+        <member name="M:HaiKanTravelManagementSystem.Api.Controllers.Api.V1.Wx.scene.SceneController.GetSceneSpot(System.Guid)">
+            <summary>
+            获取景点详情
+             </summary>
+        </member>
+        <member name="M:HaiKanTravelManagementSystem.Api.Controllers.Api.V1.Wx.traveltips.mswhController.minsuList(HaiKanTravelManagementSystem.Api.RequestPayload.Wx.traveltips.WxStrategyRequestPayload)">
+            <summary>
+            显示所有信息——民俗文化
+            </summary>
+            <param name="payload"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanTravelManagementSystem.Api.Controllers.Api.V1.Wx.traveltips.mswhController.gettext(System.String)">
+            <summary>
+            去p
+            </summary>
+            <param name="text">文本</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanTravelManagementSystem.Api.Controllers.Api.V1.Wx.traveltips.mswhController.liulan(System.String)">
+            <summary>
+            民俗文化-浏览量修改
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanTravelManagementSystem.Api.Controllers.Api.V1.Wx.traveltips.StrategyController.#ctor(HaiKanTravelManagementSystem.Api.Entities.haikanHeQiaoContext,AutoMapper.IMapper)">
+            <summary>
+            
+            </summary>
+            <param name="dbContext"></param>
+            <param name="mapper"></param>
+        </member>
+        <member name="M:HaiKanTravelManagementSystem.Api.Controllers.Api.V1.Wx.traveltips.StrategyController.List(HaiKanTravelManagementSystem.Api.RequestPayload.Wx.traveltips.WxStrategyRequestPayload)">
+            <summary>
+            显示所有信息_攻略
+            </summary>
+            <param name="payload"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanTravelManagementSystem.Api.Controllers.Api.V1.Wx.traveltips.StrategyController.RoadList(HaiKanTravelManagementSystem.Api.RequestPayload.Wx.traveltips.WxStrategyRequestPayload)">
+            <summary>
+            显示所有信息——自驾路线
+            </summary>
+            <param name="payload"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanTravelManagementSystem.Api.Controllers.Api.V1.Wx.traveltips.StrategyController.StrategyDetail(System.Guid)">
+            <summary>
+            获取详情
+            </summary>
+            <param name="guid"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanTravelManagementSystem.Api.Controllers.Api.V1.Wx.traveltips.StrategyController.getluxuan(System.Guid)">
+            <summary>
+            获取路线推荐详情
+            </summary>
+            <param name="guid"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanTravelManagementSystem.Api.Controllers.Api.V1.Wx.traveltips.StrategyController.getfff(System.Guid)">
+            <summary>
+            获取民俗文化详情
+            </summary>
+            <param name="guid"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanTravelManagementSystem.Api.Controllers.Api.V1.Wx.traveltips.StrategyController.gettext(System.String)">
+            <summary>
+            去p
+            </summary>
+            <param name="text">文本</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanTravelManagementSystem.Api.Controllers.Api.V1.Wx.traveltips.StrategyController.liulan(System.String)">
+            <summary>
+            路线推荐浏览量添加
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanTravelManagementSystem.Api.Controllers.Api.V1.Wx.traveltips.StrategyController.youwan(System.String)">
+            <summary>
+            游玩攻略浏览量添加
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:HaiKanTravelManagementSystem.Api.Controllers.ErrorController">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:HaiKanTravelManagementSystem.Api.Controllers.ErrorController.Code(System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="code"></param>
+            <returns></returns>
+        </member>
+        <member name="T:HaiKanTravelManagementSystem.Api.Controllers.OauthController">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:HaiKanTravelManagementSystem.Api.Controllers.OauthController.#ctor(Microsoft.Extensions.Options.IOptions{HaiKanTravelManagementSystem.Api.Auth.AppAuthenticationSettings},HaiKanTravelManagementSystem.Api.Entities.haikanHeQiaoContext,Microsoft.Extensions.Options.IOptions{HaiKanTravelManagementSystem.Api.Configurations.MdDesEncrypt})">
+            <summary>
+            
+            </summary>
+            <param name="appSettings"></param>
+        </member>
+        <member name="M:HaiKanTravelManagementSystem.Api.Controllers.OauthController.Auth(HaiKanTravelManagementSystem.Api.Entities.User.UserData)">
+            <summary>
+            
+            </summary>
+            <param name="username"></param>
+            <param name="password"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanTravelManagementSystem.Api.Controllers.OauthController.WXAuth(HaiKanTravelManagementSystem.Api.ViewModels.Rbac.SystemUser.WXUserInfo)">
+            <summary>
+            微信授权登录
+            </summary>
+            <param name="info"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanTravelManagementSystem.Api.Controllers.OauthController.WXOpenAuth(System.String)">
+            <summary>
+            微信端--openid登录
+            </summary>
+            <param name="openid"></param>
+            <returns></returns>
+        </member>
+        <member name="T:HaiKanTravelManagementSystem.Api.Controllers.TestController">
+            <summary>
+            测试控制器
+            </summary>
+        </member>
+        <member name="M:HaiKanTravelManagementSystem.Api.Controllers.TestController.Logger">
+            <summary>
+            测试日志
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:HaiKanTravelManagementSystem.Api.Entities.Enums.CommonEnum">
+            <summary>
+            通用枚举类
+            </summary>
+        </member>
+        <member name="T:HaiKanTravelManagementSystem.Api.Entities.Enums.CommonEnum.IsDeleted">
+            <summary>
+            是否已删
+            </summary>
+        </member>
+        <member name="F:HaiKanTravelManagementSystem.Api.Entities.Enums.CommonEnum.IsDeleted.All">
+            <summary>
+            所有
+            </summary>
+        </member>
+        <member name="F:HaiKanTravelManagementSystem.Api.Entities.Enums.CommonEnum.IsDeleted.No">
+            <summary>
+            否
+            </summary>
+        </member>
+        <member name="F:HaiKanTravelManagementSystem.Api.Entities.Enums.CommonEnum.IsDeleted.Yes">
+            <summary>
+            是
+            </summary>
+        </member>
+        <member name="T:HaiKanTravelManagementSystem.Api.Entities.Enums.CommonEnum.IsLocked">
+            <summary>
+            是否已被锁定
+            </summary>
+        </member>
+        <member name="F:HaiKanTravelManagementSystem.Api.Entities.Enums.CommonEnum.IsLocked.UnLocked">
+            <summary>
+            未锁定
+            </summary>
+        </member>
+        <member name="F:HaiKanTravelManagementSystem.Api.Entities.Enums.CommonEnum.IsLocked.Locked">
+            <summary>
+            已锁定
+            </summary>
+        </member>
+        <member name="T:HaiKanTravelManagementSystem.Api.Entities.Enums.CommonEnum.IsEnabled">
+            <summary>
+            是否可用
+            </summary>
+        </member>
+        <member name="F:HaiKanTravelManagementSystem.Api.Entities.Enums.CommonEnum.IsEnabled.No">
+            <summary>
+            否
+            </summary>
+        </member>
+        <member name="F:HaiKanTravelManagementSystem.Api.Entities.Enums.CommonEnum.IsEnabled.Yes">
+            <summary>
+            是
+            </summary>
+        </member>
+        <member name="T:HaiKanTravelManagementSystem.Api.Entities.Enums.CommonEnum.Status">
+            <summary>
+            用户状态
+            </summary>
+        </member>
+        <member name="F:HaiKanTravelManagementSystem.Api.Entities.Enums.CommonEnum.Status.All">
+            <summary>
+            未指定
+            </summary>
+        </member>
+        <member name="F:HaiKanTravelManagementSystem.Api.Entities.Enums.CommonEnum.Status.Forbidden">
+            <summary>
+            已禁用
+            </summary>
+        </member>
+        <member name="F:HaiKanTravelManagementSystem.Api.Entities.Enums.CommonEnum.Status.Normal">
+            <summary>
+            正常
+            </summary>
+        </member>
+        <member name="T:HaiKanTravelManagementSystem.Api.Entities.Enums.CommonEnum.PermissionType">
+            <summary>
+            权限类型
+            </summary>
+        </member>
+        <member name="F:HaiKanTravelManagementSystem.Api.Entities.Enums.CommonEnum.PermissionType.Menu">
+            <summary>
+            菜单
+            </summary>
+        </member>
+        <member name="F:HaiKanTravelManagementSystem.Api.Entities.Enums.CommonEnum.PermissionType.Action">
+            <summary>
+            按钮/操作/功能
+            </summary>
+        </member>
+        <member name="T:HaiKanTravelManagementSystem.Api.Entities.Enums.CommonEnum.YesOrNo">
+            <summary>
+            是否枚举
+            </summary>
+        </member>
+        <member name="F:HaiKanTravelManagementSystem.Api.Entities.Enums.CommonEnum.YesOrNo.All">
+            <summary>
+            所有
+            </summary>
+        </member>
+        <member name="F:HaiKanTravelManagementSystem.Api.Entities.Enums.CommonEnum.YesOrNo.No">
+            <summary>
+            否
+            </summary>
+        </member>
+        <member name="F:HaiKanTravelManagementSystem.Api.Entities.Enums.CommonEnum.YesOrNo.Yes">
+            <summary>
+            是
+            </summary>
+        </member>
+        <member name="M:HaiKanTravelManagementSystem.Api.Extensions.AuthContext.AuthContextService.Configure(Microsoft.AspNetCore.Http.IHttpContextAccessor)">
+            <summary>
+            
+            </summary>
+            <param name="httpContextAccessor"></param>
+        </member>
+        <member name="P:HaiKanTravelManagementSystem.Api.Extensions.AuthContext.AuthContextService.Current">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:HaiKanTravelManagementSystem.Api.Extensions.AuthContext.AuthContextService.CurrentUser">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:HaiKanTravelManagementSystem.Api.Extensions.AuthContext.AuthContextService.IsAuthenticated">
+            <summary>
+            是否已授权
+            </summary>
+        </member>
+        <member name="P:HaiKanTravelManagementSystem.Api.Extensions.AuthContext.AuthContextService.IsSupperAdministator">
+            <summary>
+            是否是超级管理员
+            </summary>
+        </member>
+        <member name="T:HaiKanTravelManagementSystem.Api.Extensions.AuthContext.AuthContextUser">
+            <summary>
+            登录用户上下文
+            </summary>
+        </member>
+        <member name="P:HaiKanTravelManagementSystem.Api.Extensions.AuthContext.AuthContextUser.Guid">
+            <summary>
+            用户GUID
+            </summary>
+        </member>
+        <member name="P:HaiKanTravelManagementSystem.Api.Extensions.AuthContext.AuthContextUser.DisplayName">
+            <summary>
+            显示名
+            </summary>
+        </member>
+        <member name="P:HaiKanTravelManagementSystem.Api.Extensions.AuthContext.AuthContextUser.LoginName">
+            <summary>
+            登录名
+            </summary>
+        </member>
+        <member name="P:HaiKanTravelManagementSystem.Api.Extensions.AuthContext.AuthContextUser.EmailAddress">
+            <summary>
+            电子邮箱
+            </summary>
+        </member>
+        <member name="P:HaiKanTravelManagementSystem.Api.Extensions.AuthContext.AuthContextUser.UserType">
+            <summary>
+            用户类型
+            </summary>
+        </member>
+        <member name="P:HaiKanTravelManagementSystem.Api.Extensions.AuthContext.AuthContextUser.Avator">
+            <summary>
+            头像地址
+            </summary>
+        </member>
+        <member name="P:HaiKanTravelManagementSystem.Api.Extensions.AuthContext.AuthContextUser.Roleid">
+            <summary>
+            角色id
+            </summary>
+        </member>
+        <member name="P:HaiKanTravelManagementSystem.Api.Extensions.AuthContext.AuthContextUser.RoleName">
+            <summary>
+            角色名
+            </summary>
+        </member>
+        <member name="T:HaiKanTravelManagementSystem.Api.Extensions.ConfigurationManager">
+            <summary>
+            配置文件管理器
+            </summary>
+        </member>
+        <member name="P:HaiKanTravelManagementSystem.Api.Extensions.ConfigurationManager.Configuration">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:HaiKanTravelManagementSystem.Api.Extensions.ConfigurationManager.AppSettings">
+            <summary>
+            读取配置文件[AppSettings]节点数据
+            </summary>
+        </member>
+        <member name="P:HaiKanTravelManagementSystem.Api.Extensions.ConfigurationManager.ConnectionStrings">
+            <summary>
+            读取配置文件[ConnectionStrings]
+            </summary>
+        </member>
+        <member name="T:HaiKanTravelManagementSystem.Api.Extensions.CustomException.CanAccess">
+            <summary>
+            用户可以访问的控制器及操作权限
+            </summary>
+        </member>
+        <member name="P:HaiKanTravelManagementSystem.Api.Extensions.CustomException.CanAccess.Controller">
+            <summary>
+            控制器
+            </summary>
+        </member>
+        <member name="P:HaiKanTravelManagementSystem.Api.Extensions.CustomException.CanAccess.Actions">
+            <summary>
+            Action集合
+            </summary>
+        </member>
+        <member name="T:HaiKanTravelManagementSystem.Api.Extensions.CustomException.OwnedApiPermission">
+            <summary>
+            用户拥有的API操作权限
+            </summary>
+        </member>
+        <member name="M:HaiKanTravelManagementSystem.Api.Extensions.CustomException.OwnedApiPermission.#ctor">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:HaiKanTravelManagementSystem.Api.Extensions.CustomException.OwnedApiPermission.CanAccesses">
+            <summary>
+            可以访问的API控制器集合
+            </summary>
+        </member>
+        <member name="M:HaiKanTravelManagementSystem.Api.Extensions.CustomException.OwnedApiPermission.Can(System.String,System.String)">
+            <summary>
+            是否可以访问
+            </summary>
+            <param name="controller"></param>
+            <param name="action"></param>
+            <returns></returns>
+        </member>
+        <member name="T:HaiKanTravelManagementSystem.Api.Extensions.CustomException.CustomAuthorizeAttribute">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:HaiKanTravelManagementSystem.Api.Extensions.CustomException.CustomAuthorizeAttribute.#ctor">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:HaiKanTravelManagementSystem.Api.Extensions.CustomException.CustomAuthorizeAttribute.ActionAlias">
+            <summary>
+            操作的别名
+            </summary>
+        </member>
+        <member name="M:HaiKanTravelManagementSystem.Api.Extensions.CustomException.CustomAuthorizeAttribute.OnAuthorization(Microsoft.AspNetCore.Mvc.Filters.AuthorizationFilterContext)">
+            <summary>
+            
+            </summary>
+            <param name="context"></param>
+        </member>
+        <member name="T:HaiKanTravelManagementSystem.Api.Extensions.CustomException.ExceptionMiddleware">
+            <summary>
+            异常中间件
+            </summary>
+        </member>
+        <member name="M:HaiKanTravelManagementSystem.Api.Extensions.CustomException.ExceptionMiddleware.#ctor(Microsoft.AspNetCore.Http.RequestDelegate)">
+            <summary>
+            
+            </summary>
+            <param name="next"></param>
+        </member>
+        <member name="T:HaiKanTravelManagementSystem.Api.Extensions.CustomException.HttpException">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:HaiKanTravelManagementSystem.Api.Extensions.CustomException.HttpException.#ctor(System.Net.HttpStatusCode)">
+            <summary>
+            
+            </summary>
+            <param name="statusCode"></param>
+        </member>
+        <member name="P:HaiKanTravelManagementSystem.Api.Extensions.CustomException.HttpException.StatusCode">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:HaiKanTravelManagementSystem.Api.Extensions.CustomException.UnauthorizeException">
+            <summary>
+            未授权的异常类
+            </summary>
+        </member>
+        <member name="M:HaiKanTravelManagementSystem.Api.Extensions.CustomException.UnauthorizeException.#ctor">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:HaiKanTravelManagementSystem.Api.Extensions.CustomException.ValidateModelAttribute">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:HaiKanTravelManagementSystem.Api.Extensions.CustomException.ValidateModelAttribute.OnActionExecuting(Microsoft.AspNetCore.Mvc.Filters.ActionExecutingContext)">
+            <summary>
+            
+            </summary>
+            <param name="actionContext"></param>
+        </member>
+        <member name="T:HaiKanTravelManagementSystem.Api.Extensions.DataAccess.EntityFrameworkExtension">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:HaiKanTravelManagementSystem.Api.Extensions.DataAccess.EntityFrameworkExtension.FromSql``1(Microsoft.EntityFrameworkCore.Infrastructure.DatabaseFacade,System.String,System.Object)">
+            <summary>
+            调用ADO.NET执行SQL语句查询泛型集合
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="database">数据库连接上下文</param>
+            <param name="sql">SQL语句</param>
+            <param name="parameters">SQL语句需要的参数</param>
+            <returns></returns>
+        </member>
+        <member name="T:HaiKanTravelManagementSystem.Api.Extensions.DataAccess.OrderByExtensions">
+            <summary>
+            排序静态扩展类
+            </summary>
+        </member>
+        <member name="T:HaiKanTravelManagementSystem.Api.Extensions.DataAccess.QueryParamNameAttribute">
+            <summary>
+            Use for an alternative param name other than the propery name
+            </summary>
+        </member>
+        <member name="T:HaiKanTravelManagementSystem.Api.Extensions.DataAccess.QueryParamIgnoreAttribute">
+            <summary>
+            Ignore this property
+            </summary>
+        </member>
+        <member name="T:HaiKanTravelManagementSystem.Api.Extensions.DataAccess.TypeConvertor">
+            <summary>
+            Convert a base data type to another base data type
+            </summary>
+        </member>
+        <member name="M:HaiKanTravelManagementSystem.Api.Extensions.DataAccess.TypeConvertor.ToNetType(System.Data.DbType)">
+            <summary>
+            Convert db type to .Net data type
+            </summary>
+            <param name="dbType"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanTravelManagementSystem.Api.Extensions.DataAccess.TypeConvertor.ToNetType(System.Data.SqlDbType)">
+            <summary>
+            Convert TSQL type to .Net data type
+            </summary>
+            <param name="sqlDbType"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanTravelManagementSystem.Api.Extensions.DataAccess.TypeConvertor.ToDbType(System.Type)">
+            <summary>
+            Convert .Net type to Db type
+            </summary>
+            <param name="type"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanTravelManagementSystem.Api.Extensions.DataAccess.TypeConvertor.ToDbType(System.Data.SqlDbType)">
+            <summary>
+            Convert TSQL data type to DbType
+            </summary>
+            <param name="sqlDbType"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanTravelManagementSystem.Api.Extensions.DataAccess.TypeConvertor.ToSqlDbType(System.Type)">
+            <summary>
+            Convert .Net type to TSQL data type
+            </summary>
+            <param name="type"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HaiKanTravelManagementSystem.Api.Extensions.DataAccess.TypeConvertor.ToSqlDbType(System.Data.DbType)">
+            <summary>
+            Convert DbType type to TSQL data type
+            </summary>
+            <param name="dbType"></param>
+            <returns></returns>
+        </member>
+        <member name="T:HaiKanTravelManagementSystem.Api.Extensions.DataTableConvert">
+            <summary>
+            把datatable转换为对象集合列表List&lt;T&gt;
+            </summary>
+        </member>
+        <member name="M:HaiKanTravelManagementSystem.Api.Extensions.DataTableConvert.ToList``1(System.Data.DataTable)">
+            <summary>
+            将DataTable转换成泛型对象列表
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="dt"></param>
+            <returns></returns>
+        </member>
+        <member name="T:HaiKanTravelManagementSystem.Api.Extensions.QueryableExtension">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:HaiKanTravelManagementSystem.Api.Extensions.QueryableExtension.Paged``1(System.Linq.IQueryable{``0},System.Int32,System.Int32)">
+            <summary>
+            IQueryable分页
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="query"></param>
+            <param name="currentPage"></param>
+            <param name="pageSize"></param>
+            <returns></returns>
+        </member>
+        <member name="T:HaiKanTravelManagementSystem.Api.Extensions.ResponseModelFactory">
+            <summary>
+            /
+            </summary>
+        </member>
+        <member name="P:HaiKanTravelManagementSystem.Api.Extensions.ResponseModelFactory.CreateInstance">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:HaiKanTravelManagementSystem.Api.Extensions.ResponseModelFactory.CreateResultInstance">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:HaiKanTravelManagementSystem.Api.Models.Menu.Router">
+            <summary>
+            用于前端的路由对象
+            </summary>
+        </member>
+        <member name="T:HaiKanTravelManagementSystem.Api.Models.Menu.RouterMeta">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:HaiKanTravelManagementSystem.Api.Models.QueryModels.SystemPermissionWithAssignProperty.Code">
+            <summary>
+            权限编码
+            </summary>
+        </member>
+        <member name="P:HaiKanTravelManagementSystem.Api.Models.QueryModels.SystemPermissionWithAssignProperty.Name">
+            <summary>
+            权限名称
+            </summary>
+        </member>
+        <member name="P:HaiKanTravelManagementSystem.Api.Models.QueryModels.SystemPermissionWithAssignProperty.MenuGuid">
+            <summary>
+            权限关联的菜单GUID
+            </summary>
+        </member>
+        <member name="P:HaiKanTravelManagementSystem.Api.Models.QueryModels.SystemPermissionWithAssignProperty.ActionCode">
+            <summary>
+            权限操作码
+            </summary>
+        </member>
+        <member name="P:HaiKanTravelManagementSystem.Api.Models.QueryModels.SystemPermissionWithAssignProperty.RoleCode">
+            <summary>
+            角色编码
+            </summary>
+        </member>
+        <member name="P:HaiKanTravelManagementSystem.Api.Models.QueryModels.SystemPermissionWithAssignProperty.IsAssigned">
+            <summary>
+            权限是否已分配到当前角色
+            </summary>
+        </member>
+        <member name="P:HaiKanTravelManagementSystem.Api.Models.QueryModels.SystemPermissionWithMenu.PermissionCode">
+            <summary>
+            权限码
+            </summary>
+        </member>
+        <member name="P:HaiKanTravelManagementSystem.Api.Models.QueryModels.SystemPermissionWithMenu.PermissionActionCode">
+            <summary>
+            权限操作码
+            </summary>
+        </member>
+        <member name="P:HaiKanTravelManagementSystem.Api.Models.QueryModels.SystemPermissionWithMenu.PermissionName">
+            <summary>
+            权限名称
+            </summary>
+        </member>
+        <member name="P:HaiKanTravelManagementSystem.Api.Models.QueryModels.SystemPermissionWithMenu.PermissionType">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:HaiKanTravelManagementSystem.Api.Models.QueryModels.SystemPermissionWithMenu.MenuName">
+            <summary>
+            菜单名称
+            </summary>
+        </member>
+        <member name="P:HaiKanTravelManagementSystem.Api.Models.QueryModels.SystemPermissionWithMenu.MenuGuid">
+            <summary>
+            菜单GUID
+            </summary>
+        </member>
+        <member name="P:HaiKanTravelManagementSystem.Api.Models.QueryModels.SystemPermissionWithMenu.MenuAlias">
+            <summary>
+            菜单别名(与前端路由配置中的name值保持一致)
+            </summary>
+        </member>
+        <member name="P:HaiKanTravelManagementSystem.Api.Models.QueryModels.SystemPermissionWithMenu.IsDefaultRouter">
+            <summary>
+            是否是默认前端路由
+            </summary>
+        </member>
+        <member name="T:HaiKanTravelManagementSystem.Api.Models.Response.ResponseModel">
+            <summary>
+            请求响应实体
+            </summary>
+        </member>
+        <member name="M:HaiKanTravelManagementSystem.Api.Models.Response.ResponseModel.#ctor">
+            <summary>
+            请求响应实体类
+            </summary>
+        </member>
+        <member name="P:HaiKanTravelManagementSystem.Api.Models.Response.ResponseModel.Code">
+            <summary>
+            响应代码
+            </summary>
+        </member>
+        <member name="P:HaiKanTravelManagementSystem.Api.Models.Response.ResponseModel.Message">
+            <summary>
+            响应消息内容
+            </summary>
+        </member>
+        <member name="P:HaiKanTravelManagementSystem.Api.Models.Response.ResponseModel.Data">
+            <summary>
+            返回的响应数据
+            </summary>
+        </member>
+        <member name="M:HaiKanTravelManagementSystem.Api.Models.Response.ResponseModel.SetSuccess(System.String)">
+            <summary>
+            设置响应状态为成功
+            </summary>
+            <param name="message"></param>
+        </member>
+        <member name="M:HaiKanTravelManagementSystem.Api.Models.Response.ResponseModel.SetFailed(System.String)">
+            <summary>
+            设置响应状态为失败
+            </summary>
+            <param name="message"></param>
+        </member>
+        <member name="M:HaiKanTravelManagementSystem.Api.Models.Response.ResponseModel.SetIsTrial(System.String)">
+            <summary>
+            设置响应状态为体验版(返回失败结果)
+            </summary>
+            <param name="message"></param>
+        </member>
+        <member name="M:HaiKanTravelManagementSystem.Api.Models.Response.ResponseModel.SetError(System.String)">
+            <summary>
+            设置响应状态为错误
+            </summary>
+            <param name="message"></param>
+        </member>
+        <member name="M:HaiKanTravelManagementSystem.Api.Models.Response.ResponseModel.SetNotFound(System.String)">
+            <summary>
+            设置响应状态为未知资源
+            </summary>
+            <param name="message"></param>
+        </member>
+        <member name="M:HaiKanTravelManagementSystem.Api.Models.Response.ResponseModel.SetNoPermission(System.String)">
+            <summary>
+            设置响应状态为无权限
+            </summary>
+            <param name="message"></param>
+        </member>
+        <member name="M:HaiKanTravelManagementSystem.Api.Models.Response.ResponseModel.SetData(System.Object)">
+            <summary>
+            设置响应数据
+            </summary>
+            <param name="data"></param>
+        </member>
+        <member name="T:HaiKanTravelManagementSystem.Api.Models.Response.ResponseResultModel">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:HaiKanTravelManagementSystem.Api.Models.Response.ResponseResultModel.TotalCount">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:HaiKanTravelManagementSystem.Api.Models.Response.ResponseResultModel.SetData(System.Object,System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="data"></param>
+            <param name="totalCount"></param>
+        </member>
+        <member name="P:HaiKanTravelManagementSystem.Api.RequestPayload.ArticleManagement.articlequestpayload.IsDeleted">
+            <summary>
+            是否已被删除
+            </summary>
+        </member>
+        <member name="P:HaiKanTravelManagementSystem.Api.RequestPayload.ArticleManagement.ArticleTypeRequestPayload.IsDeleted">
+            <summary>
+            是否已被删除
+            </summary>
+        </member>
+        <member name="P:HaiKanTravelManagementSystem.Api.RequestPayload.Intelligentguide.CarParkRequestPayload.IsDeleted">
+            <summary>
+            是否已被删除
+            </summary>
+        </member>
+        <member name="P:HaiKanTravelManagementSystem.Api.RequestPayload.Intelligentguide.CarParkRequestPayload.State">
+             /// <summary>
+            状态
+            </summary>
+        </member>
+        <member name="P:HaiKanTravelManagementSystem.Api.RequestPayload.Intelligentguide.FoodRequestPayload.IsDeleted">
+            <summary>
+            是否已被删除
+            </summary>
+        </member>
+        <member name="P:HaiKanTravelManagementSystem.Api.RequestPayload.Intelligentguide.FoodRequestPayload.State">
+             /// <summary>
+            状态
+            </summary>
+        </member>
+        <member name="P:HaiKanTravelManagementSystem.Api.RequestPayload.Intelligentguide.GtoiletRequestPayload.IsDeleted">
+            <summary>
+            是否已被删除
+            </summary>
+        </member>
+        <member name="P:HaiKanTravelManagementSystem.Api.RequestPayload.Intelligentguide.HotelRequestPayload.IsDeleted">
+            <summary>
+            是否已被删除
+            </summary>
+        </member>
+        <member name="P:HaiKanTravelManagementSystem.Api.RequestPayload.Intelligentguide.HotelRequestPayload.State">
+             /// <summary>
+            状态
+            </summary>
+        </member>
+        <member name="P:HaiKanTravelManagementSystem.Api.RequestPayload.Intelligentguide.MapmarkRequestPayload.IsDeleted">
+            <summary>
+            是否已被删除
+            </summary>
+        </member>
+        <member name="P:HaiKanTravelManagementSystem.Api.RequestPayload.Intelligentguide.MarkRequestPayload.IsDeleted">
+            <summary>
+            是否已被删除
+            </summary>
+        </member>
+        <member name="P:HaiKanTravelManagementSystem.Api.RequestPayload.Intelligentguide.SpecialpickRequestPayload.IsDeleted">
+            <summary>
+            是否已被删除
+            </summary>
+        </member>
+        <member name="P:HaiKanTravelManagementSystem.Api.RequestPayload.Intelligentguide.SpecialpickRequestPayload.State">
+             /// <summary>
+            状态
+            </summary>
+        </member>
+        <member name="P:HaiKanTravelManagementSystem.Api.RequestPayload.Intelligentguide.VideoMarkRequestPayload.IsDeleted">
+            <summary>
+            是否已被删除
+            </summary>
+        </member>
+        <member name="P:HaiKanTravelManagementSystem.Api.RequestPayload.Leavemessage.LiuyanRequestPayload.IsDeleted">
+            <summary>
+            是否已被删除
+            </summary>
+        </member>
+        <member name="P:HaiKanTravelManagementSystem.Api.RequestPayload.Leavemessage.LiuyanRequestPayload.State">
+             /// <summary>
+            状态
+            </summary>
+        </member>
+        <member name="P:HaiKanTravelManagementSystem.Api.RequestPayload.Parking.ParkingQueryPayload.Type">
+            <summary>
+            0 全部  1距离  2车位
+            </summary>
+        </member>
+        <member name="P:HaiKanTravelManagementSystem.Api.RequestPayload.Rbac.Department.DepartmentRequestPaload.IsDeleted">
+            <summary>
+            是否已被删除
+            </summary>
+        </member>
+        <member name="T:HaiKanTravelManagementSystem.Api.RequestPayload.Rbac.Menu.MenuRequestPayload">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:HaiKanTravelManagementSystem.Api.RequestPayload.Rbac.Menu.MenuRequestPayload.IsDeleted">
+            <summary>
+            是否已被删除
+            </summary>
+        </member>
+        <member name="P:HaiKanTravelManagementSystem.Api.RequestPayload.Rbac.Menu.MenuRequestPayload.Status">
+            <summary>
+            状态
+            </summary>
+        </member>
+        <member name="P:HaiKanTravelManagementSystem.Api.RequestPayload.Rbac.Menu.MenuRequestPayload.ParentGuid">
+            <summary>
+            上级菜单GUID
+            </summary>
+        </member>
+        <member name="T:HaiKanTravelManagementSystem.Api.RequestPayload.Rbac.Permission.PermissionRequestPayload">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:HaiKanTravelManagementSystem.Api.RequestPayload.Rbac.Permission.PermissionRequestPayload.IsDeleted">
+            <summary>
+            是否已被删除
+            </summary>
+        </member>
+        <member name="P:HaiKanTravelManagementSystem.Api.RequestPayload.Rbac.Permission.PermissionRequestPayload.Status">
+            <summary>
+            状态
+            </summary>
+        </member>
+        <member name="P:HaiKanTravelManagementSystem.Api.RequestPayload.Rbac.Permission.PermissionRequestPayload.SystemMenuUuid">
+            <summary>
+            关联菜单GUID
+            </summary>
+        </member>
+        <member name="T:HaiKanTravelManagementSystem.Api.RequestPayload.Rbac.Role.RoleAssignPermissionPayload">
+            <summary>
+            角色分配权限的请求载体类
+            </summary>
+        </member>
+        <member name="M:HaiKanTravelManagementSystem.Api.RequestPayload.Rbac.Role.RoleAssignPermissionPayload.#ctor">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:HaiKanTravelManagementSystem.Api.RequestPayload.Rbac.Role.RoleAssignPermissionPayload.RoleCode">
+            <summary>
+            角色编码
+            </summary>
+        </member>
+        <member name="P:HaiKanTravelManagementSystem.Api.RequestPayload.Rbac.Role.RoleAssignPermissionPayload.Permissions">
+            <summary>
+            权限列表
+            </summary>
+        </member>
+        <member name="T:HaiKanTravelManagementSystem.Api.RequestPayload.Rbac.Role.RoleRequestPayload">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:HaiKanTravelManagementSystem.Api.RequestPayload.Rbac.Role.RoleRequestPayload.IsDeleted">
+            <summary>
+            是否已被删除
+            </summary>
+        </member>
+        <member name="P:HaiKanTravelManagementSystem.Api.RequestPayload.Rbac.Role.RoleRequestPayload.Status">
+            <summary>
+            状态
+            </summary>
+        </member>
+        <member name="T:HaiKanTravelManagementSystem.Api.RequestPayload.Rbac.User.UserRequestPayload">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:HaiKanTravelManagementSystem.Api.RequestPayload.Rbac.User.UserRequestPayload.IsDeleted">
+            <summary>
+            是否已被删除
+            </summary>
+        </member>
+        <member name="T:HaiKanTravelManagementSystem.Api.RequestPayload.RequestPayload">
+            <summary>
+            请求实体
+            </summary>
+        </member>
+        <member name="M:HaiKanTravelManagementSystem.Api.RequestPayload.RequestPayload.#ctor">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:HaiKanTravelManagementSystem.Api.RequestPayload.RequestPayload.PageSize">
+            <summary>
+            分页大小
+            </summary>
+        </member>
+        <member name="P:HaiKanTravelManagementSystem.Api.RequestPayload.RequestPayload.CurrentPage">
+            <summary>
+            当前页码
+            </summary>
+        </member>
+        <member name="P:HaiKanTravelManagementSystem.Api.RequestPayload.RequestPayload.Sort">
+            <summary>
+            排序对象集合(支持多个字段排序)
+            </summary>
+        </member>
+        <member name="P:HaiKanTravelManagementSystem.Api.RequestPayload.RequestPayload.OrderBy">
+            <summary>
+            组合后的排序字符串
+            </summary>
+        </member>
+        <member name="P:HaiKanTravelManagementSystem.Api.RequestPayload.RequestPayload.FirstSort">
+            <summary>
+            第一个排序字段(单个字段排序)
+            </summary>
+        </member>
+        <member name="P:HaiKanTravelManagementSystem.Api.RequestPayload.RequestPayload.Kw">
+            <summary>
+            搜索关键字
+            </summary>
+        </member>
+        <member name="T:HaiKanTravelManagementSystem.Api.RequestPayload.Sort">
+            <summary>
+            排序实体对象
+            </summary>
+        </member>
+        <member name="M:HaiKanTravelManagementSystem.Api.RequestPayload.Sort.#ctor">
+            <summary>
+            排序实体对象构造函数
+            </summary>
+        </member>
+        <member name="P:HaiKanTravelManagementSystem.Api.RequestPayload.Sort.Field">
+            <summary>
+            排序字段
+            </summary>
+        </member>
+        <member name="P:HaiKanTravelManagementSystem.Api.RequestPayload.Sort.Direct">
+            <summary>
+            排序方向
+            </summary>
+        </member>
+        <member name="P:HaiKanTravelManagementSystem.Api.RequestPayload.Scene.ScenicSpotRequestPayload.IsDeleted">
+            <summary>
+            是否已被删除
+            </summary>
+        </member>
+        <member name="P:HaiKanTravelManagementSystem.Api.RequestPayload.Scene.ScenicSpotRequestPayload.State">
+             /// <summary>
+            状态
+            </summary>
+        </member>
+        <member name="P:HaiKanTravelManagementSystem.Api.RequestPayload.SpotPublicity.PromotionalVideoRequestPayload.IsDeleted">
+            <summary>
+            是否已被删除
+            </summary>
+        </member>
+        <member name="P:HaiKanTravelManagementSystem.Api.RequestPayload.SpotPublicity.PromotionalVideoRequestPayload.State">
+             /// <summary>
+            状态
+            </summary>
+        </member>
+        <member name="P:HaiKanTravelManagementSystem.Api.RequestPayload.SpotPublicity.PublicityRequestPayload.IsDeleted">
+            <summary>
+            是否已被删除
+            </summary>
+        </member>
+        <member name="P:HaiKanTravelManagementSystem.Api.RequestPayload.SpotPublicity.PublicityTypeRequestPayload.IsDeleted">
+            <summary>
+            是否已被删除
+            </summary>
+        </member>
+        <member name="P:HaiKanTravelManagementSystem.Api.RequestPayload.Strategy.StrategyRequestPayload.IsDeleted">
+            <summary>
+            是否已被删除
+            </summary>
+        </member>
+        <member name="P:HaiKanTravelManagementSystem.Api.RequestPayload.Strategy.StrategyRequestPayload.AuditStaues">
+             /// <summary>
+            状态
+            </summary>
+        </member>
+        <member name="P:HaiKanTravelManagementSystem.Api.RequestPayload.Treasurerecord.TreasurerecordRequestPayload.IsDeleted">
+            <summary>
+            是否已被删除
+            </summary>
+        </member>
+        <member name="P:HaiKanTravelManagementSystem.Api.RequestPayload.Treasurerecord.TreasurerecordRequestPayload.State">
+             /// <summary>
+            状态
+            </summary>
+        </member>
+        <member name="T:HaiKanTravelManagementSystem.Api.ViewModels.Rbac.SystemMenu.MenuCreateViewModel">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:HaiKanTravelManagementSystem.Api.ViewModels.Rbac.SystemMenu.MenuCreateViewModel.Name">
+            <summary>
+            菜单名称
+            </summary>
+        </member>
+        <member name="P:HaiKanTravelManagementSystem.Api.ViewModels.Rbac.SystemMenu.MenuCreateViewModel.Url">
+            <summary>
+            链接地址
+            </summary>
+        </member>
+        <member name="P:HaiKanTravelManagementSystem.Api.ViewModels.Rbac.SystemMenu.MenuCreateViewModel.Alias">
+            <summary>
+            页面别名
+            </summary>
+        </member>
+        <member name="P:HaiKanTravelManagementSystem.Api.ViewModels.Rbac.SystemMenu.MenuCreateViewModel.Icon">
+            <summary>
+            菜单图标(可选)
+            </summary>
+        </member>
+        <member name="P:HaiKanTravelManagementSystem.Api.ViewModels.Rbac.SystemMenu.MenuCreateViewModel.ParentGuid">
+            <summary>
+            父级GUID
+            </summary>
+        </member>
+        <member name="P:HaiKanTravelManagementSystem.Api.ViewModels.Rbac.SystemMenu.MenuCreateViewModel.ParentName">
+            <summary>
+            上级菜单名称
+            </summary>
+        </member>
+        <member name="P:HaiKanTravelManagementSystem.Api.ViewModels.Rbac.SystemMenu.MenuCreateViewModel.Level">
+            <summary>
+            菜单层级深度
+            </summary>
+        </member>
+        <member name="P:HaiKanTravelManagementSystem.Api.ViewModels.Rbac.SystemMenu.MenuCreateViewModel.Description">
+            <summary>
+            描述信息
+            </summary>
+        </member>
+        <member name="P:HaiKanTravelManagementSystem.Api.ViewModels.Rbac.SystemMenu.MenuCreateViewModel.Sort">
+            <summary>
+            排序
+            </summary>
+        </member>
+        <member name="P:HaiKanTravelManagementSystem.Api.ViewModels.Rbac.SystemMenu.MenuCreateViewModel.Status">
+            <summary>
+            是否可用(0:禁用,1:可用)
+            </summary>
+        </member>
+        <member name="P:HaiKanTravelManagementSystem.Api.ViewModels.Rbac.SystemMenu.MenuCreateViewModel.IsDeleted">
+            <summary>
+            是否已删
+            </summary>
+        </member>
+        <member name="P:HaiKanTravelManagementSystem.Api.ViewModels.Rbac.SystemMenu.MenuCreateViewModel.IsDefaultRouter">
+            <summary>
+            是否为默认路由
+            </summary>
+        </member>
+        <member name="P:HaiKanTravelManagementSystem.Api.ViewModels.Rbac.SystemMenu.MenuCreateViewModel.Component">
+            <summary>
+            前端组件(.vue)
+            </summary>
+        </member>
+        <member name="P:HaiKanTravelManagementSystem.Api.ViewModels.Rbac.SystemMenu.MenuCreateViewModel.HideInMenu">
+            <summary>
+            在菜单中隐藏
+            </summary>
+        </member>
+        <member name="P:HaiKanTravelManagementSystem.Api.ViewModels.Rbac.SystemMenu.MenuCreateViewModel.NotCache">
+            <summary>
+            不缓存页面
+            </summary>
+        </member>
+        <member name="P:HaiKanTravelManagementSystem.Api.ViewModels.Rbac.SystemMenu.MenuCreateViewModel.BeforeCloseFun">
+            <summary>
+            页面关闭前的回调函数
+            </summary>
+        </member>
+        <member name="T:HaiKanTravelManagementSystem.Api.ViewModels.Rbac.SystemMenu.MenuEditViewModel">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:HaiKanTravelManagementSystem.Api.ViewModels.Rbac.SystemMenu.MenuEditViewModel.SystemMenuUuid">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:HaiKanTravelManagementSystem.Api.ViewModels.Rbac.SystemMenu.MenuEditViewModel.Name">
+            <summary>
+            菜单名称
+            </summary>
+        </member>
+        <member name="P:HaiKanTravelManagementSystem.Api.ViewModels.Rbac.SystemMenu.MenuEditViewModel.Url">
+            <summary>
+            链接地址
+            </summary>
+        </member>
+        <member name="P:HaiKanTravelManagementSystem.Api.ViewModels.Rbac.SystemMenu.MenuEditViewModel.Alias">
+            <summary>
+            页面别名
+            </summary>
+        </member>
+        <member name="P:HaiKanTravelManagementSystem.Api.ViewModels.Rbac.SystemMenu.MenuEditViewModel.Icon">
+            <summary>
+            菜单图标(可选)
+            </summary>
+        </member>
+        <member name="P:HaiKanTravelManagementSystem.Api.ViewModels.Rbac.SystemMenu.MenuEditViewModel.ParentGuid">
+            <summary>
+            父级GUID
+            </summary>
+        </member>
+        <member name="P:HaiKanTravelManagementSystem.Api.ViewModels.Rbac.SystemMenu.MenuEditViewModel.ParentName">
+            <summary>
+            上级菜单名称
+            </summary>
+        </member>
+        <member name="P:HaiKanTravelManagementSystem.Api.ViewModels.Rbac.SystemMenu.MenuEditViewModel.Level">
+            <summary>
+            菜单层级深度
+            </summary>
+        </member>
+        <member name="P:HaiKanTravelManagementSystem.Api.ViewModels.Rbac.SystemMenu.MenuEditViewModel.Description">
+            <summary>
+            描述信息
+            </summary>
+        </member>
+        <member name="P:HaiKanTravelManagementSystem.Api.ViewModels.Rbac.SystemMenu.MenuEditViewModel.Sort">
+            <summary>
+            排序
+            </summary>
+        </member>
+        <member name="P:HaiKanTravelManagementSystem.Api.ViewModels.Rbac.SystemMenu.MenuEditViewModel.Status">
+            <summary>
+            是否可用(0:禁用,1:可用)
+            </summary>
+        </member>
+        <member name="P:HaiKanTravelManagementSystem.Api.ViewModels.Rbac.SystemMenu.MenuEditViewModel.IsDeleted">
+            <summary>
+            是否已删
+            </summary>
+        </member>
+        <member name="P:HaiKanTravelManagementSystem.Api.ViewModels.Rbac.SystemMenu.MenuEditViewModel.IsDefaultRouter">
+            <summary>
+            是否为默认路由
+            </summary>
+        </member>
+        <member name="P:HaiKanTravelManagementSystem.Api.ViewModels.Rbac.SystemMenu.MenuEditViewModel.Component">
+            <summary>
+            前端组件(.vue)
+            </summary>
+        </member>
+        <member name="P:HaiKanTravelManagementSystem.Api.ViewModels.Rbac.SystemMenu.MenuEditViewModel.HideInMenu">
+            <summary>
+            在菜单中隐藏
+            </summary>
+        </member>
+        <member name="P:HaiKanTravelManagementSystem.Api.ViewModels.Rbac.SystemMenu.MenuEditViewModel.NotCache">
+            <summary>
+            不缓存页面
+            </summary>
+        </member>
+        <member name="P:HaiKanTravelManagementSystem.Api.ViewModels.Rbac.SystemMenu.MenuEditViewModel.BeforeCloseFun">
+            <summary>
+            页面关闭前的回调函数
+            </summary>
+        </member>
+        <member name="T:HaiKanTravelManagementSystem.Api.ViewModels.Rbac.SystemMenu.MenuJsonModel">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:HaiKanTravelManagementSystem.Api.ViewModels.Rbac.SystemMenu.MenuTree">
+            <summary>
+            用于iview的菜单树
+            </summary>
+        </member>
+        <member name="M:HaiKanTravelManagementSystem.Api.ViewModels.Rbac.SystemMenu.MenuTree.#ctor">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:HaiKanTravelManagementSystem.Api.ViewModels.Rbac.SystemMenu.MenuTree.Guid">
+            <summary>
+            GUID
+            </summary>
+        </member>
+        <member name="P:HaiKanTravelManagementSystem.Api.ViewModels.Rbac.SystemMenu.MenuTree.ParentGuid">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:HaiKanTravelManagementSystem.Api.ViewModels.Rbac.SystemMenu.MenuTree.Title">
+            <summary>
+            标题(菜单名称)
+            </summary>
+        </member>
+        <member name="P:HaiKanTravelManagementSystem.Api.ViewModels.Rbac.SystemMenu.MenuTree.Expand">
+            <summary>
+            是否展开子节点
+            </summary>
+        </member>
+        <member name="P:HaiKanTravelManagementSystem.Api.ViewModels.Rbac.SystemMenu.MenuTree.Disabled">
+            <summary>
+            禁掉响应
+            </summary>
+        </member>
+        <member name="P:HaiKanTravelManagementSystem.Api.ViewModels.Rbac.SystemMenu.MenuTree.DisableCheckbox">
+            <summary>
+            禁掉 checkbox
+            </summary>
+        </member>
+        <member name="P:HaiKanTravelManagementSystem.Api.ViewModels.Rbac.SystemMenu.MenuTree.Selected">
+            <summary>
+            是否选中子节点	
+            </summary>
+        </member>
+        <member name="P:HaiKanTravelManagementSystem.Api.ViewModels.Rbac.SystemMenu.MenuTree.Checked">
+            <summary>
+            是否勾选(如果勾选，子节点也会全部勾选)
+            </summary>
+        </member>
+        <member name="P:HaiKanTravelManagementSystem.Api.ViewModels.Rbac.SystemMenu.MenuTree.Children">
+            <summary>
+            子节点属性数组
+            </summary>
+        </member>
+        <member name="T:HaiKanTravelManagementSystem.Api.ViewModels.Rbac.SystemPermission.PermissionCreateViewModel">
+            <summary>
+            权限实体类
+            </summary>
+        </member>
+        <member name="T:HaiKanTravelManagementSystem.Api.ViewModels.Rbac.SystemPermission.PermissionEditViewModel">
+            <summary>
+            权限实体类
+            </summary>
+        </member>
+        <member name="P:HaiKanTravelManagementSystem.Api.ViewModels.Rbac.SystemPermission.PermissionEditViewModel.MenuName">
+            <summary>
+            菜单名称
+            </summary>
+        </member>
+        <member name="T:HaiKanTravelManagementSystem.Api.ViewModels.Rbac.SystemPermission.PermissionJsonModel">
+            <summary>
+            权限实体类
+            </summary>
+        </member>
+        <member name="P:HaiKanTravelManagementSystem.Api.ViewModels.Rbac.SystemPermission.PermissionJsonModel.MenuName">
+            <summary>
+            菜单名称
+            </summary>
+        </member>
+        <member name="P:HaiKanTravelManagementSystem.Api.ViewModels.Rbac.SystemPermission.PermissionJsonModel.PermissionTypeText">
+            <summary>
+            权限类型的显示文本
+            </summary>
+        </member>
+        <member name="T:HaiKanTravelManagementSystem.Api.ViewModels.Rbac.SystemPermission.PermissionMenuTree">
+            <summary>
+            用于角色权限的菜单树
+            </summary>
+        </member>
+        <member name="M:HaiKanTravelManagementSystem.Api.ViewModels.Rbac.SystemPermission.PermissionMenuTree.#ctor">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:HaiKanTravelManagementSystem.Api.ViewModels.Rbac.SystemPermission.PermissionMenuTree.Guid">
+            <summary>
+            GUID
+            </summary>
+        </member>
+        <member name="P:HaiKanTravelManagementSystem.Api.ViewModels.Rbac.SystemPermission.PermissionMenuTree.ParentGuid">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:HaiKanTravelManagementSystem.Api.ViewModels.Rbac.SystemPermission.PermissionMenuTree.Title">
+            <summary>
+            标题(菜单名称)
+            </summary>
+        </member>
+        <member name="P:HaiKanTravelManagementSystem.Api.ViewModels.Rbac.SystemPermission.PermissionMenuTree.Expand">
+            <summary>
+            是否展开子节点
+            </summary>
+        </member>
+        <member name="P:HaiKanTravelManagementSystem.Api.ViewModels.Rbac.SystemPermission.PermissionMenuTree.Disabled">
+            <summary>
+            禁掉响应
+            </summary>
+        </member>
+        <member name="P:HaiKanTravelManagementSystem.Api.ViewModels.Rbac.SystemPermission.PermissionMenuTree.DisableCheckbox">
+            <summary>
+            禁掉 checkbox
+            </summary>
+        </member>
+        <member name="P:HaiKanTravelManagementSystem.Api.ViewModels.Rbac.SystemPermission.PermissionMenuTree.Selected">
+            <summary>
+            是否选中子节点	
+            </summary>
+        </member>
+        <member name="P:HaiKanTravelManagementSystem.Api.ViewModels.Rbac.SystemPermission.PermissionMenuTree.Checked">
+            <summary>
+            是否勾选(如果勾选，子节点也会全部勾选)
+            </summary>
+        </member>
+        <member name="P:HaiKanTravelManagementSystem.Api.ViewModels.Rbac.SystemPermission.PermissionMenuTree.AllAssigned">
+            <summary>
+            当前菜单的所有权限都已分配到指定角色
+            </summary>
+        </member>
+        <member name="P:HaiKanTravelManagementSystem.Api.ViewModels.Rbac.SystemPermission.PermissionMenuTree.Permissions">
+            <summary>
+            当前菜单拥有的权限功能
+            </summary>
+        </member>
+        <member name="P:HaiKanTravelManagementSystem.Api.ViewModels.Rbac.SystemPermission.PermissionMenuTree.Children">
+            <summary>
+            子节点属性数组
+            </summary>
+        </member>
+        <member name="T:HaiKanTravelManagementSystem.Api.ViewModels.Rbac.SystemPermission.PermissionElement">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:HaiKanTravelManagementSystem.Api.ViewModels.Rbac.SystemPermission.PermissionElement.Code">
+            <summary>
+            权限编码
+            </summary>
+        </member>
+        <member name="P:HaiKanTravelManagementSystem.Api.ViewModels.Rbac.SystemPermission.PermissionElement.Name">
+            <summary>
+            权限名称
+            </summary>
+        </member>
+        <member name="P:HaiKanTravelManagementSystem.Api.ViewModels.Rbac.SystemPermission.PermissionElement.IsAssignedToRole">
+            <summary>
+            是否已分配到指定角色
+            </summary>
+        </member>
+        <member name="T:HaiKanTravelManagementSystem.Api.ViewModels.Rbac.SystemRole.RoleCreateViewModel">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:HaiKanTravelManagementSystem.Api.ViewModels.Rbac.SystemRole.RoleJsonModel">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:HaiKanTravelManagementSystem.Api.ViewModels.Rbac.SystemUser.SaveUserRolesViewModel">
+            <summary>
+            用户获得的角色实体对象
+            </summary>
+        </member>
+        <member name="P:HaiKanTravelManagementSystem.Api.ViewModels.Rbac.SystemUser.SaveUserRolesViewModel.UserGuid">
+            <summary>
+            用户GUID
+            </summary>
+        </member>
+        <member name="P:HaiKanTravelManagementSystem.Api.ViewModels.Rbac.SystemUser.SaveUserRolesViewModel.AssignedRoles">
+            <summary>
+            已获得的角色代码集合
+            </summary>
+        </member>
+        <member name="T:HaiKanTravelManagementSystem.Api.ViewModels.Rbac.SystemUser.UserCreateViewModel">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:HaiKanTravelManagementSystem.Api.ViewModels.Rbac.SystemUser.UserEditViewModel">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:HaiKanTravelManagementSystem.Api.ViewModels.Rbac.SystemUser.UserJsonModel">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:HaiKanTravelManagementSystem.Api.ViewModels.Rbac.SystemUser.UserPhoneInfoModel.phoneNumber">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:HaiKanTravelManagementSystem.Api.ViewModels.Rbac.SystemUser.UserPhoneInfoModel.purePhoneNumber">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:HaiKanTravelManagementSystem.Api.ViewModels.Rbac.SystemUser.UserPhoneInfoModel.countryCode">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:HaiKanTravelManagementSystem.Api.ViewModels.Rbac.SystemUser.UserPhoneInfoModel.watermark">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:HaiKanTravelManagementSystem.Api.ViewModels.Rbac.SystemUser.Watermark.timestamp">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:HaiKanTravelManagementSystem.Api.ViewModels.Rbac.SystemUser.Watermark.appid">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:HaikanEnrollmentRegistration.Api.Controllers.Api.V1.Rbac.MenuController">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:HaikanEnrollmentRegistration.Api.Controllers.Api.V1.Rbac.MenuController.#ctor(HaiKanTravelManagementSystem.Api.Entities.haikanHeQiaoContext,AutoMapper.IMapper)">
+            <summary>
+            
+            </summary>
+            <param name="dbContext"></param>
+            <param name="mapper"></param>
+        </member>
+        <member name="M:HaikanEnrollmentRegistration.Api.Controllers.Api.V1.Rbac.MenuController.List(HaiKanTravelManagementSystem.Api.RequestPayload.Rbac.Menu.MenuRequestPayload)">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HaikanEnrollmentRegistration.Api.Controllers.Api.V1.Rbac.MenuController.Create(HaiKanTravelManagementSystem.Api.ViewModels.Rbac.SystemMenu.MenuCreateViewModel)">
+            <summary>
+            创建菜单
+            </summary>
+            <param name="model">菜单视图实体</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaikanEnrollmentRegistration.Api.Controllers.Api.V1.Rbac.MenuController.Edit(System.Guid)">
+            <summary>
+            编辑菜单
+            </summary>
+            <param name="guid">菜单ID</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaikanEnrollmentRegistration.Api.Controllers.Api.V1.Rbac.MenuController.Edit(HaiKanTravelManagementSystem.Api.ViewModels.Rbac.SystemMenu.MenuEditViewModel)">
+            <summary>
+            保存编辑后的菜单信息
+            </summary>
+            <param name="model">菜单视图实体</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaikanEnrollmentRegistration.Api.Controllers.Api.V1.Rbac.MenuController.Tree(System.String)">
+            <summary>
+            菜单树
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HaikanEnrollmentRegistration.Api.Controllers.Api.V1.Rbac.MenuController.Delete(System.String)">
+            <summary>
+            删除菜单
+            </summary>
+            <param name="ids">菜单ID,多个以逗号分隔</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaikanEnrollmentRegistration.Api.Controllers.Api.V1.Rbac.MenuController.Recover(System.String)">
+            <summary>
+            恢复菜单
+            </summary>
+            <param name="ids">菜单ID,多个以逗号分隔</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaikanEnrollmentRegistration.Api.Controllers.Api.V1.Rbac.MenuController.Batch(System.String,System.String)">
+            <summary>
+            批量操作
+            </summary>
+            <param name="command"></param>
+            <param name="ids">菜单ID,多个以逗号分隔</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaikanEnrollmentRegistration.Api.Controllers.Api.V1.Rbac.MenuController.UpdateIsDelete(HaiKanTravelManagementSystem.Api.Entities.Enums.CommonEnum.IsDeleted,System.String)">
+            <summary>
+            删除菜单
+            </summary>
+            <param name="isDeleted"></param>
+            <param name="ids">菜单ID字符串,多个以逗号隔开</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaikanEnrollmentRegistration.Api.Controllers.Api.V1.Rbac.MenuController.UpdateStatus(HaiKanTravelManagementSystem.Api.Entities.Enums.CommonEnum.Status,System.String)">
+            <summary>
+            删除菜单
+            </summary>
+            <param name="status">菜单状态</param>
+            <param name="ids">菜单ID字符串,多个以逗号隔开</param>
+            <returns></returns>
+        </member>
+        <member name="T:HaikanEnrollmentRegistration.Api.Controllers.Api.V1.Rbac.MenuTreeHelper">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:HaikanEnrollmentRegistration.Api.Controllers.Api.V1.Rbac.MenuTreeHelper.BuildTree(System.Collections.Generic.List{HaiKanTravelManagementSystem.Api.ViewModels.Rbac.SystemMenu.MenuTree},System.String)">
+            <summary>
+            
+            </summary>
+            <param name="menus"></param>
+            <param name="selectedGuid"></param>
+            <returns></returns>
+        </member>
+        <member name="T:HaikanEnrollmentRegistration.Api.Controllers.Api.V1.Rbac.PermissionController">
+            <summary>
+            权限控制器
+            </summary>
+        </member>
+        <member name="M:HaikanEnrollmentRegistration.Api.Controllers.Api.V1.Rbac.PermissionController.#ctor(HaiKanTravelManagementSystem.Api.Entities.haikanHeQiaoContext,AutoMapper.IMapper)">
+            <summary>
+            
+            </summary>
+            <param name="dbContext"></param>
+            <param name="mapper"></param>
+        </member>
+        <member name="M:HaikanEnrollmentRegistration.Api.Controllers.Api.V1.Rbac.PermissionController.List(HaiKanTravelManagementSystem.Api.RequestPayload.Rbac.Permission.PermissionRequestPayload)">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HaikanEnrollmentRegistration.Api.Controllers.Api.V1.Rbac.PermissionController.Create(HaiKanTravelManagementSystem.Api.ViewModels.Rbac.SystemPermission.PermissionCreateViewModel)">
+            <summary>
+            创建权限
+            </summary>
+            <param name="model">权限视图实体</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaikanEnrollmentRegistration.Api.Controllers.Api.V1.Rbac.PermissionController.Edit(System.Guid)">
+            <summary>
+            编辑权限
+            </summary>
+            <param name="code">权限惟一编码</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaikanEnrollmentRegistration.Api.Controllers.Api.V1.Rbac.PermissionController.Edit(HaiKanTravelManagementSystem.Api.ViewModels.Rbac.SystemPermission.PermissionEditViewModel)">
+            <summary>
+            保存编辑后的权限信息
+            </summary>
+            <param name="model">权限视图实体</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaikanEnrollmentRegistration.Api.Controllers.Api.V1.Rbac.PermissionController.Delete(System.String)">
+            <summary>
+            删除权限
+            </summary>
+            <param name="ids">权限ID,多个以逗号分隔</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaikanEnrollmentRegistration.Api.Controllers.Api.V1.Rbac.PermissionController.Recover(System.String)">
+            <summary>
+            恢复权限
+            </summary>
+            <param name="ids">权限ID,多个以逗号分隔</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaikanEnrollmentRegistration.Api.Controllers.Api.V1.Rbac.PermissionController.Batch(System.String,System.String)">
+            <summary>
+            批量操作
+            </summary>
+            <param name="command"></param>
+            <param name="ids">权限ID,多个以逗号分隔</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaikanEnrollmentRegistration.Api.Controllers.Api.V1.Rbac.PermissionController.PermissionTree(System.String)">
+            <summary>
+            角色-权限菜单树
+            </summary>
+            <param name="code">角色编码</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaikanEnrollmentRegistration.Api.Controllers.Api.V1.Rbac.PermissionController.UpdateIsDelete(HaiKanTravelManagementSystem.Api.Entities.Enums.CommonEnum.IsDeleted,System.String)">
+            <summary>
+            删除权限
+            </summary>
+            <param name="isDeleted"></param>
+            <param name="ids">权限ID字符串,多个以逗号隔开</param>
+            <returns></returns>
+        </member>
+        <member name="M:HaikanEnrollmentRegistration.Api.Controllers.Api.V1.Rbac.PermissionController.UpdateStatus(HaiKanTravelManagementSystem.Api.Entities.Enums.CommonEnum.Status,System.String)">
+            <summary>
+            删除权限
+            </summary>
+            <param name="status">权限状态</param>
+            <param name="ids">权限ID字符串,多个以逗号隔开</param>
+            <returns></returns>
+        </member>
+        <member name="T:HaikanEnrollmentRegistration.Api.Controllers.Api.V1.Rbac.PermissionTreeHelper">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:HaikanEnrollmentRegistration.Api.Controllers.Api.V1.Rbac.PermissionTreeHelper.FillRecursive(System.Collections.Generic.List{HaiKanTravelManagementSystem.Api.ViewModels.Rbac.SystemPermission.PermissionMenuTree},System.Collections.Generic.List{HaiKanTravelManagementSystem.Api.Models.QueryModels.SystemPermissionWithAssignProperty},System.Nullable{System.Guid},System.Boolean)">
+            <summary>
+            
+            </summary>
+            <param name="menus">菜单集合</param>
+            <param name="permissions">权限集合</param>
+            <param name="parentGuid">父级菜单GUID</param>
+            <param name="isSuperAdministrator">是否为超级管理员角色</param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

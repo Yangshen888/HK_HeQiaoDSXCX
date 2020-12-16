@@ -1,0 +1,156 @@
+@charset "UTF-8";
+/**
+ * 下方引入的为uView UI的集成样式文件，为scss预处理器，其中包含了一些"u-"开头的自定义变量
+ * 使用的时候，请将下面的一行复制到您的uniapp项目根目录的uni.scss中即可
+ * uView自定义的css类名和scss变量，均以"u-"开头，不会造成冲突，请放心使用 
+ */
+.specialityBox.data-v-ebba6fb4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  margin: 40rpx;
+  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  -webkit-border-radius: 10rpx;
+          border-radius: 10rpx;
+  overflow: hidden;
+}
+.imgBox.data-v-ebba6fb4 {
+  width: 100%;
+  height: 100%;
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.rightBox.data-v-ebba6fb4 {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+          flex: 1;
+  line-height: 1.5;
+  padding: 0 20rpx;
+  padding-top: 18rpx;
+}
+.decripte.data-v-ebba6fb4 {
+  font-size: 24rpx;
+  text-overflow: -o-ellipsis-lastline;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  text-align: justify;
+}
+.u-wrap.data-v-ebba6fb4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+          flex-direction: column;
+}
+.u-menu-wrap.data-v-ebba6fb4 {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+          flex: 1;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+}
+.u-tab-view.data-v-ebba6fb4 {
+  width: 200rpx;
+  height: 100%;
+}
+.u-tab-item.data-v-ebba6fb4 {
+  height: 110rpx;
+  background: #fff;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+          justify-content: center;
+  font-size: 26rpx;
+  color: #444;
+  font-weight: 400;
+  line-height: 1;
+}
+.u-tab-item-active.data-v-ebba6fb4 {
+  position: relative;
+  color: #000;
+  font-size: 30rpx;
+  font-weight: 600;
+  background: #f6f6f6;
+}
+.u-tab-item-active.data-v-ebba6fb4::before {
+  content: '';
+  position: absolute;
+  height: 32rpx;
+  left: 0;
+  top: 39rpx;
+}
+.u-tab-view.data-v-ebba6fb4 {
+  height: 100%;
+}
+.right-box.data-v-ebba6fb4 {
+  background-color: #fafafa;
+}
+.page-view.data-v-ebba6fb4 {
+  padding: 16rpx;
+}
+.class-item.data-v-ebba6fb4 {
+  margin-bottom: 30rpx;
+  padding: 16rpx;
+  -webkit-border-radius: 8rpx;
+          border-radius: 8rpx;
+}
+.item-title.data-v-ebba6fb4 {
+  font-size: 26rpx;
+  color: #303133;
+  font-weight: bold;
+}
+.item-menu-name.data-v-ebba6fb4 {
+  font-weight: normal;
+  font-size: 24rpx;
+  color: #303133;
+}
+.item-container.data-v-ebba6fb4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+          flex-wrap: wrap;
+}
+.thumb-box.data-v-ebba6fb4 {
+  width: 33.333333%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+          flex-direction: column;
+  margin-top: 20rpx;
+}
+.item-menu-image.data-v-ebba6fb4 {
+  width: 150rpx;
+  height: 150rpx;
+}
+
+
+page {
+	background: url(https://hqjsc.hzgx.info/wxapp/static/taohua.gif);
+	background-size: 100% 100%;
+}
+

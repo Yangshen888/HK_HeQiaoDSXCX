@@ -1,0 +1,1 @@
+{"version":3,"sources":["uni-app:///main.js"],"names":["createPage","Page"],"mappings":";;;;;;;;;;kDAAA;AACA;AACA,mH;AACAA,UAAU,CAACC,kBAAD,CAAV,C","file":"pages/gereninfo/clockinfo/clockinfo.js","sourcesContent":["import 'uni-pages';\nimport Vue from 'vue'\nimport Page from './pages/gereninfo/clockinfo/clockinfo.vue'\ncreatePage(Page)"],"sourceRoot":""}

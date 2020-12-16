@@ -1,0 +1,96 @@
+
+page {
+	padding-bottom: 64px;
+}
+.suggest {
+	width: 100%;
+}
+.sur_item {
+	width: 98%;
+	padding: 5px;
+	-webkit-border-radius: 5px;
+	        border-radius: 5px;
+	-webkit-box-shadow: 0 0 2px rgba(0, 0, 0, 0.2);
+	        box-shadow: 0 0 2px rgba(0, 0, 0, 0.2);
+	margin: 20rpx auto;
+}
+
+/* .waterfall{
+	column-count: 2;
+	column-gap: 1em;
+} */
+.sur_item_waterfall {
+
+	/* 两列布局（从上到下）
+	padding: 1em;
+	margin: 0 0 1em 0;
+	break-inside: avoid;
+	box-shadow: 0 0 2px rgba(0, 0, 0, 0.2); */
+
+	/* 浮动布局 */
+	display: inline-block;
+	padding: 6px;
+	-webkit-border-radius: 5px;
+	        border-radius: 5px;
+	-webkit-box-shadow: 0 0 2px rgba(0, 0, 0, 0.2);
+	        box-shadow: 0 0 2px rgba(0, 0, 0, 0.2);
+	width: 98%;
+	margin: 20rpx 1%;
+	float: left;
+}
+.left_waterfall,
+.right_waterfall {
+	width: 50%;
+	padding: 0 1px;
+	float: left;
+}
+.item_top {
+	margin-bottom: 10rpx;
+	height: 60rpx;
+	line-height: 60rpx;
+	width: 103%;
+	position: relative;
+}
+.item_title1 {
+	font-weight: 600;
+	float: left;
+	padding: 10rpx 0;
+}
+.item_title2 {
+	font-weight: 600;
+	float: left;
+	padding: 10rpx 0;
+	display: inline-block;
+	white-space: nowrap;
+	width: 100%;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+.item_con {
+	text-align: center;
+}
+.splendidBox {
+	width:180rpx;
+	height: 108rpx;
+	line-height: 120rpx;
+	text-align: center;
+	-webkit-border-radius: 0 10px 0 8px;
+	        border-radius: 0 10px 0 8px;
+	background: url(https://hqjsc.hzgx.info/wxapp/static/tagsbg.png) no-repeat;
+	background-size: 100% 100%;
+	color: #fff;
+	position: absolute;
+	top: -24rpx;
+	right: 0;
+}
+.tabItem {
+	width: 33.333333%;
+	height: 100%;
+	float: left;
+	text-align: center;
+	padding: 10rpx 0;
+}
+.tabItem u-icon {
+	font-size: 24px;
+}
+

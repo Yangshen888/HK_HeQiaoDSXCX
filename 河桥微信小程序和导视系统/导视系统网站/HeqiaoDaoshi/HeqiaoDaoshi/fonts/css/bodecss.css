@@ -1,0 +1,9 @@
+﻿*{
+    margin:0;
+    padding:0;
+}
+body {
+    /* background: url('../images/45.png') no-repeat; */
+    width: 1920px;
+    height: 1080px;
+}

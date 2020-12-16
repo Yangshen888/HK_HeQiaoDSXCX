@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "打卡",
+  "usingComponents": {
+    "u-form": "/uview-ui/components/u-form/u-form",
+    "easy-upload": "/components/easy-upload/easy-upload"
+  }
+}

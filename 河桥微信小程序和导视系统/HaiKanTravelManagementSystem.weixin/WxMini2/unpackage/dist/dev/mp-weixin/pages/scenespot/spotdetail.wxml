@@ -1,0 +1,1 @@
+<view><view><u-swiper vue-id="34c9cbb9-1" list="{{imglist}}" height="{{340}}" bind:__l="__l"></u-swiper></view><view>{{''+'景点名称: '+spotdetail.name+''}}</view><view>{{''+'介绍: '+spotdetail.spotContent+''}}</view><view>{{''+'地址: '+spotdetail.address+''}}</view></view>

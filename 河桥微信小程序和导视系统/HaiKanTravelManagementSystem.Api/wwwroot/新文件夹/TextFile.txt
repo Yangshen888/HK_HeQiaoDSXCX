@@ -1,0 +1,9 @@
+﻿Scaffold-DbContext “Data Source=18069772305.qicp.vip,27800;Initial Catalog=heqiaodaoshi;Persist Security Info=True;User ID=heqiaodaoshi;Password=haikan051030” Microsoft.EntityFrameworkCore.SqlServer -OutputDir Entities -Context haikanHeQiaoContext -force
+
+
+Scaffold-DbContext “Data Source=192.168.0.214;Initial Catalog=heqiaodaoshi;Persist Security Info=True;User ID=heqiaodaoshi;Password=haikan051030” Microsoft.EntityFrameworkCore.SqlServer -OutputDir Entities -Context haikanHeQiaoContext -force
+
+optionsBuilder.UseSqlServer("Data Source=.;Initial Catalog=heqiaodaoshi;Persist Security Info=True;User ID=hq;Password=Haikan051030");
+
+var conncectstr=ConfigurationManager.ConnectionStrings.DefaultConnection;
+optionsBuilder.UseSqlServer(conncectstr);

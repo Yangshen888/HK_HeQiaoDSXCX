@@ -1,0 +1,1 @@
+<view><view class="wrap"><view class="list-wrap"><button class="dlbutton" hover-class="dlbutton-hover" type="default" open-type="getUserInfo" withCredentials="true" data-event-opts="{{[['getuserinfo',[['getUserInfo',['$event']]]]]}}" bindgetuserinfo="__e">微信号授权登录</button></view></view></view>

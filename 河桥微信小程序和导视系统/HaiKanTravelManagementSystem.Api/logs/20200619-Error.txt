@@ -1,0 +1,2 @@
+2020-06-19 09:24:15,152 [16] ERROR Microsoft.EntityFrameworkCore.Database.Command [(null)]  - Failed executing DbCommand (181ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+UPDATE SystemMenu SET IsDeleted=@IsDeleted WHERE SystemMenuUUID IN (@p0)

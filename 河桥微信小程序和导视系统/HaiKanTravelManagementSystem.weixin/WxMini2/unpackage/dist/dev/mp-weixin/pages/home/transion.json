@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "古镇概况",
+  "usingComponents": {
+    "u-count-down": "/uview-ui/components/u-count-down/u-count-down"
+  }
+}

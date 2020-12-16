@@ -1,0 +1,230 @@
+@charset "UTF-8";
+/**
+ * 下方引入的为uView UI的集成样式文件，为scss预处理器，其中包含了一些"u-"开头的自定义变量
+ * 使用的时候，请将下面的一行复制到您的uniapp项目根目录的uni.scss中即可
+ * uView自定义的css类名和scss变量，均以"u-"开头，不会造成冲突，请放心使用 
+ */
+.busRouteBox.data-v-db85712e {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-border-radius: 10rpx;
+          border-radius: 10rpx;
+  overflow: hidden;
+}
+.imgBox.data-v-db85712e {
+  width: 100%;
+  height: 100%;
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.rightBox.data-v-db85712e {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+          flex: 1;
+  line-height: 1.5;
+  padding: 0 20rpx;
+  padding-top: 18rpx;
+}
+.decripte.data-v-db85712e {
+  font-size: 24rpx;
+  text-overflow: -o-ellipsis-lastline;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  text-align: justify;
+}
+.u-wrap.data-v-db85712e {
+  height: calc(100vh);
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+          flex-direction: column;
+}
+.u-search-box.data-v-db85712e {
+  padding: 18rpx 30rpx;
+}
+.u-menu-wrap.data-v-db85712e {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+          flex: 1;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  overflow: hidden;
+}
+.u-search-inner.data-v-db85712e {
+  background-color: #eaeaea;
+  -webkit-border-radius: 100rpx;
+          border-radius: 100rpx;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+          align-items: center;
+  padding: 10rpx 16rpx;
+}
+.u-search-text.data-v-db85712e {
+  font-size: 26rpx;
+  color: #909399;
+  margin-left: 10rpx;
+}
+.order.data-v-db85712e {
+  width: 710rpx;
+  background-color: #ffffff;
+  margin: 20rpx auto;
+  -webkit-border-radius: 20rpx;
+          border-radius: 20rpx;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 20rpx;
+  font-size: 28rpx;
+}
+.order .top.data-v-db85712e {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+          justify-content: space-between;
+}
+.order .top .left.data-v-db85712e {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+          align-items: center;
+}
+.order .top .left .store.data-v-db85712e {
+  margin: 0 10rpx;
+  font-size: 32rpx;
+  font-weight: bold;
+}
+.order .top .right.data-v-db85712e {
+  color: #f29100;
+  padding: 0;
+}
+.order .item.data-v-db85712e {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+}
+.order .item .left.data-v-db85712e {
+  margin-right: 20rpx;
+}
+.order .item .left image.data-v-db85712e {
+  width: 200rpx;
+  height: 200rpx;
+  -webkit-border-radius: 10rpx;
+          border-radius: 10rpx;
+}
+.order .item .content .title.data-v-db85712e {
+  font-size: 28rpx;
+  line-height: 50rpx;
+}
+.order .item .content .type.data-v-db85712e {
+  margin: 10rpx 0;
+  font-size: 24rpx;
+  color: #909399;
+}
+.order .item .content .delivery-time.data-v-db85712e {
+  font-size: 24rpx;
+  line-height: 1.5;
+  overflow: auto;
+}
+.order .item .right.data-v-db85712e {
+  margin-left: 40rpx;
+  padding-top: 20rpx;
+  text-align: right;
+}
+.order .item .right .decimal.data-v-db85712e {
+  font-size: 24rpx;
+  margin-top: 4rpx;
+}
+.order .item .right .number.data-v-db85712e {
+  color: #909399;
+  font-size: 24rpx;
+}
+.order .total.data-v-db85712e {
+  margin-top: 20rpx;
+  text-align: right;
+  font-size: 24rpx;
+}
+.order .total .total-price.data-v-db85712e {
+  font-size: 32rpx;
+}
+.order .bottom.data-v-db85712e {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  margin-top: 40rpx;
+  padding: 0 10rpx;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+          justify-content: space-between;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+          align-items: center;
+}
+.order .bottom .btn.data-v-db85712e {
+  line-height: 52rpx;
+  width: 160rpx;
+  -webkit-border-radius: 26rpx;
+          border-radius: 26rpx;
+  border: 2rpx solid #e4e7ed;
+  font-size: 26rpx;
+  text-align: center;
+  color: #82848a;
+}
+.order .bottom .evaluate.data-v-db85712e {
+  color: #f29100;
+  border-color: #f29100;
+}
+.carnum.data-v-db85712e {
+  font-weight: 600;
+  float: right;
+}
+.centre.data-v-db85712e {
+  text-align: center;
+  margin: 200rpx auto;
+  font-size: 32rpx;
+}
+.centre image.data-v-db85712e {
+  width: 164rpx;
+  height: 164rpx;
+  -webkit-border-radius: 50%;
+          border-radius: 50%;
+  margin-bottom: 20rpx;
+}
+.centre .tips.data-v-db85712e {
+  font-size: 24rpx;
+  color: #999999;
+  margin-top: 20rpx;
+}
+.centre .btn.data-v-db85712e {
+  margin: 80rpx auto;
+  width: 200rpx;
+  -webkit-border-radius: 32rpx;
+          border-radius: 32rpx;
+  line-height: 64rpx;
+  color: #ffffff;
+  font-size: 26rpx;
+  background: -webkit-gradient(linear, right top, left top, from(#f9745a), to(#ff9e01));
+  background: -webkit-linear-gradient(right, #f9745a 0%, #ff9e01 100%);
+  background: linear-gradient(270deg, #f9745a 0%, #ff9e01 100%);
+}
+
+
+page {
+	background: url(https://hqjsc.hzgx.info/wxapp/static/chuan.gif);
+	background-size: 100% 100%;
+}
+

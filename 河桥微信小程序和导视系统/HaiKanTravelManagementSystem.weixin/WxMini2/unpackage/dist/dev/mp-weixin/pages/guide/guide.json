@@ -1,0 +1,8 @@
+{
+  "navigationBarTitleText": "智能导游",
+  "navigationStyle": "custom",
+  "navigationBarTextStyle": "black",
+  "usingComponents": {
+    "u-navbar": "/uview-ui/components/u-navbar/u-navbar"
+  }
+}

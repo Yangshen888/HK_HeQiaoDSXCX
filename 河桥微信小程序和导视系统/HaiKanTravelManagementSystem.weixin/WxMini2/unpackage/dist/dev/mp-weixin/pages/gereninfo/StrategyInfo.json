@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "攻略详情",
+  "usingComponents": {
+    "u-swiper": "/uview-ui/components/u-swiper/u-swiper"
+  }
+}

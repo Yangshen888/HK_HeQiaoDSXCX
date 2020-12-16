@@ -1,0 +1,75 @@
+
+page {
+	height: 100%;
+	overflow: auto;
+}
+.pallet {
+	width: 60rpx;
+	height: 24rpx;
+	-webkit-border-radius: 50%;
+	        border-radius: 50%;
+	border: 4rpx solid red;
+	position: absolute;
+	left: 50%;
+	-webkit-transform: translateX(-50%) rotate(-20deg);
+	        transform: translateX(-50%) rotate(-20deg);
+	bottom: 26rpx;
+	border-top: 0;
+	border-right: 0;
+	/* background-color: #fff; */
+}
+.smallpallet {
+	width: 24rpx;
+	height: 12rpx;
+	-webkit-border-radius: 50%;
+	        border-radius: 50%;
+	border: 1px solid #fff;
+	position: absolute;
+	left: 50%;
+	-webkit-transform: translateX(-50%);
+	        transform: translateX(-50%);
+	top: 0;
+	border-top: 0;
+	/* background-color: transparent; */
+	/* background-color: #fff; */
+}
+.jiantou {
+	position: absolute;
+	width: 40rpx;
+	height: 40rpx;
+	-webkit-transform: rotate(-45deg);
+	        transform: rotate(-45deg);
+	background-color: #fff;
+	/* border-left: 1px solid #333;
+	border-bottom: 1px solid #333; */
+}
+.slot-content {
+	font-size: 28rpx;
+	color: $u-content-color;
+	padding: 30rpx;
+}
+.area {
+	margin: 10rpx 0;
+	border-left: 1px solid #333;
+	border-right: 1px solid #333;
+}
+.areatag {
+	position: absolute;
+	background-color: #fff;
+	width: 60rpx;
+	-webkit-border-radius: 10rpx;
+	        border-radius: 10rpx;
+	text-align: center;
+	padding: 4px;
+}
+.tabItem {
+	width: 33.333333%;
+	height: 100%;
+	float: left;
+	text-align: center;
+	padding: 10px 0;
+}
+.tabItem u-icon {
+	font-size: 24px;
+}
+

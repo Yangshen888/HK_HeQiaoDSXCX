@@ -1,0 +1,9 @@
+{
+  "navigationBarTitleText": "攻略",
+  "enablePullDownRefresh": true,
+  "onReachBottomDistance": 1,
+  "usingComponents": {
+    "u-swiper": "/uview-ui/components/u-swiper/u-swiper",
+    "u-line": "/uview-ui/components/u-line/u-line"
+  }
+}

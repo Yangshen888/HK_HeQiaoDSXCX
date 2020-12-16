@@ -1,0 +1,10 @@
+{
+  "navigationBarTitleText": "攻略发布",
+  "usingComponents": {
+    "u-form": "/uview-ui/components/u-form/u-form",
+    "u-form-item": "/uview-ui/components/u-form-item/u-form-item",
+    "u-radio-group": "/uview-ui/components/u-radio-group/u-radio-group",
+    "u-radio": "/uview-ui/components/u-radio/u-radio",
+    "easy-upload": "/components/easy-upload/easy-upload"
+  }
+}
