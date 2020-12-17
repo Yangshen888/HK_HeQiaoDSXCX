@@ -390,7 +390,7 @@
           </Row>
         </fieldset>
 
-        <fieldset>
+        <!-- <fieldset>
           <legend class="legend">景区视频(不超过30M)</legend>
           <Row style="padding: 15px">
             <Upload
@@ -429,9 +429,9 @@
                 <Button @click="deletevideo(item)">删除</Button>
               </p>
               <!-- <Button @click="download">下载</Button> -->
-            </Card>
+            <!-- </Card>
           </Row>
-        </fieldset>
+        </fieldset> -->
 
         <fieldset>
           <legend class="legend">景区音频</legend>
@@ -703,8 +703,8 @@
           </Row>
         </fieldset>
 
-        <fieldset>
-          <legend class="legend">景区视频</legend>
+        <!-- <fieldset>
+          <legend class="legend">景区视频</legend> -->
           <!--          <Row style="padding: 15px">-->
           <!--            <Upload-->
           <!--              ref="vupload"-->
@@ -723,7 +723,7 @@
           <!--              <Button type="primary" icon="ios-cloud-upload-outline" :loading="vloadingStatus">上传视频</Button>-->
           <!--            </Upload>-->
           <!--          </Row>-->
-          <Row
+          <!-- <Row
             v-if="
               formModel.fields.video != null &&
               formModel.fields.video.length > 0
@@ -734,12 +734,12 @@
               <p slot="title">视频文件</p>
               <p v-for="item in formModel.fields.video.split(',')">
                 {{ item }}
-                <!--                <Button @click="deletevideo(item)">删除</Button>-->
+                <Button @click="deletevideo(item)">删除</Button>
                 <Button @click="downloadvideo(item)">下载</Button>
               </p>
             </Card>
           </Row>
-        </fieldset>
+        </fieldset> -->
 
         <fieldset>
           <legend class="legend">景区音频</legend>

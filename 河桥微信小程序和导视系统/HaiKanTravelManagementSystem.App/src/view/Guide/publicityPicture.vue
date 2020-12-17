@@ -190,7 +190,7 @@
         </Row>
         <Row :gutter="16">
           <Col span="12">
-            <FormItem label="发布时间" prop="title">
+            <FormItem label="发布时间" prop="releaseTime">
               
               <DatePicker type="date" v-model="formModel.fields.releaseTime" placeholder="请选择发布时间" :editable="false" style="width: 400px"></DatePicker>
             </FormItem>
@@ -562,6 +562,12 @@ export default {
               required: true,
               message: "请输入标题",
               trigger: "blur",
+            },
+          ],
+          releaseTime: [
+            {
+              required: true,
+              message: "请选择发布时间"
             },
           ],
           content: [

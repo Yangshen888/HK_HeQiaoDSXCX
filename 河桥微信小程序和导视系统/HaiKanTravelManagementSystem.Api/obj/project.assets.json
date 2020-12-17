@@ -8722,17 +8722,21 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Administrator\\.nuget\\packages\\": {}
+    "C:\\Users\\Administrator\\.nuget\\packages\\": {},
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\work_hqds\\201214_16.57\\河桥微信小程序和导视系统\\HaiKanTravelManagementSystem.Api\\HaiKanTravelManagementSystem.Api.csproj",
+      "projectUniqueName": "D:\\我的工作目录\\2020.12.17\\河桥微信小程序和导视系统\\HaiKanTravelManagementSystem.Api\\HaiKanTravelManagementSystem.Api.csproj",
       "projectName": "HaiKanTravelManagementSystem.Api",
-      "projectPath": "D:\\work_hqds\\201214_16.57\\河桥微信小程序和导视系统\\HaiKanTravelManagementSystem.Api\\HaiKanTravelManagementSystem.Api.csproj",
+      "projectPath": "D:\\我的工作目录\\2020.12.17\\河桥微信小程序和导视系统\\HaiKanTravelManagementSystem.Api\\HaiKanTravelManagementSystem.Api.csproj",
       "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
-      "outputPath": "D:\\work_hqds\\201214_16.57\\河桥微信小程序和导视系统\\HaiKanTravelManagementSystem.Api\\obj\\",
+      "outputPath": "D:\\我的工作目录\\2020.12.17\\河桥微信小程序和导视系统\\HaiKanTravelManagementSystem.Api\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+      ],
       "configFilePaths": [
         "C:\\Users\\Administrator\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
@@ -8747,10 +8751,9 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
-          "targetAlias": "netcoreapp3.1",
           "projectReferences": {
-            "D:\\work_hqds\\201214_16.57\\河桥微信小程序和导视系统\\HaiKan3\\HaiKan3.csproj": {
-              "projectPath": "D:\\work_hqds\\201214_16.57\\河桥微信小程序和导视系统\\HaiKan3\\HaiKan3.csproj"
+            "D:\\我的工作目录\\2020.12.17\\河桥微信小程序和导视系统\\HaiKan3\\HaiKan3.csproj": {
+              "projectPath": "D:\\我的工作目录\\2020.12.17\\河桥微信小程序和导视系统\\HaiKan3\\HaiKan3.csproj"
             }
           }
         }
@@ -8763,7 +8766,6 @@
     },
     "frameworks": {
       "netcoreapp3.1": {
-        "targetAlias": "netcoreapp3.1",
         "dependencies": {
           "AutoMapper": {
             "target": "Package",
@@ -8840,7 +8842,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.101\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.404\\RuntimeIdentifierGraph.json"
       }
     }
   }

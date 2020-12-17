@@ -396,11 +396,11 @@ export default {
     handleSubmitPlan() {
       let valid = this.validateForm();
       if (valid) {
-        let reg = /^[1][3,4,5,7,8][0-9]{9}$/;
-        if (!reg.test(this.formModel.fields.phone)) {
-          this.$Message.warning("手机号不合法!");
-          return;
-        }
+        // let reg = /^[1][3,4,5,7,8][0-9]{9}$/;
+        // if (!reg.test(this.formModel.fields.phone)) {
+        //   this.$Message.warning("手机号不合法!");
+        //   return;
+        // }
         if (this.formModel.mode === "create") {
           this.docreateDispatch();
         }
@@ -411,12 +411,14 @@ export default {
     },
     //添加按钮
     handleShowCreateWindow() {
+      this.wzy=true;
       this.formModel.mode = "create";
       this.handleResetFormDispatch(); //清空表单
       this.formModel.opened = true;
     },
     //编辑
     handleEdit(row) {
+      this.wzy=true;
       this.formModel.mode = "edit";
       this.formModel.opened = true;
       this.handleResetFormDispatch(); //清空表单

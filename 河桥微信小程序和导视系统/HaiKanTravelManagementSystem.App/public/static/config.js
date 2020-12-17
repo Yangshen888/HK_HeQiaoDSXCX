@@ -10,17 +10,17 @@ window.configData = {
     "homeName": 'home',
     //api请求基础路径
     "baseUrl": {
-        // "dev": "http://localhost:54321/",
-        // "pro": "http://localhost:54321/",
-        "dev": 'https://hqjsc.hzgx.info/',
-        "pro": 'https://hqjsc.hzgx.info/',
+         "dev": "http://localhost:54321/",
+         "pro": "http://localhost:54321/",
+        //"dev": 'https://hqjsc.hzgx.info/',
+        //"pro": 'https://hqjsc.hzgx.info/',
         "defaultPrefix": "api/v1/"
     },
     "authUrl": {
-        // "dev": 'http://localhost:54321/api/oauth/auth',
-        // "pro": 'http://localhost:54321/api/oauth/auth'
-        "dev": 'https://hqjsc.hzgx.info/api/oauth/auth',
-        "pro": 'https://hqjsc.hzgx.info/api/oauth/auth'
+         "dev": 'http://localhost:54321/api/oauth/auth',
+         "pro": 'http://localhost:54321/api/oauth/auth'
+        //"dev": 'https://hqjsc.hzgx.info/api/oauth/auth',
+        //"pro": 'https://hqjsc.hzgx.info/api/oauth/auth'
     },
     //需要加载的插件
     "plugin": {

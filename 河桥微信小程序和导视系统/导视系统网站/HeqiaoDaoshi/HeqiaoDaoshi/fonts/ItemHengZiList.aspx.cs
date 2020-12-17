@@ -123,7 +123,7 @@ namespace HeqiaoDaoshi.fonts
                 }
                 else if (types == "4")
                 {
-                    strs = FilesUrl + "UploadFiles/PromotionalVideo/Picture/" + filesname;
+                    strs = FilesUrl + "UploadFiles/Scene/Picture/" + filesname;
                 }
                 else if (types == "5")
                 {

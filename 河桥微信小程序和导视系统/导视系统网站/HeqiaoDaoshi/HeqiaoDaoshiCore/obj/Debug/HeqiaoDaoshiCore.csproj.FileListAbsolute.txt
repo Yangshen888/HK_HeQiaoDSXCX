@@ -64,3 +64,11 @@ D:\工作目录\河桥小程序\2020.12.11\河桥微信小程序和导视系统\
 D:\工作目录\河桥小程序\2020.12.11\河桥微信小程序和导视系统\导视系统网站\HeqiaoDaoshi\HeqiaoDaoshiCore\obj\Debug\HeqiaoDaoshiCore.csproj.CopyComplete
 D:\工作目录\河桥小程序\2020.12.11\河桥微信小程序和导视系统\导视系统网站\HeqiaoDaoshi\HeqiaoDaoshiCore\obj\Debug\HeqiaoDaoshiCore.dll
 D:\工作目录\河桥小程序\2020.12.11\河桥微信小程序和导视系统\导视系统网站\HeqiaoDaoshi\HeqiaoDaoshiCore\obj\Debug\HeqiaoDaoshiCore.pdb
+D:\我的工作目录\2020.12.17\河桥微信小程序和导视系统\导视系统网站\HeqiaoDaoshi\HeqiaoDaoshiCore\bin\Debug\HeqiaoDaoshiCore.dll
+D:\我的工作目录\2020.12.17\河桥微信小程序和导视系统\导视系统网站\HeqiaoDaoshi\HeqiaoDaoshiCore\bin\Debug\HeqiaoDaoshiCore.pdb
+D:\我的工作目录\2020.12.17\河桥微信小程序和导视系统\导视系统网站\HeqiaoDaoshi\HeqiaoDaoshiCore\bin\Debug\Haikan2.dll
+D:\我的工作目录\2020.12.17\河桥微信小程序和导视系统\导视系统网站\HeqiaoDaoshi\HeqiaoDaoshiCore\obj\Debug\HeqiaoDaoshiCore.csprojAssemblyReference.cache
+D:\我的工作目录\2020.12.17\河桥微信小程序和导视系统\导视系统网站\HeqiaoDaoshi\HeqiaoDaoshiCore\obj\Debug\HeqiaoDaoshiCore.csproj.CoreCompileInputs.cache
+D:\我的工作目录\2020.12.17\河桥微信小程序和导视系统\导视系统网站\HeqiaoDaoshi\HeqiaoDaoshiCore\obj\Debug\HeqiaoDaoshiCore.csproj.CopyComplete
+D:\我的工作目录\2020.12.17\河桥微信小程序和导视系统\导视系统网站\HeqiaoDaoshi\HeqiaoDaoshiCore\obj\Debug\HeqiaoDaoshiCore.dll
+D:\我的工作目录\2020.12.17\河桥微信小程序和导视系统\导视系统网站\HeqiaoDaoshi\HeqiaoDaoshiCore\obj\Debug\HeqiaoDaoshiCore.pdb

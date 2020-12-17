@@ -104,7 +104,10 @@ namespace HaiKanTravelManagementSystem.Api.Controllers.Api.V1.Guide
                 //var entity = _mapper.Map<NaturalViewModel, NaturalResources>(model);
                 var entity = new NaturalResources();
                 entity.IsRelease = model.IsRelease;
-                entity.ReleaseTime = Convert.ToDateTime(model.ReleaseTime);
+                if (!string.IsNullOrEmpty(model.ReleaseTime.ToString()))
+                {
+                    entity.ReleaseTime = Convert.ToDateTime(model.ReleaseTime);
+                }
                 entity.Title = model.Title;
                 entity.Content = model.Content;
                 entity.Cover = model.Cover;

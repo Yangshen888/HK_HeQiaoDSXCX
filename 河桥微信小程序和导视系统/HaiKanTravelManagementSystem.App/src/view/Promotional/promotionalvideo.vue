@@ -180,11 +180,12 @@
               :on-progress="toUpResult"
               :format="['jpg','jpeg','png']"
               :max-size="5120"
-              :data="{fileSavePath:'PromotionalVideo/Picture'}"
+              :data="{fileSavePath:'Scene/Picture'}"
               :on-format-error="handleFormatError"
               :on-exceeded-size="handleMaxSize"
               :before-upload="handleBeforeUpload"
               :headers="postheaders"
+              :disabled="updisabled"
               type="drag"
               :action="actionurl"
               style="display: inline-block;width:58px;"
@@ -256,7 +257,7 @@
               :action="vactionurl"
               :headers="postheaders"
               :show-upload-list="true"
-              :data="{fileSavePath:'PromotionalVideo/Video'}"
+              :data="{fileSavePath:'Scene/Video'}"
               :on-success="vshowUpResult"
               :on-progress="vtoUpResult"
               :max-size="20480"
@@ -596,7 +597,7 @@
     methods: {
       async showUpResult(response, file, fileList) {
         this.loadingStatus = false;
-        this.updisabled = false;
+        this.updisabled = true;
         if (response.code == "200") {
           this.$Message.success(response.message);
           console.log(this.formModel.fields.cover);
@@ -710,13 +711,13 @@
         });
       },
       deletevideo(file){
-        this.vuploadList = this.vuploadList.filter(x => x.name != 'UploadFiles/PromotionalVideo/Video/'+file);
+        this.vuploadList = this.vuploadList.filter(x => x.name != 'UploadFiles/Scene/Video/'+file);
         this.formModel.fields.video = this.vuploadList
           .map(x => x.fileName)
           .join(",");
       },
       downloadvideo(file){
-        window.location.href =  config.baseUrl.dev +'UploadFiles/PromotionalVideo/Video/'+file
+        window.location.href =  config.baseUrl.dev +'UploadFiles/Scene/Video/'+file
       },
 
 
@@ -863,6 +864,11 @@
       },
       //编辑
       handleEdit(row) {
+        if (row.cover=="") {
+          this.updisabled=false;
+        } else {
+          this.updisabled=true;
+        }
         this.handleSwitchFormModeToEdit();
         this.handleResetFormRole();
         this.doLoadPromotionalvideo(row.promotionalVideoUuid);
@@ -875,6 +881,7 @@
       },
 
       handleShowCreateWindow() {
+        this.updisabled=false
         this.handleSwitchFormModeToCreate();
         this.handleResetFormRole();
       },
@@ -902,9 +909,9 @@
             for (let i = 0; i < list.length; i++) {
               this.uploadList.push({
                 url:
-                  config.baseUrl.dev + "UploadFiles/PromotionalVideo/Picture/" + list[i],
+                  config.baseUrl.dev + "UploadFiles/Scene/Picture/" + list[i],
                 status: "finished",
-                name: "UploadFiles/PromotionalVideo/Picture/" + list[i],
+                name: "UploadFiles/Scene/Picture/" + list[i],
                 fileName: list[i]
               });
             }
@@ -915,9 +922,9 @@
             for (let i = 0; i < list.length; i++) {
               this.vuploadList.push({
                 url:
-                  config.baseUrl.dev + "UploadFiles/PromotionalVideo/Video/" + list[i],
+                  config.baseUrl.dev + "UploadFiles/Scene/Video/" + list[i],
                 status: "finished",
-                name: "UploadFiles/PromotionalVideo/Video/" + list[i],
+                name: "UploadFiles/Scene/Video/" + list[i],
                 fileName: list[i]
               });
             }
@@ -928,9 +935,9 @@
             for (let i = 0; i < list.length; i++) {
               this.auploadList.push({
                 url:
-                  config.baseUrl.dev + "UploadFiles/PromotionalVideo/Audio/" + list[i],
+                  config.baseUrl.dev + "UploadFiles/Scene/Audio/" + list[i],
                 status: "finished",
-                name: "UploadFiles/PromotionalVideo/Audio/" + list[i],
+                name: "UploadFiles/Scene/Audio/" + list[i],
                 fileName: list[i]
               });
             }

@@ -215,7 +215,7 @@ namespace HaiKanTravelManagementSystem.Api.Controllers.Api.V1.ArticleManagement
                 entity.CoverPhoto = model.CoverPhoto;
                 entity.IsRecommend = model.IsRecommend;
                 entity.IsRelease = Convert.ToInt32(model.IsRelease);
-                entity.ReleaseTime = model.ReleaseTime;
+                entity.ReleaseTime =Convert.ToDateTime(model.ReleaseTime).ToString("yyyy-MM-dd HH:mm:ss");
                 int res = _dbContext.SaveChanges();
                 if (res > 0)
                 {

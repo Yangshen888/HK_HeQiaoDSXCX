@@ -566,11 +566,19 @@ export default {
           state: 0,
         },
         rules: {
-          name: [
+          begainSite: [
             {
               type: "string",
               required: true,
-              message: "请输入公交线路名称",
+              message: "请输入起始站",
+              trigger: "blur",
+            },
+          ],
+          endSite: [
+            {
+              type: "string",
+              required: true,
+              message: "请输入终点站",
               trigger: "blur",
             },
           ],

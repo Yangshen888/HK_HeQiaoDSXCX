@@ -176,7 +176,7 @@
           <Col span="12">
             <FormItem label="发布时间" prop="releaseTime">
               <Date-picker
-                :value="formModel.fields.releaseTime"
+                v-model="formModel.fields.releaseTime"
                 @on-change="formModel.fields.releaseTime=$event"
                 type="datetime"
                 format="yyyy-MM-dd HH:mm:ss"
@@ -477,7 +477,6 @@ export default {
             {
               required: true,
               message: "请选择发布时间",
-              trigger: "blur",
             },
           ],         
         },

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "/taA7NYWH77RVqMUBqZi41J03R9Cfzfjqufx85CEhXSdsGGgHa6Mg2m1op6WJoVjIFkIoXRPSRhJpvLMGhbuGg==",
+  "dgSpecHash": "s7ZKaNYFeJpXic82y8D5MciMWREHxZmC/NzLDTcPnesZ/dMEO90zKzLafu4xJjCS9kxUHYNhCrO0r7tkmsdsZA==",
   "success": true,
-  "projectFilePath": "D:\\work_hqds\\201214_16.57\\河桥微信小程序和导视系统\\HaiKanTravelManagementSystem.Api\\HaiKanTravelManagementSystem.Api.csproj",
+  "projectFilePath": "D:\\我的工作目录\\2020.12.17\\河桥微信小程序和导视系统\\HaiKanTravelManagementSystem.Api\\HaiKanTravelManagementSystem.Api.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Administrator\\.nuget\\packages\\automapper\\9.0.0\\automapper.9.0.0.nupkg.sha512",
     "C:\\Users\\Administrator\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\7.0.0\\automapper.extensions.microsoft.dependencyinjection.7.0.0.nupkg.sha512",
